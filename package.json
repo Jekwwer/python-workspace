@@ -1,0 +1,60 @@
+{
+  "name": "python-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates.",
+  "keywords": [
+    "python",
+    "template",
+    "workspace",
+    "devcontainer",
+    "development-environment",
+    "vscode",
+    "linting",
+    "formatting",
+    "type-checking",
+    "pre-commit",
+    "automation",
+    "starter",
+    "boilerplate",
+    "setup",
+    "development",
+    "tooling"
+  ],
+  "homepage": "https://github.com/Jekwwer/python-workspace#readme",
+  "bugs": {
+    "url": "https://github.com/Jekwwer/python-workspace/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jekwwer/python-workspace.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Evgenii \"Jekwwer\" Shiliaev",
+    "email": "evgenii.shiliaev@jekwwer.com",
+    "url": "https://jekwwer.com"
+  },
+  "engines": {
+    "node": ">=20.18 <21"
+  },
+  "scripts": {
+    "spell": "cspell . --gitignore --cache",
+    "format": "prettier --check --config .prettierrc .",
+    "format-fix": "prettier --write --config .prettierrc .",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/exec": "^7.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "conventional-changelog": "^7.0.1",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
+    "cspell": "^9.0.2",
+    "prettier": "^3.5.3",
+    "semantic-release": "^24.2.3"
+  }
+}
