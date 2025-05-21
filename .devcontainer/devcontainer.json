@@ -1,0 +1,62 @@
+{
+  "name": "jekwwer/python-workspace",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1.6.2": {
+      "version": "20"
+    }
+  },
+  "postCreateCommand": ".devcontainer/post-create.sh",
+  "containerEnv": {
+    "PYTHONPATH": "/workspaces/python-workspace/src:/workspaces/python-workspace/__pypackages__/3.12/lib"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astral-builders.ruff",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "github.copilot",
+        "github.copilot-chat",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "ms-python.debugpy",
+        "ms-python.mypy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-vscode-remote.remote-containers",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "[json, jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[markdown]": {
+          "editor.rulers": [
+            120
+          ]
+        },
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+          88
+        ],
+        "files.autoSave": "onFocusChange",
+        "files.autoSaveWhenNoErrors": true,
+        "npm.packageManager": "npm",
+        "prettier.configPath": "./.prettierrc",
+        "prettier.prettierPath": "./node_modules/prettier",
+        "python.analysis.extraPaths": [
+          "${workspaceFolder}/src",
+          "${workspaceFolder}/__pypackages__/3.12/lib"
+        ],
+        "python.linting.ruffEnabled": true,
+        "python.linting.ruffPath": "ruff",
+        "python.linting.mypyEnabled": true,
+        "python.linting.mypyPath": "mypy",
+        "python.testing.unittestEnabled": false,
+        "python.testing.pytestEnabled": true
+      }
+    }
+  }
+}
