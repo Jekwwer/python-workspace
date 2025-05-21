@@ -1,0 +1,24 @@
+{
+  "ignorePaths": [
+    "*.json",
+    "*.jsonc",
+    "*.lock",
+    "*.toml",
+    "*.yaml",
+    "*.yml",
+    ".editorconfig",
+    ".devcontainer/*",
+    ".gitignore",
+    ".prettierrc",
+    ".releaserc.js",
+    "tests/*"
+  ],
+  "language": "en",
+  "useGitignore": true,
+  "version": "0.2",
+  "words": [
+    "Evgenii",
+    "Jekwwer",
+    "Shiliaev"
+  ]
+}
