@@ -1,0 +1,135 @@
+[project]
+name = "python-workspace"
+version = "0.0.0"
+description = "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates."
+authors = [
+  { name = "Evgenii Shiliaev", email = "evgenii.shiliaev@jekwwer.com" },
+]
+license = { text = "MIT" }
+requires-python = "==3.12.*"
+readme = "README.md"
+keywords = [
+  "ci",
+  "codespaces",
+  "devcontainer",
+  "documentation",
+  "pre-commit",
+  "python",
+  "template",
+  "vscode",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Integrated Development Environment (IDE)",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.0",
+  "pre-commit>=4.2.0"
+]
+test = [
+  "pytest>=8.3.5",
+  "pytest-cov>=6.1.1",
+  "pytest-xdist>=3.6.1",
+  "coverage[toml]>=7.8.1"
+]
+lint = [
+  "rstfmt>=0.0.14",
+  "ruff>=0.11.10"
+]
+mypy = [
+  "mypy>=1.15.0"
+]
+docs = [
+  "sphinx>=8.2.3",
+  "sphinx-autoapi>=3.6.0",
+  "sphinx-rtd-theme>=3.0.2",
+  "sphinx-autobuild>=2024.10.3",
+]
+
+[project.scripts]
+cli = "python_workspace.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/Jekwwer/python-workspace"
+"Bug Reports" = "https://github.com/Jekwwer/python-workspace/issues"
+"Source" = "https://github.com/Jekwwer/python-workspace"
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+exclude_lines = [
+  "# pragma: no cover",
+  "^if __name__ == .__main__.:",
+  "^\\s*#.*$"
+]
+
+[tool.coverage.run]
+branch = true
+source = ["python_workspace"]
+omit = [
+  "tests/*",
+  "src/python_workspace/migrations/*"
+]
+
+[tool.mypy]
+platform = "linux"
+python_version = "3.12"
+strict = true
+disallow_untyped_defs = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = [
+  "--import-mode=importlib",
+  "--cov=python_workspace",
+  "--cov-config=pyproject.toml",
+  "--cov-fail-under=90",
+  "--cov-report=term-missing",
+  "--cov-report=html:htmlcov",
+  "--cov-report=xml:coverage.xml"
+]
+
+[tool.pdm]
+distribution = true
+python.use_venv = false
+
+[tool.pdm.scripts]
+cli = { call = "python_workspace.cli:main" }
+lint = "ruff check ."
+lint-fix = "ruff check --fix ."
+format = "ruff format ."
+type = "mypy --install-types --non-interactive src"
+test = "pytest"
+docs-format = "rstfmt docs/source"
+docs-build = "sphinx-build -b html docs/source docs/build"
+docs-serve = "sphinx-autobuild docs/source docs/build --open-browser"
+docs-clean = "sh -c \"rm -rf docs/source/api docs/build\""
+
+[tool.rstfmt]
+wrap_length = 120
+
+[tool.ruff]
+line-length = 88
+extend-exclude = ["tests", "migrations", "__pycache__"]
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E","F","W","C","ANN","B","D","I","Q"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["python_workspace"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.setuptools.packages.find]
+where = ["src"]
