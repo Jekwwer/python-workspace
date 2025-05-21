@@ -1,0 +1,88 @@
+[project]
+name = "python-workspace"
+version = "0.0.0-dev"
+description = "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates."
+authors = [
+  { name = "Evgenii Shiliaev", email = "evgenii.shiliaev@jekwwer.com" },
+]
+license = { text = "MIT" }
+requires-python = "==3.12.*"
+readme = "README.md"
+keywords = [
+  "python", "template", "workspace", "devcontainer", "development-environment",
+  "vscode", "linting", "formatting", "type-checking", "pre-commit", "automation",
+  "starter", "boilerplate", "setup", "development", "tooling"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Integrated Development Environment (IDE)",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.0",
+  "pre-commit>=4.2.0"
+]
+test = [
+  "pytest>=8.3.5",
+  "pytest-cov>=6.1.1",
+  "pytest-xdist>=3.6.1"
+]
+lint = [
+  "ruff>=0.11.10"
+]
+mypy = [
+  "mypy>=1.15.0"
+]
+docs = [
+  "mkdocs>=1.6.1",
+  "mkdocs-material>=9.6.14"
+]
+
+[project.scripts]
+cli = "python_workspace.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/Jekwwer/python-workspace"
+"Bug Reports" = "https://github.com/Jekwwer/python-workspace/issues"
+"Source" = "https://github.com/Jekwwer/python-workspace"
+
+[tool.coverage.report]
+fail_under = 90
+
+[tool.coverage.run]
+source = ["python_workspace"]
+omit = [
+  "tests/*",
+  "src/python_workspace/migrations/*"
+]
+
+[tool.mypy]
+python_version = "3.12"
+platform = "linux"
+strict = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = ["--import-mode=importlib"]
+
+[tool.pdm]
+distribution = false
+python.use_venv = false
+
+[tool.ruff]
+line-length = 88
+lint.select = ["E", "F", "W", "C90", "ANN", "B", "C", "D", "I", "Q"]
+lint.extend-ignore = ["E501"]
+exclude = ["tests", "migrations", "env", "venv", ".git", "__pycache__"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
