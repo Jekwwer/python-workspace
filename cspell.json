@@ -22,7 +22,10 @@
     "genindex",
     "Jekwwer",
     "modindex",
+    "pyproject",
+    "pytest",
     "Shiliaev",
+    "styleguide",
     "toctree",
     "undoc",
     "viewcode"
