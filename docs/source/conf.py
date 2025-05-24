@@ -4,7 +4,7 @@
 project = "Python Workspace"
 copyright = "%Y, Evgenii Shiliaev"
 author = "Evgenii Shiliaev"
-release = "0.0.0"
+release = "1.0.0"
 
 extensions = [
     "autoapi.extension",

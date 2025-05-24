@@ -1,6 +1,6 @@
 [project]
 name = "python-workspace"
-version = "0.0.0"
+version = "1.0.0"
 description = "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates."
 authors = [
   { name = "Evgenii Shiliaev", email = "evgenii.shiliaev@jekwwer.com" },
