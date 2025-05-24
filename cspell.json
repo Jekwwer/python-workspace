@@ -17,8 +17,14 @@
   "useGitignore": true,
   "version": "0.2",
   "words": [
+    "autoapi",
     "Evgenii",
+    "genindex",
     "Jekwwer",
-    "Shiliaev"
+    "modindex",
+    "Shiliaev",
+    "toctree",
+    "undoc",
+    "viewcode"
   ]
 }
