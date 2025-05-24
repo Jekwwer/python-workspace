@@ -1,0 +1,63 @@
+# .github/workflows/docs.yml:
+# Configures the GitHub Actions workflow to build and deploy documentation using Sphinx.
+---
+name: deploy-docs
+
+on:
+  workflow_run:
+    workflows: ['release']
+    types: [completed]
+
+permissions:
+  id-token: write
+  pages: write
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+
+    steps:
+      - name: checkout-code
+        uses: actions/checkout@v4.2.2
+
+      - name: setup-python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: '3.12'
+
+      - name: cache-pip-and-pdm
+        uses: actions/cache@v4.2.3
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/pdm
+            __pypackages__/
+          key: ${{ runner.os }}-python-pdm-${{ hashFiles('pdm.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-python-pdm-
+
+      - name: install-pdm
+        run: pip install pdm
+
+      - name: install-dependencies
+        run: pdm install && pdm install --group :docs
+
+      - name: docs-clean
+        run: pdm docs-clean
+
+      - name: docs-build
+        run: pdm docs-build
+
+      - name: configure-pages
+        uses: actions/configure-pages@v5.0.0
+
+      - name: upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          path: docs/build
+
+      - name: deploy-pages
+        uses: actions/deploy-pages@v4.0.5
