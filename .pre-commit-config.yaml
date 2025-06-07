@@ -119,6 +119,7 @@ repos:
     hooks:
       - id: rstfmt
         name: 'format:rst'
+        args: ['-w', '120']
         files: ^docs/source/.*\.rst$
 
   # ── Testing Hooks ──────────────────────────────────────────────────────────

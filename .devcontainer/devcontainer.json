@@ -36,6 +36,11 @@
             120
           ]
         },
+        "[restructuredtext]": {
+          "editor.rulers": [
+            120
+          ]
+        },
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
         "editor.rulers": [
