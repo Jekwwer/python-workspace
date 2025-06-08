@@ -1,5 +1,55 @@
 # Changelog
 
+## 2.0.0 - 2025-06-08
+### ⚠ BREAKING CHANGES
+
+* The project now uses Poetry instead of PDM for dependency management and build tasks. Workflows and scripts relying on PDM have been removed or replaced. Users must adopt the 'Makefile' tasks and 'poetry' commands for their workflows.
+
+[FILES ADDED]
+ - Makefile
+ - poetry.lock
+
+[FILES MODIFIED]
+ - .devcontainer/devcontainer.json
+ - .devcontainer/post-create.sh
+ - .editorconfig
+ - .github/dependabot.yml
+ - .github/workflows/ci.yml
+ - .github/workflows/docs.yml
+ - .github/workflows/release.yml
+ - .pre-commit-config.yaml
+ - CONTRIBUTING.md
+ - README.md
+ - STYLEGUIDE.md
+ - cspell.json
+ - pyproject.toml
+
+[FILES REMOVED]
+ - pdm.lock
+
+[DEPENDENCIES ADDED]
+ - poetry
+
+[DEPENDENCIES REMOVED]
+ - pdm
+
+[FEATURES/CHANGES]
+ - Adapted project to use Poetry for dependency management.
+ - Introduced Makefile to standardize development tasks.
+ - Updated CI/CD workflows to use Poetry.
+ - Updated documentation to reflect changes in tasks and dependencies.
+
+[TECHNIQUES]
+ - Replaced PDM scripts with Makefile targets.
+
+[PURPOSE]
+ - Simplify task execution and unify development workflow under Poetry and Makefile tooling.
+
+[IMPACT]
+ - Users must adapt to using Poetry and Makefile commands for development and CI/CD tasks.
+
+* feat!(build): migrate from PDM to Poetry ([934c82a](https://github.com/Jekwwer/python-workspace/commit/934c82a92eacd9c3fec501bc5f4dea9d6a61fc25))
+
 ## 1.0.1 - 2025-06-08
 ### 🐞 Bug Fixes
 
