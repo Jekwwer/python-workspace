@@ -8,14 +8,14 @@ authors = [
   "Evgenii Shiliaev <evgenii.shiliaev@jekwwer.com>"
 ]
 keywords = [
-  "ci",
-  "codespaces",
-  "devcontainer",
-  "documentation",
-  "pre-commit",
   "python",
-  "template",
+  "devcontainer",
   "vscode",
+  "codespaces",
+  "ci",
+  "pre-commit-hooks",
+  "linting",
+  "formatting",
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",

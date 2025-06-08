@@ -4,14 +4,14 @@
   "private": true,
   "description": "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates.",
   "keywords": [
-    "ci",
-    "codespaces",
-    "devcontainer",
-    "documentation",
-    "pre-commit",
     "python",
-    "template",
-    "vscode"
+    "devcontainer",
+    "vscode",
+    "codespaces",
+    "ci",
+    "pre-commit-hooks",
+    "linting",
+    "formatting"
   ],
   "homepage": "https://github.com/Jekwwer/python-workspace#readme",
   "bugs": {
