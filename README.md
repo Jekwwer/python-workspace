@@ -131,6 +131,11 @@ For questions, reach out via [evgenii.shiliaev@jekwwer.com][evgenii.shiliaev@jek
 
 ---
 
+**Migration Note:** This project previously used PDM (last PDM-based release: [v1.0.1]). As of [v2.0.0], Poetry is used
+for dependency and environment management.
+
+---
+
 This document is based on a template by [Evgenii Shiliaev][evgenii-shiliaev-github], licensed under [CC BY
 4.0][jekwwer-markdown-docs-kit-license]. All additional content is licensed under [LICENSE][LICENSE].
 
@@ -142,3 +147,5 @@ This document is based on a template by [Evgenii Shiliaev][evgenii-shiliaev-gith
 [issues]: https://github.com/Jekwwer/python-workspace/issues
 [jekwwer-markdown-docs-kit-license]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/LICENSE
 [open-in-codespaces]: https://codespaces.new/Jekwwer/python-workspace
+[v1.0.1]: https://github.com/Jekwwer/python-workspace/tree/v1.0.1
+[v2.0.0]: https://github.com/Jekwwer/python-workspace/tree/v2.0.0
