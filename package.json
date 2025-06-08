@@ -43,7 +43,7 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.3",
     "@semantic-release/release-notes-generator": "^14.0.3",
-    "conventional-changelog": "^7.0.2",
+    "conventional-changelog": "^7.1.0",
     "conventional-changelog-conventionalcommits": "^9.0.0",
     "cspell": "^9.0.2",
     "prettier": "^3.5.3",
