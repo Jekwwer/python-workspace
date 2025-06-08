@@ -326,8 +326,8 @@ cython_debug/
 .history/
 
 ### Custom ###
-# Ignore changelog files
+# Changelog files
 CHANGELOG.md
 
-# Ignore cache files
+# Cache files
 .cspellcache
