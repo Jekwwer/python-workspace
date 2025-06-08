@@ -21,6 +21,10 @@ trim_trailing_whitespace = true
 [*.{editorconfig,gitignore,lock,prettierrc,toml}]
 trim_trailing_whitespace = false
 
+# Makefile-specific settings
+[Makefile]
+indent_style = tab
+
 # JavaScript-specific settings (Present in the repository but no special rules needed)
 [*.js]
 # No overrides, but this section helps indicate JavaScript files exist in the project.

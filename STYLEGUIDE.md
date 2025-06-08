@@ -42,7 +42,7 @@ devcontainer technology and GitHub Codespaces with VS Code.
 - **Editor:** Visual Studio Code (workspace settings, recommended extensions)
 - **Devcontainer:** Docker config (`devcontainer.json`)
 - **Pre-commit Hooks:** pre-commit (`.pre-commit-config.yaml`)
-- **Build and Packaging:** Python 3.12, PDM
+- **Build and Packaging:** Python 3.12, Poetry
 - **Linting and Formatting:** Ruff, Prettier, rstfmt
 - **Type Checking:** MyPy
 - **Testing:** pytest, pytest-cov
@@ -100,9 +100,10 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 ├── CONTRIBUTING.md                     ├── # contributing guidelines
 ├── cspell.json                         ├── # spell checking configuration
 ├── LICENSE                             ├── # main license
+├── Makefile                            ├── # common development tasks
 ├── package-lock.json                   ├── # npm lock file
 ├── package.json                        ├── # npm package metadata
-├── pdm.lock                            ├── # pdm lock file
+├── poetry.lock                         ├── # poetry lock file
 ├── pyproject.toml                      ├── # Python project metadata
 ├── README.md                           ├── # project README
 ├── SECURITY.md                         ├── # security information
@@ -148,11 +149,13 @@ Key configuration files in the repository:
 - `.releaserc.js`: semantic-release configuration, defining release branches, plugins, and versioning strategy.
 - `.yamllint`: YAML linting configuration for CI and project YAML files.
 - `cspell.json`: Code spell-check configuration with custom dictionaries and file globs.
+- `Makefile`: Targets for common development tasks (linting, formatting, type checking, spell-checking, testing,Add
+  commentMore actions running, and releasing).
 - `package-lock.json`: npm lockfile capturing exact dependency versions.
 - `package.json`: npm manifest with project metadata, script definitions, and dependency declarations.
-- `pdm.lock`: PDM lockfile locking Python dependency versions for reproducible environments.
-- `pyproject.toml`: Python project metadata, PDM settings, build-system requirements, and tool configurations (linting,
-  typing, docs).
+- `poetry.lock`: Poetry lockfile locking Python dependency versions for reproducible environments.
+- `pyproject.toml`: Python project metadata, Poetry settings, build-system requirements, and tool configurations
+  (linting, typing, docs).
 
 ## Naming Conventions
 
@@ -188,8 +191,8 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 
 ### Indentation and Spacing
 
-- **General Guidelines:** Use **2 spaces** per indentation level throughout the project. Tabs are not permitted.
-  _(Enforced by EditorConfig and Prettier for supported files)_
+- **General Guidelines:** Use **2 spaces** per indentation level throughout the project. Tabs are allowed only forAdd
+  commentMore actions `Makefile`. _(Enforced by EditorConfig and Prettier for supported files)_
 - **Python:** Use **4 spaces** per indentation level for Python files. _(Enforced by EditorConfig)_
 
 ### Line Length
@@ -229,7 +232,7 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 ### EditorConfig
 
 - **Purpose:** The `.editorconfig` file ensures consistent coding styles across all editors by specifying:
-  - **Indentation:** 2 spaces (4 spaces for Python)
+  - **Indentation:** 2 spaces (4 spaces for Python; tab-indented with 2-space width for `Makefile`)
   - **Line Endings:** Unix-style (`lf`)
   - **Charset:** UTF-8
   - **Max Line Length:** 88 for code, 120 for Markdown/reStructuredText _(Note: `.editorconfig` provides these values
@@ -351,9 +354,9 @@ See [Comments and Documentation][COMMENTS-AND-DOCUMENTATION].
 #### Tools
 
 - **sphinx:** Foundation for external docs. Auto-deploys to GitHub Pages on new releases; local commands:
-  `pdm docs-build` (build) and `pdm docs-serve` (live preview).
-- **rstfmt:** Formats reStructuredText files. Runs as a pre-commit hook; local command: `pdm docs-format`.
-- **cspell:** Spell-checks code and Markdown. Runs as a pre-commit hook; local command: `npm run spell`.
+  `make docs-build` (build) and `make docs-serve` (live preview).
+- **rstfmt:** Formats reStructuredText files. Runs as a pre-commit hook; local command: `make format`.
+- **cspell:** Spell-checks code and Markdown. Runs as a pre-commit hook; local command: `make spell`.
 - **markdown-link-check:** Validates Markdown links. Runs as a pre-commit hook.
 - **markdownlint:** Enforces Markdown style rules. Runs as a pre-commit hook.
 

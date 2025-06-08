@@ -226,7 +226,7 @@ to use the new OAuth2 endpoints as described in the migration guide.
 
 - **NPM Dependencies:** Managed via `package.json` and `package-lock.json`.
 
-- **Python Dependencies:** Managed via `pyproject.toml` and `pdm.lock`.
+- **Python Dependencies:** Managed via `pyproject.toml` and `poetry.lock`.
 
 - **Dependabot:** The `.github/dependabot.yml` file monitors and updates dependencies for NPM packages, Python packages
   and GitHub Actions.
@@ -242,21 +242,22 @@ and pre-commit levels, with the exception of building the documentation.
 
 ### Manual Testing
 
-Run the following scripts (see `package.json` and `pyproject.toml` for details) to verify code quality manually:
+Run the following scripts to verify code quality manually:
 
-- **npm run spell:** Checks files for typos.
-- **npm run format:** Verifies code formatting using Prettier (for non-Python files).
-- **npm run format-fix:** Auto-formats code using Prettier (for non-Python files).
-- **pdm cli:** Runs the project's CLI entry point.
-- **pdm lint:** Checks the codebase for lint issues using Ruff.
-- **pdm lint-fix:** Auto-fixes lint issues with Ruff.
-- **pdm format:** Formats code using Ruff’s formatter.
-- **pdm type:** Performs static type checking with MyPy.
-- **pdm test:** Executes the test suite with coverage using pytest.
-- **pdm docs-format**: Formats reStructuredText files in `docs/source`.
-- **pdm docs-build:** Builds HTML documentation with Sphinx.
-- **pdm docs-serve:** Serves and auto-rebuilds documentation locally.
-- **pdm docs-clean:** Cleans generated docs and build artifacts.
+- **make help:** Shows Make help message.
+- **make format:** Verifies code formatting using Ruff (for Python files), Prettier (for non-Python files) and rstfmt
+  (for reStructuredText files),
+- **make format-fix:** Auto-formats code using Ruff (for Python files), Prettier (for non-Python files) and rstfmt (for
+  reStructuredText files),
+- **make lint:** Checks Python files for lint issues using Ruff.
+- **make lint-fix:** Auto-fixes lint issues with Ruff.
+- **make type:** Performs static type checking with MyPy.
+- **make spell:** Checks files for typos using cspell.
+- **make test:** Executes the test suite with coverage using pytest.
+- **make run:** Runs the project’s CLI entry point (`poetry run cli`).
+- **make docs-build:** Builds the documentation using Sphinx.
+- **make docs-serve:** Serves the documentation locally with live reloading.
+- **make docs-clean:** Cleans up the documentation build directory.
 
 ### Automated Testing
 

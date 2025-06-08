@@ -4,10 +4,8 @@
 set -euo pipefail
 
 npm install
-pipx install pdm
 
-# Ensuring PEP-582 layout
-mkdir -p __pypackages__
+pipx install poetry
+poetry install --with test,lint,mypy,docs
 
-pdm install --group :all
-pdm run pre-commit install
+poetry run pre-commit install

@@ -1,13 +1,12 @@
-[project]
+[tool.poetry]
 name = "python-workspace"
 version = "1.0.1"
 description = "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates."
+readme = ["README.md", "LICENSE"]
+license = "MIT"
 authors = [
-  { name = "Evgenii Shiliaev", email = "evgenii.shiliaev@jekwwer.com" },
+  "Evgenii Shiliaev <evgenii.shiliaev@jekwwer.com>"
 ]
-license = { text = "MIT" }
-requires-python = "==3.12.*"
-readme = "README.md"
 keywords = [
   "ci",
   "codespaces",
@@ -26,40 +25,39 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent"
 ]
-dependencies = []
 
-[project.optional-dependencies]
-dev = [
-  "build>=1.2.0",
-  "pre-commit>=4.2.0"
-]
-test = [
-  "pytest>=8.3.5",
-  "pytest-cov>=6.1.1",
-  "pytest-xdist>=3.6.1",
-  "coverage[toml]>=7.8.1"
-]
-lint = [
-  "rstfmt>=0.0.14",
-  "ruff>=0.11.10"
-]
-mypy = [
-  "mypy>=1.16.0"
-]
-docs = [
-  "sphinx>=8.2.3",
-  "sphinx-autoapi>=3.6.0",
-  "sphinx-rtd-theme>=3.0.2",
-  "sphinx-autobuild>=2024.10.3",
-]
-
-[project.scripts]
-cli = "python_workspace.cli:main"
-
-[project.urls]
-"Homepage" = "https://github.com/Jekwwer/python-workspace"
+[tool.poetry.urls]
+Homepage = "https://github.com/Jekwwer/python-workspace"
 "Bug Reports" = "https://github.com/Jekwwer/python-workspace/issues"
-"Source" = "https://github.com/Jekwwer/python-workspace"
+Source = "https://github.com/Jekwwer/python-workspace"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.4.0"
+pytest-cov = "^6.1.1"
+pytest-xdist = "^3.7.0"
+coverage = {extras = ["toml"], version = "^7.8.2"}
+
+[tool.poetry.group.lint.dependencies]
+rstfmt = "^0.0.14"
+ruff = "^0.11.12"
+
+[tool.poetry.group.mypy.dependencies]
+mypy = "^1.16.0"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^8.2.3"
+sphinx-autoapi = "^3.6.0"
+sphinx-rtd-theme = "^3.0.2"
+sphinx-autobuild = "^2024.10.3"
+
+[tool.poetry.scripts]
+cli = "python_workspace.cli:main"
 
 [tool.coverage.report]
 fail_under = 90
@@ -98,22 +96,6 @@ addopts = [
   "--cov-report=xml:coverage.xml"
 ]
 
-[tool.pdm]
-distribution = true
-python.use_venv = false
-
-[tool.pdm.scripts]
-cli = { call = "python_workspace.cli:main" }
-lint = "ruff check ."
-lint-fix = "ruff check --fix ."
-format = "ruff format ."
-type = "mypy --install-types --non-interactive src"
-test = "pytest"
-docs-format = "rstfmt -w 120 docs/source"
-docs-build = "sphinx-build -b html docs/source docs/build"
-docs-serve = "sphinx-autobuild docs/source docs/build --open-browser"
-docs-clean = "sh -c \"rm -rf docs/source/api docs/build\""
-
 [tool.ruff]
 line-length = 88
 extend-exclude = ["tests", "migrations", "__pycache__"]
@@ -128,5 +110,6 @@ known-first-party = ["python_workspace"]
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

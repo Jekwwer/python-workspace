@@ -10,7 +10,8 @@
     ".gitignore",
     ".prettierrc",
     ".releaserc.js",
-    "tests/*"
+    "tests/*",
+    "Makefile"
   ],
   "language": "en",
   "useGitignore": true,
@@ -35,6 +36,7 @@
     "styleguide",
     "toctree",
     "undoc",
+    "venv",
     "viewcode"
   ]
 }

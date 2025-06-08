@@ -8,7 +8,7 @@
   },
   "postCreateCommand": ".devcontainer/post-create.sh",
   "containerEnv": {
-    "PYTHONPATH": "/workspaces/python-workspace/src:/workspaces/python-workspace/__pypackages__/3.12/lib"
+    "PYTHONPATH": "/workspaces/python_workspace/src"
   },
   "customizations": {
     "vscode": {
@@ -52,15 +52,16 @@
         "prettier.configPath": "./.prettierrc",
         "prettier.prettierPath": "./node_modules/prettier",
         "python.analysis.extraPaths": [
-          "${workspaceFolder}/src",
-          "${workspaceFolder}/__pypackages__/3.12/lib"
+          "${workspaceFolder}/src"
         ],
         "python.linting.ruffEnabled": true,
         "python.linting.ruffPath": "ruff",
         "python.linting.mypyEnabled": true,
         "python.linting.mypyPath": "mypy",
         "python.testing.unittestEnabled": false,
-        "python.testing.pytestEnabled": true
+        "python.testing.pytestEnabled": true,
+        "python.terminal.activateEnvironment": false,
+        "python.venvPath": "/home/vscode/.cache/pypoetry/virtualenvs"
       }
     }
   }

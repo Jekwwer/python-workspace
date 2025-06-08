@@ -22,27 +22,26 @@ jobs:
       - name: setup-python
         uses: actions/setup-python@v5.6.0
         with:
-          python-version: '3.12'
+          python-version: '3.10'
 
-      - name: cache-pip-and-pdm
+      - name: cache-pip-and-poetry
         uses: actions/cache@v4.2.3
         with:
           path: |
             ~/.cache/pip
-            ~/.cache/pdm
-            __pypackages__/
-          key: ${{ runner.os }}-python-pdm-${{ hashFiles('pdm.lock') }}
+            ~/.cache/pypoetry
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
           restore-keys: |
-            ${{ runner.os }}-python-pdm-
+            ${{ runner.os }}-poetry-
 
-      - name: install-pdm
-        run: pip install pdm
+      - name: install-poetry
+        run: pip install poetry
 
       - name: install-dependencies
-        run: pdm install && pdm install --group :test
+        run: poetry install --no-interaction --no-ansi --with test
 
       - name: run-tests
-        run: pdm test
+        run: make test
 
       - name: upload-coverage
         uses: codecov/codecov-action@v5.4.3

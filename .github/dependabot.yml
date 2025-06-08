@@ -42,7 +42,7 @@ updates:
     schedule:
       interval: 'monthly'
     groups:
-      pdm-deps:
+      poetry-deps:
         patterns:
           - '*'
     reviewers:
@@ -50,5 +50,5 @@ updates:
     assignees:
       - 'Jekwwer'
     commit-message:
-      prefix: 'deps(pdm)'
+      prefix: 'deps(poetry)'
     open-pull-requests-limit: 5

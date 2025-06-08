@@ -12,27 +12,30 @@
 
 ## Project Overview 🚀
 
-This repository is a robust template for Python development on **PEP 582** (`__pypackages__`), delivering a zero-install
-local package workflow. It comes equipped with tools for testing, formatting, linting, spell checking, a ready-to-use
-devcontainer, custom VS Code settings, essential repo files, automated checks, integrated VS Code extensions, semantic
-releases, automated documentation deployment, and extensive in-repo guides for project management and customization.
+This repository is a robust template for Python development using **Poetry** and isolated virtual environments,
+delivering a consistent and reproducible local package workflow. It comes equipped with tools for testing, formatting,
+linting, spell-checking, a ready-to-use devcontainer, custom VS Code settings, essential repo files, automated checks,
+integrated VS Code extensions, semantic releases, automated documentation deployment, and extensive in-repo guides for
+project management and customization.
 
 ## Features ✨
 
-- **Devcontainer & VS Code:** Ubuntu-based Docker container with Python 3.12, PDM, PEP 582 support, recommended VS Code
-  extensions and workspace settings.
-- **Dependency Management:** PDM for declarative `pyproject.toml` builds and lock files.
-- **PEP 582 Support:** Local `__pypackages__` directory eliminates need for virtual environments.
-- **Linting & Formatting:** Ruff for Python, Prettier for JSON/Markdown/YAML, enforced via pre-commit and editor
+- **Devcontainer & VS Code:** Ubuntu-based Docker container with Python 3.12 and Poetry installed, plus recommended VS
+  Code extensions and workspace settings.
+- **Dependency Management:** Poetry for declarative `pyproject.toml` configuration and `poetry.lock` locking.
+- **Virtual Environments:** Project-scoped `.venv` directory automatically managed by Poetry (no need to install or
+  activate manually).
+- **Linting & Formatting:** Ruff for Python, Prettier for JSON/Markdown/YAML; enforced via pre-commit hooks and editor
   integrations.
-- **Type Checking:** MyPy with auto-install of missing types.
+- **Type Checking:** MyPy with automatic installation of missing stub packages.
 - **Testing:** pytest suite with coverage reporting.
-- **Spell Checking:** cspell for code and docs.
+- **Spell Checking:** cspell for both code and documentation.
 - **Pre-commit Hooks:** Automates Ruff, MyPy, pytest, rstfmt, yamllint, markdownlint, markdown-link-check, pyupgrade,
   and more.
-- **CI/CD:** GitHub Actions for lint/test, semantic-release, and Sphinx docs deployment.
-- **Documentation:** Sphinx with `autoapi`, `napoleon`, and `viewcode` extensions; live preview and GitHub Pages
-  publishing.
+- **CI/CD:** GitHub Actions for linting, testing, semantic-release versioning, and Sphinx docs deployment.
+- **Documentation:** Sphinx configured with `autoapi`, `napoleon`, and `viewcode`; live preview during development and
+  publishing to GitHub Pages.
+
 - **In-Repo Guides:** `CONTRIBUTING.md`, `STYLEGUIDE.md`, `SECURITY.md` to enforce best practices and streamline
   onboarding.
 
@@ -44,7 +47,7 @@ Designed for **GitHub Codespaces**—running locally is untested and may require
 
 ## Usage 🛠️
 
-Most manual quality checks and workflows are exposed via npm and PDM scripts. These commands mirror the editor
+Most manual quality checks and workflows are exposed via `Makefile` targets. These commands mirror the editor
 integrations, pre-commit hooks, and CI pipelines.
 
 ### CLI
@@ -52,41 +55,38 @@ integrations, pre-commit hooks, and CI pipelines.
 Invoke the project’s command-line interface:
 
 ```bash
-pdm cli --help
+poetry run cli --help
 ```
 
-### Formatting & Linting
+### Formatting
 
 Most formatting tasks are automated and enforced using various tools. Feel free to adjust these settings for your
 project. The repository configurations are described in the [`STYLEGUIDE.md`][STYLEGUIDE].
 
-- **Prettier** (non-Python files)
+```bash
+make format             # check formatting
+make format-fix         # apply formatting fixes
+```
 
-  ```bash
-  npm run format        # check formatting
-  npm run format-fix    # apply formatting fixes
-  ```
+### Linting
 
-- **Ruff** (Python code)
-
-  ```bash
-  pdm lint              # detect lint issues
-  pdm lint-fix          # auto-fix lint issues
-  pdm format            # apply Ruff’s formatter
-  ```
+```bash
+make lint               # detect lint issues
+make lint-fix           # auto-fix lint issues
+```
 
 ### Static Analysis
 
 - **Type Checking** with MyPy
 
   ```bash
-  pdm type
+  make type
   ```
 
 - **Spell Checking** with cspell
 
   ```bash
-  npm run spell
+  make spell
   ```
 
 ### Testing
@@ -94,33 +94,27 @@ project. The repository configurations are described in the [`STYLEGUIDE.md`][ST
 Run the test suite (with coverage):
 
 ```bash
-pdm test
+make test
 ```
 
 ### Documentation
 
-- **Format docs** (reStructuredText):
-
-  ```bash
-  pdm docs-format
-  ```
-
 - **Build HTML docs** with Sphinx:
 
   ```bash
-  pdm docs-build
+  make docs-build
   ```
 
 - **Live-serve docs** locally:
 
   ```bash
-  pdm docs-serve
+  make docs-serve
   ```
 
 - **Clean docs** build artifacts:
 
   ```bash
-  pdm docs-clean
+  make docs-clean
   ```
 
 ## Contributing 👥
