@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.0.1 - 2025-06-08
+### 🐞 Bug Fixes
+
+* **config:** add and correct restructuredtext format settings ([384f50a](https://github.com/Jekwwer/python-workspace/commit/384f50aad1583722f909b5a29155078fe37aa995))
+
+### 📦 Dependency Updates
+
+* bump mypy 1.16.0 and @semantic-release/github 11.0.3 versions ([488f4ac](https://github.com/Jekwwer/python-workspace/commit/488f4ac78844da5d9307ee13acb6791b8b53f979)), closes [#3](https://github.com/Jekwwer/python-workspace/issues/3)
+
+### 📦 Chores
+
+* **config:** remove redundant ignore pattern for cspell ([ba837ca](https://github.com/Jekwwer/python-workspace/commit/ba837ca57541c810948046ce8d9a03210cc50cf6))
+* **docs:** remove redundant settings from Sphinx configuration ([45ba501](https://github.com/Jekwwer/python-workspace/commit/45ba501a0696fd5fef245e9ee3e0553c4827ca97))
+* **gitignore:** align comments style in custom section ([2f053ca](https://github.com/Jekwwer/python-workspace/commit/2f053ca6510900c51412eb0c78d956b9ff198a1c))
+
 ## 1.0.0 - 2025-05-26
 ### 🚀 New Features
 
