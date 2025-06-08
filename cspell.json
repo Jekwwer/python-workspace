@@ -1,7 +1,6 @@
 {
   "ignorePaths": [
     "*.json",
-    "*.jsonc",
     "*.lock",
     "*.toml",
     "*.yaml",
