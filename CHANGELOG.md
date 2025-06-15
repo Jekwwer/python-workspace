@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.0.1 - 2025-06-15
+### 🐞 Bug Fixes
+
+* **Makefile:** add missing targets to phony list ([1ccffb4](https://github.com/Jekwwer/python-workspace/commit/1ccffb4101024b5954f088e8d5516476856311d4))
+* **pre-commit:** update file pattern for format hook ([d7a7638](https://github.com/Jekwwer/python-workspace/commit/d7a76382b1cb51f4bcfb0e57b5c2bd033a7b4b43))
+
+### 📖 Documentation
+
+* **README.md:** add note about migration to Poetry ([90a521d](https://github.com/Jekwwer/python-workspace/commit/90a521d26fae9f3902ec754e9d849b581995e10a))
+* **STYLEGUIDE.md:** update style guide for clarity and accuracy ([64cf419](https://github.com/Jekwwer/python-workspace/commit/64cf419e2f3355fb5c8130beb2d35ae39bedaced))
+
+### 📦 Chores
+
+* **metadata:** add report email to package metadata ([c13f43f](https://github.com/Jekwwer/python-workspace/commit/c13f43fc7e37d2738c96f8d8b3648d10f6d808c0))
+* **metadata:** update keywords in package.json and pyproject.toml ([05fa191](https://github.com/Jekwwer/python-workspace/commit/05fa191b3aded8614ccc16e11d903a59fb734dd4))
+
 ## 2.0.0 - 2025-06-08
 ### ⚠ BREAKING CHANGES
 
