@@ -170,7 +170,7 @@ repos:
         name: 'format:ruff'
         entry: make format-fix
         language: system
-        files: '\.py$'
+        files: '^(src|tests)/.*\.py$'
         pass_filenames: false
 
   # ── Autoupdate Hooks (local) ───────────────────────────────────────────────
