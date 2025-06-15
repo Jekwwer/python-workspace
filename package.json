@@ -15,7 +15,8 @@
   ],
   "homepage": "https://github.com/Jekwwer/python-workspace#readme",
   "bugs": {
-    "url": "https://github.com/Jekwwer/python-workspace/issues"
+    "url": "https://github.com/Jekwwer/python-workspace/issues",
+    "email": "report@jekwwer.com"
   },
   "repository": {
     "type": "git",
