@@ -149,8 +149,8 @@ Key configuration files in the repository:
 - `.releaserc.js`: semantic-release configuration, defining release branches, plugins, and versioning strategy.
 - `.yamllint`: YAML linting configuration for CI and project YAML files.
 - `cspell.json`: Code spell-check configuration with custom dictionaries and file globs.
-- `Makefile`: Targets for common development tasks (linting, formatting, type checking, spell-checking, testing,Add
-  commentMore actions running, and releasing).
+- `Makefile`: Targets for common development tasks (linting, formatting, type checking, spell-checking, testing,
+  running, and releasing).
 - `package-lock.json`: npm lockfile capturing exact dependency versions.
 - `package.json`: npm manifest with project metadata, script definitions, and dependency declarations.
 - `poetry.lock`: Poetry lockfile locking Python dependency versions for reproducible environments.
@@ -191,8 +191,8 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 
 ### Indentation and Spacing
 
-- **General Guidelines:** Use **2 spaces** per indentation level throughout the project. Tabs are allowed only forAdd
-  commentMore actions `Makefile`. _(Enforced by EditorConfig and Prettier for supported files)_
+- **General Guidelines:** Use **2 spaces** per indentation level throughout the project. Tabs are allowed only for
+  `Makefile`. _(Enforced by EditorConfig and Prettier for supported files)_
 - **Python:** Use **4 spaces** per indentation level for Python files. _(Enforced by EditorConfig)_
 
 ### Line Length
@@ -235,8 +235,8 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   - **Indentation:** 2 spaces (4 spaces for Python; tab-indented with 2-space width for `Makefile`)
   - **Line Endings:** Unix-style (`lf`)
   - **Charset:** UTF-8
-  - **Max Line Length:** 88 for code, 120 for Markdown/reStructuredText _(Note: `.editorconfig` provides these values
-    for reference; enforcement is handled by other tools.)_
+  - **Max Line Length:** 88, 120 for Markdown/reStructuredText _(Note: `.editorconfig` provides these values for
+    reference; enforcement is handled by other tools.)_
   - **Final Newline:** Enforced
   - **Trailing Whitespace:** Trimmed (with exceptions)
 - **Note:** Contributors should use an editor that supports EditorConfig to automatically apply these settings.
@@ -249,7 +249,7 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   - **Trailing Commas:** Added where possible
   - **Tab Width:** 2 spaces
   - **End of Line:** Unix-style (`lf`)
-  - **Print Width:** 88 characters _(Note: Markdown overrides to 120; JSON has no enforced limit.)_
+  - **Print Width:** 88 120 for Markdown; JSON has no enforced limit.
 - **Note:** Prettier runs in VS Code and as a pre-commit hook to auto-format code before commits.
 
 ### Ruff
@@ -267,7 +267,7 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
     `# noqa`/`# type: ignore`, improper mock usage, stray Unicode replacement chars).
 - **markdownlint-cli & markdown-link-check:** Lints Markdown files according to `.markdownlint.json` rules and validate
   links.
-- **yamllint:** Lints YAML files according to `.yamllint` rules.
+- **yamllint:** Lints YAML files according to `.yamllint.yml` rules.
 - **pyupgrade:** Auto-upgrades Python syntax to modern versions.
 - **mypy:** Does static type checks for Python code.
 - **rstfmt:** Formats reStructuredText files to comply with style rules.
