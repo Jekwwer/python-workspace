@@ -1,6 +1,6 @@
 # Makefile: Simplifies common development tasks.
 
-.PHONY: help lint lint-fix format format-fix type spell test run release
+.PHONY: help format format-fix lint lint-fix type spell test run release  docs-build docs-serve docs-clean
 
 help:
 	@echo "Usage: make [target]"
