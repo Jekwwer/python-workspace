@@ -7,13 +7,10 @@
     }
   },
   "postCreateCommand": ".devcontainer/post-create.sh",
-  "containerEnv": {
-    "PYTHONPATH": "/workspaces/python_workspace/src"
-  },
   "customizations": {
     "vscode": {
       "extensions": [
-        "astral-builders.ruff",
+        "charliermarsh.ruff",
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
         "github.copilot",
@@ -21,20 +18,20 @@
         "github.vscode-github-actions",
         "github.vscode-pull-request-github",
         "ms-python.debugpy",
-        "ms-python.mypy",
+        "ms-python.mypy-type-checker",
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-vscode-remote.remote-containers",
         "streetsidesoftware.code-spell-checker"
       ],
       "settings": {
-        "[json, jsonc]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
         "[markdown]": {
           "editor.rulers": [
             120
           ]
+        },
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff"
         },
         "[restructuredtext]": {
           "editor.rulers": [
@@ -48,20 +45,28 @@
         ],
         "files.autoSave": "onFocusChange",
         "files.autoSaveWhenNoErrors": true,
+
+        "mypy-type-checker.args": [
+          "--config-file=pyproject.toml"
+        ],
+        "mypy-type-checker.path": [
+          "${workspaceFolder}/.venv/bin/mypy"
+        ],
+
         "npm.packageManager": "npm",
+
         "prettier.configPath": "./.prettierrc",
         "prettier.prettierPath": "./node_modules/prettier",
-        "python.analysis.extraPaths": [
-          "${workspaceFolder}/src"
-        ],
-        "python.linting.ruffEnabled": true,
-        "python.linting.ruffPath": "ruff",
-        "python.linting.mypyEnabled": true,
-        "python.linting.mypyPath": "mypy",
+
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
         "python.testing.unittestEnabled": false,
         "python.testing.pytestEnabled": true,
         "python.terminal.activateEnvironment": false,
-        "python.venvPath": "/home/vscode/.cache/pypoetry/virtualenvs"
+
+        "ruff.configuration": "${workspaceFolder}/pyproject.toml",
+        "ruff.path": [
+          "${workspaceFolder}/.venv/bin/ruff"
+        ]
       }
     }
   }
