@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-workspace"
-version = "2.0.1"
+version = "2.0.2"
 description = "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates."
 readme = ["README.md", "LICENSE"]
 license = "MIT"

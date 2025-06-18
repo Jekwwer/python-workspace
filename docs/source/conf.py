@@ -3,7 +3,7 @@
 project = "Python Workspace"
 copyright = "%Y, Evgenii Shiliaev"
 author = "Evgenii Shiliaev"
-release = "2.0.1"
+release = "2.0.2"
 
 extensions = [
     "autoapi.extension",

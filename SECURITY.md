@@ -9,7 +9,7 @@ I actively maintain and provide security updates for the following versions:
 
 | Version            | Supported             |
 | ------------------ | --------------------- |
-| [`v2.0.1`][v2.0.1] | ✅ Actively supported |
+| [`v2.0.2`][v2.0.2] | ✅ Actively supported |
 | Older versions     | ❌ Not supported      |
 
 If your project is using an unsupported version, I recommend upgrading to the latest version to benefit from security
@@ -49,4 +49,4 @@ This document is based on a template by [Evgenii Shiliaev][evgenii-shiliaev-gith
 [jekwwer-markdown-docs-kit-license]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/LICENSE
 [report@jekwwer.com]: mailto:report@jekwwer.com
 [security-advisories]: https://github.com/Jekwwer/python-workspace/security/advisories
-[v2.0.1]: https://github.com/Jekwwer/python-workspace/tree/v2.0.1
+[v2.0.2]: https://github.com/Jekwwer/python-workspace/tree/v2.0.2

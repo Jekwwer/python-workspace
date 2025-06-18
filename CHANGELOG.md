@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.2 - 2025-06-18
+### 📦 Dependency Updates
+
+* **npm:** bump conventional-changelog and cspell to latest versions ([581c638](https://github.com/Jekwwer/python-workspace/commit/581c638c42d051f1075ea9877826473428026126))
+* **poetry:** bump pytest-cov, coverage, mypy to latest versions ([b7bb4ff](https://github.com/Jekwwer/python-workspace/commit/b7bb4ff8aae4b661f9950085f788bd0f39227025))
+
+### 🛠️ Refactoring
+
+* **devcontainer:** optimize devcontainer settings and extensions ([d72f548](https://github.com/Jekwwer/python-workspace/commit/d72f5485535b383fcc94bafb464e2ab35c530eb0))
+
 ## 2.0.1 - 2025-06-15
 ### 🐞 Bug Fixes
 
