@@ -1,6 +1,6 @@
 {
   "name": "python-workspace",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "private": true,
   "description": "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates.",
   "keywords": [

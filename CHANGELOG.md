@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.0.3 - 2025-06-23
+### 📦 Dependency Updates
+
+* **npm:** bump prettier to v3.6.0 ([96a602d](https://github.com/Jekwwer/python-workspace/commit/96a602d185056879f35f2477b0e8f3b81d61daf5))
+
+### 📖 Documentation
+
+* **README.md:** update feature section for accuracy ([d481c0b](https://github.com/Jekwwer/python-workspace/commit/d481c0bccd3f6dfe7669cbdced78c62be4125291))
+
+### 🛠️ Refactoring
+
+* **prettierrc:** remove redundant overwrite for printWidth ([639e1ac](https://github.com/Jekwwer/python-workspace/commit/639e1ac831b2a7a06dbfdaa16f52e5c0fe136643))
+
 ## 2.0.2 - 2025-06-18
 ### 🐞 Bug Fixes
 
