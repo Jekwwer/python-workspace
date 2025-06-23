@@ -20,12 +20,6 @@
       "options": {
         "printWidth": 0
       }
-    },
-    {
-      "files": "*.{yml,yaml}",
-      "options": {
-        "printWidth": 88
-      }
     }
   ]
 }
