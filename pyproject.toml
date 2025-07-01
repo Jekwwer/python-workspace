@@ -45,7 +45,7 @@ coverage = {extras = ["toml"], version = "^7.9.1"}
 
 [tool.poetry.group.lint.dependencies]
 rstfmt = "^0.0.14"
-ruff = "^0.11.12"
+ruff = "^0.12.1"
 
 [tool.poetry.group.mypy.dependencies]
 mypy = "^1.16.1"
