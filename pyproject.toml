@@ -40,15 +40,15 @@ pre-commit = "^4.2.0"
 [tool.poetry.group.test.dependencies]
 pytest = "^8.4.0"
 pytest-cov = "^6.2.1"
-pytest-xdist = "^3.7.0"
-coverage = {extras = ["toml"], version = "^7.9.1"}
+pytest-xdist = "^3.8.0"
+coverage = {extras = ["toml"], version = "^7.10.1"}
 
 [tool.poetry.group.lint.dependencies]
 rstfmt = "^0.0.14"
-ruff = "^0.11.12"
+ruff = "^0.12.7"
 
 [tool.poetry.group.mypy.dependencies]
-mypy = "^1.16.1"
+mypy = "^1.17.1"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^8.2.3"
