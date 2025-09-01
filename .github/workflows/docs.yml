@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: checkout-code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
 
       - name: setup-python
         uses: actions/setup-python@v5.6.0
@@ -29,7 +29,7 @@ jobs:
           python-version: '3.12'
 
       - name: cache-pip-and-poetry
-        uses: actions/cache@v4.2.3
+        uses: actions/cache@v4.2.4
         with:
           path: |
             ~/.cache/pip
@@ -54,7 +54,7 @@ jobs:
         uses: actions/configure-pages@v5.0.0
 
       - name: upload-pages-artifact
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v4.0.0
         with:
           path: docs/build
 
