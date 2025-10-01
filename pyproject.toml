@@ -35,26 +35,26 @@ Source = "https://github.com/Jekwwer/python-workspace"
 python = ">=3.12,<3.13"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^4.2.0"
+pre-commit = "^4.3.0"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^8.4.0"
-pytest-cov = "^6.2.1"
-pytest-xdist = "^3.7.0"
+pytest = "^8.4.2"
+pytest-cov = "^7.0.0"
+pytest-xdist = "^3.8.0"
 coverage = {extras = ["toml"], version = "^7.9.1"}
 
 [tool.poetry.group.lint.dependencies]
 rstfmt = "^0.0.14"
-ruff = "^0.11.12"
+ruff = "^0.13.2"
 
 [tool.poetry.group.mypy.dependencies]
-mypy = "^1.16.1"
+mypy = "^1.18.2"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^8.2.3"
 sphinx-autoapi = "^3.6.0"
 sphinx-rtd-theme = "^3.0.2"
-sphinx-autobuild = "^2024.10.3"
+sphinx-autobuild = "^2025.8.25"
 
 [tool.poetry.scripts]
 cli = "python_workspace.cli:main"
