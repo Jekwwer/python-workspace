@@ -26,32 +26,22 @@
       ],
       "settings": {
         "[markdown]": {
-          "editor.rulers": [
-            120
-          ]
+          "editor.rulers": [120]
         },
         "[python]": {
           "editor.defaultFormatter": "charliermarsh.ruff"
         },
         "[restructuredtext]": {
-          "editor.rulers": [
-            120
-          ]
+          "editor.rulers": [120]
         },
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
-        "editor.rulers": [
-          88
-        ],
+        "editor.rulers": [88],
         "files.autoSave": "onFocusChange",
         "files.autoSaveWhenNoErrors": true,
 
-        "mypy-type-checker.args": [
-          "--config-file=pyproject.toml"
-        ],
-        "mypy-type-checker.path": [
-          "${workspaceFolder}/.venv/bin/mypy"
-        ],
+        "mypy-type-checker.args": ["--config-file=pyproject.toml"],
+        "mypy-type-checker.path": ["${workspaceFolder}/.venv/bin/mypy"],
 
         "npm.packageManager": "npm",
 
@@ -64,9 +54,7 @@
         "python.terminal.activateEnvironment": false,
 
         "ruff.configuration": "${workspaceFolder}/pyproject.toml",
-        "ruff.path": [
-          "${workspaceFolder}/.venv/bin/ruff"
-        ]
+        "ruff.path": ["${workspaceFolder}/.venv/bin/ruff"]
       }
     }
   }

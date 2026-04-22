@@ -31,7 +31,7 @@ indent_style = tab
 
 # JSON-specific settings
 [*.{json,jsonc}]
-max_line_length = off
+max_line_length = 88
 
 # Markdown-specific settings
 [*.md]

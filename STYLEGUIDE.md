@@ -201,7 +201,7 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   yamllint pre-commit hook for YAML)_
 - **Markdown:** Allow up to **120 characters** per line. _(Enforced by Prettier and markdownlint pre-commit)_
 - **reStructuredText:** Allow up to **120 characters** per line. _(Enforced by rstfmt pre-commit)_
-- **JSON:** No line-length limit. _(Enforced by Prettier)_
+- **JSON:** Allow up to **88 characters** per line. . _(Enforced by Prettier)_
 
 ### Braces and Control Structures
 
