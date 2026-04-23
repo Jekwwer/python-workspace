@@ -1,11 +1,12 @@
-[tool.poetry]
+[project]
 name = "python-workspace"
 version = "2.0.3"
 description = "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates."
-readme = ["README.md", "LICENSE"]
+readme = "README.md"
 license = "MIT"
+requires-python = ">=3.12,<3.13"
 authors = [
-  "Evgenii Shiliaev <evgenii.shiliaev@jekwwer.com>"
+  {name = "Evgenii Shiliaev", email = "evgenii.shiliaev@jekwwer.com"}
 ]
 keywords = [
   "python",
@@ -20,19 +21,17 @@ keywords = [
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
-  "Topic :: Software Development :: Integrated Development Environment (IDE)",
   "Programming Language :: Python :: 3.12",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent"
 ]
 
-[tool.poetry.urls]
+[project.urls]
 Homepage = "https://github.com/Jekwwer/python-workspace"
 "Bug Reports" = "https://github.com/Jekwwer/python-workspace/issues"
 Source = "https://github.com/Jekwwer/python-workspace"
 
-[tool.poetry.dependencies]
-python = ">=3.12,<3.13"
+[project.scripts]
+cli = "python_workspace.cli:main"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.2.0"
@@ -55,9 +54,6 @@ sphinx = "^8.2.3"
 sphinx-autoapi = "^3.6.0"
 sphinx-rtd-theme = "^3.0.2"
 sphinx-autobuild = "^2024.10.3"
-
-[tool.poetry.scripts]
-cli = "python_workspace.cli:main"
 
 [tool.coverage.report]
 fail_under = 90
