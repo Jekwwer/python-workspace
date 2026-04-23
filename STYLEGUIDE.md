@@ -119,9 +119,12 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 - **Shell Files:** Use **snake_case** for executable scripts (e.g., `build_docs.sh`, `deploy_app.sh`).
 - **Python Files:** Use **snake_case** for modules and packages (e.g., `data_loader.py`, `utils.py`). Test modules
   should follow the `<name>_test.py` pattern.
-- **GitHub and Workflow Files:** Files within the `.github` directory—such as `dependabot.yml`, `FUNDING.yml`, and
-  templates under `ISSUE_TEMPLATE`/`PULL_REQUEST_TEMPLATE`—follow GitHub’s naming conventions. In `.github/workflows/`,
-  use **kebab-case** for YAML workflow files (e.g., `deploy-app.yml`, `run-tests.yml`).
+- **GitHub Files:** Files within the `.github` directory fall into two groups:
+  - **GitHub-mandated names** (use exactly as required): `CODEOWNERS`, `FUNDING.yml`, `SUPPORT.md`,
+    `PULL_REQUEST_TEMPLATE.md`, `dependabot.yml`, and `ISSUE_TEMPLATE/config.yml`.
+  - **User-named YAML** under `.github/workflows/`, `.github/ISSUE_TEMPLATE/`, and `.github/DISCUSSION_TEMPLATE/`: use
+    **kebab-case** (e.g., `deploy-app.yml`, `bug.yml`, `show-and-tell.yml`). Discussion template filenames must also
+    match their GitHub Discussion category slug.
 
 ### Directory Naming Conventions
 
