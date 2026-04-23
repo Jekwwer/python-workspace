@@ -4,17 +4,17 @@ version: 2
 updates:
   # GitHub Actions dependencies
   - package-ecosystem: 'github-actions'
-    directory: '.github/workflows'
+    directory: '/'
     schedule:
       interval: 'monthly'
     groups:
-      github-actions-deps:
+      actions-deps:
+        applies-to: version-updates
         patterns:
           - '*'
-    reviewers:
-      - 'Jekwwer'
-    assignees:
-      - 'Jekwwer'
+    labels:
+      - 'dependencies'
+      - 'actions-deps'
     commit-message:
       prefix: 'deps(actions)'
     open-pull-requests-limit: 5
@@ -26,12 +26,12 @@ updates:
       interval: 'monthly'
     groups:
       npm-deps:
+        applies-to: version-updates
         patterns:
           - '*'
-    reviewers:
-      - 'Jekwwer'
-    assignees:
-      - 'Jekwwer'
+    labels:
+      - 'dependencies'
+      - 'npm-deps'
     commit-message:
       prefix: 'deps(npm)'
     open-pull-requests-limit: 5
@@ -42,15 +42,15 @@ updates:
     schedule:
       interval: 'monthly'
     groups:
-      poetry-deps:
+      pip-deps:
+        applies-to: version-updates
         patterns:
           - '*'
-    reviewers:
-      - 'Jekwwer'
-    assignees:
-      - 'Jekwwer'
+    labels:
+      - 'dependencies'
+      - 'pip-deps'
     commit-message:
-      prefix: 'deps(poetry)'
+      prefix: 'deps(pip)'
     open-pull-requests-limit: 5
 
   # Pre-commit hook revs
@@ -59,16 +59,13 @@ updates:
     schedule:
       interval: 'monthly'
     groups:
-      pre-commit-revs:
+      pre-commit-deps:
+        applies-to: version-updates
         patterns:
           - '*'
     labels:
       - 'dependencies'
-      - 'pre-commit'
-    reviewers:
-      - 'Jekwwer'
-    assignees:
-      - 'Jekwwer'
+      - 'pre-commit-deps'
     commit-message:
       prefix: 'deps(pre-commit)'
     open-pull-requests-limit: 2
