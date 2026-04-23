@@ -27,15 +27,10 @@
         "charliermarsh.ruff",
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
-        "github.copilot",
-        "github.copilot-chat",
-        "github.vscode-github-actions",
-        "github.vscode-pull-request-github",
         "ms-python.debugpy",
         "ms-python.mypy-type-checker",
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "ms-vscode-remote.remote-containers",
         "streetsidesoftware.code-spell-checker"
       ],
       "settings": {

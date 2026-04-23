@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# .devcontainer/post-create.sh: Installs dependencies for the devcontainer.
 
 set -euo pipefail
 
