@@ -20,7 +20,7 @@ project management and customization.
 
 ## Features ✨
 
-- **Devcontainer & VS Code:** Ubuntu-based Docker container with Python 3.12 and Poetry installed, plus recommended VS
+- **Devcontainer & VS Code:** Ubuntu-based Docker container with Python 3.14 and Poetry installed, plus recommended VS
   Code extensions and workspace settings.
 - **Dependency Management:** Poetry for declarative `pyproject.toml` configuration and `poetry.lock` locking.
 - **Virtual Environments:** Project-scoped `.venv` directory automatically managed by Poetry (no need to install or

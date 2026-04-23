@@ -42,7 +42,7 @@ devcontainer technology and GitHub Codespaces with VS Code.
 - **Editor:** Visual Studio Code (workspace settings, recommended extensions)
 - **Devcontainer:** Docker config (`devcontainer.json`)
 - **Pre-commit Hooks:** pre-commit (`.pre-commit-config.yaml`)
-- **Build and Packaging:** Python 3.12, Poetry
+- **Build and Packaging:** Python 3.14, Poetry
 - **Linting and Formatting:** Ruff, Prettier, rstfmt
 - **Type Checking:** MyPy
 - **Testing:** pytest, pytest-cov
