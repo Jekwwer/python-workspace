@@ -103,6 +103,7 @@ repos:
       - id: markdown-link-check
         name: 'check:md-links'
         args: ['--config', '.mlc-config.json']
+        exclude: '^\.github/PULL_REQUEST_TEMPLATE\.md$'
 
   # ── YAML ───────────────────────────────────────────────────────────────────
   - repo: https://github.com/adrienverge/yamllint
