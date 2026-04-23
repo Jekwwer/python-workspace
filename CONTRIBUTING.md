@@ -63,6 +63,11 @@ Semantic Release automatically manages versioning based on commit messages.
 Use the following template for commit messages. It aligns with best practices and the Conventional Commits standard,
 providing essential details about changes.
 
+> **Note:** Conventional Commits format is enforced by the `conventional-pre-commit` hook on the `commit-msg` stage, and
+> the message body is spell-checked by `cspell`. The devcontainer installs both `pre-commit` and `commit-msg` hooks
+> automatically (`pre-commit install --hook-type pre-commit --hook-type commit-msg`); contributors working outside the
+> devcontainer should run that command once after cloning.
+
 ### Template Structure
 
 ```plaintext

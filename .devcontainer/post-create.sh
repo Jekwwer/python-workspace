@@ -9,4 +9,4 @@ pipx install poetry
 poetry config virtualenvs.in-project true
 poetry install --with test,lint,mypy,docs
 
-poetry run pre-commit install
+poetry run pre-commit install --hook-type pre-commit --hook-type commit-msg

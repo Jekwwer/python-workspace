@@ -260,17 +260,27 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 
 ### Additional Code Quality Tools
 
-- **Pre-commit Framework:** Enforces automated checks before each commit via `.pre-commit-config.yaml`:
+- **Pre-commit Framework:** Enforces automated checks via `.pre-commit-config.yaml`. Hooks run on the `pre-commit` stage
+  by default; `commit-msg` hooks are opted in explicitly. Hook names follow a `category:action` convention (e.g.
+  `lint:ruff`, `validate:json`, `format:prettier`). Hook revisions are bumped by Dependabot (`.github/dependabot.yml`,
+  `pre-commit` ecosystem).
   - **pre-commit-hooks:** Normalizes line endings, trims whitespace, validates JSON/TOML/YAML syntax, detects private
-    keys, checks for merge conflicts, enforces shebangs, and other generic sanity checks.
-  - **pygrep-hooks:** Catches anti-patterns and enforces conventions (no `eval`, no `log.warn`, blanket
+    keys, checks for merge conflicts, enforces shebangs, enforces `*_test.py` test naming, and other generic sanity
+    checks.
+  - **pygrep-hooks:** Catches Python anti-patterns and enforces conventions (no `eval`, no `log.warn`, blanket
     `# noqa`/`# type: ignore`, improper mock usage, stray Unicode replacement chars).
-- **markdownlint-cli & markdown-link-check:** Lints Markdown files according to `.markdownlint.json` rules and validate
-  links.
-- **yamllint:** Lints YAML files according to `.yamllint.yml` rules.
-- **pyupgrade:** Auto-upgrades Python syntax to modern versions.
-- **mypy:** Does static type checks for Python code.
-- **rstfmt:** Formats reStructuredText files to comply with style rules.
+  - **ruff:** Lints (`ruff-check --fix`) and formats Python files. Pyupgrade rules included via the `UP` selector in
+    `pyproject.toml`.
+  - **mypy:** Static type checks for Python code (local hook; runs `make type`, skipped in CI).
+  - **markdownlint-cli & markdown-link-check:** Lints Markdown files per `.markdownlint.json` and validates links
+    (`markdown-link-check` skipped in CI — no network access).
+  - **yamllint:** Lints YAML files per `.yamllint.yml`.
+  - **rstfmt:** Formats reStructuredText files (`docs/source/*.rst`).
+  - **prettier:** Formats multi-format files (JSON, YAML, Markdown, etc.) per `.prettierrc`.
+  - **cspell:** Spell-checks files (`pre-commit` stage) and commit message body (`commit-msg` stage).
+  - **pytest-pre-commit:** Runs test suite on every commit.
+  - **poetry-lock-check:** Validates `pyproject.toml` ↔ `poetry.lock` consistency (local hook).
+  - **conventional-pre-commit:** Validates commit messages against Conventional Commits (`commit-msg` stage).
 
 ## Documentation
 

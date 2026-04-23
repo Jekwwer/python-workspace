@@ -52,3 +52,23 @@ updates:
     commit-message:
       prefix: 'deps(poetry)'
     open-pull-requests-limit: 5
+
+  # Pre-commit hook revs
+  - package-ecosystem: 'pre-commit'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    groups:
+      pre-commit-revs:
+        patterns:
+          - '*'
+    labels:
+      - 'dependencies'
+      - 'pre-commit'
+    reviewers:
+      - 'Jekwwer'
+    assignees:
+      - 'Jekwwer'
+    commit-message:
+      prefix: 'deps(pre-commit)'
+    open-pull-requests-limit: 2
