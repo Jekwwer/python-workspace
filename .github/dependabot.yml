@@ -1,113 +1,15 @@
 # .github/dependabot.yml: Automates dependency updates.
 ---
 version: 2
+
 updates:
-  # GitHub Actions dependencies
-  - package-ecosystem: 'github-actions'
-    directory: '/'
-    schedule:
-      interval: 'monthly'
-    cooldown:
-      semver-major-days: 14
-      semver-minor-days: 7
-      semver-patch-days: 3
-    allow:
-      - dependency-type: 'direct'
-    groups:
-      actions-deps:
-        applies-to: version-updates
-        patterns:
-          - '*'
-        update-types:
-          - 'minor'
-          - 'patch'
-    labels:
-      - 'dependencies'
-      - 'actions-deps'
-    commit-message:
-      prefix: 'deps(actions)'
-    open-pull-requests-limit: 3
-
-  # NPM dependencies
-  - package-ecosystem: 'npm'
-    directory: '/'
-    schedule:
-      interval: 'monthly'
-    cooldown:
-      semver-major-days: 14
-      semver-minor-days: 7
-      semver-patch-days: 3
-    allow:
-      - dependency-type: 'direct'
-    groups:
-      npm-deps:
-        applies-to: version-updates
-        patterns:
-          - '*'
-        update-types:
-          - 'minor'
-          - 'patch'
-    labels:
-      - 'dependencies'
-      - 'npm-deps'
-    commit-message:
-      prefix: 'deps(npm)'
-    open-pull-requests-limit: 3
-
-  # Python dependencies
-  - package-ecosystem: 'pip'
-    directory: '/'
-    schedule:
-      interval: 'monthly'
-    cooldown:
-      semver-major-days: 14
-      semver-minor-days: 7
-      semver-patch-days: 3
-    allow:
-      - dependency-type: 'direct'
-    groups:
-      pip-deps:
-        applies-to: version-updates
-        patterns:
-          - '*'
-        update-types:
-          - 'minor'
-          - 'patch'
-    labels:
-      - 'dependencies'
-      - 'pip-deps'
-    commit-message:
-      prefix: 'deps(pip)'
-    open-pull-requests-limit: 3
-
-  # Pre-commit hook revs
-  - package-ecosystem: 'pre-commit'
-    directory: '/'
-    schedule:
-      interval: 'monthly'
-    cooldown:
-      semver-major-days: 14
-      semver-minor-days: 7
-      semver-patch-days: 3
-    allow:
-      - dependency-type: 'direct'
-    groups:
-      pre-commit-deps:
-        applies-to: version-updates
-        patterns:
-          - '*'
-        update-types:
-          - 'minor'
-          - 'patch'
-    labels:
-      - 'dependencies'
-      - 'pre-commit-deps'
-    commit-message:
-      prefix: 'deps(pre-commit)'
-    open-pull-requests-limit: 3
-
+  # NOTE: The devcontainers entry below hosts two YAML anchors (&defaults and
+  # &default-group) that all subsequent entries inherit via merge keys (<<: *defaults)
+  # and value references (*default-group). Do not reorder or delete this entry
+  # without migrating the anchors to the new first entry.
   # Dev Container Features
-  - package-ecosystem: 'devcontainers'
+  - &defaults
+    package-ecosystem: 'devcontainers'
     directory: '/'
     schedule:
       interval: 'monthly'
@@ -118,7 +20,7 @@ updates:
     allow:
       - dependency-type: 'direct'
     groups:
-      devcontainers-deps:
+      devcontainers-deps: &default-group
         applies-to: version-updates
         patterns:
           - '*'
@@ -131,3 +33,47 @@ updates:
     commit-message:
       prefix: 'deps(devcontainers)'
     open-pull-requests-limit: 3
+
+  # Python dependencies
+  - <<: *defaults
+    package-ecosystem: 'pip'
+    groups:
+      pip-deps: *default-group
+    labels:
+      - 'dependencies'
+      - 'pip-deps'
+    commit-message:
+      prefix: 'deps(pip)'
+
+  # NPM dependencies
+  - <<: *defaults
+    package-ecosystem: 'npm'
+    groups:
+      npm-deps: *default-group
+    labels:
+      - 'dependencies'
+      - 'npm-deps'
+    commit-message:
+      prefix: 'deps(npm)'
+
+  # Pre-commit hook revs
+  - <<: *defaults
+    package-ecosystem: 'pre-commit'
+    groups:
+      pre-commit-deps: *default-group
+    labels:
+      - 'dependencies'
+      - 'pre-commit-deps'
+    commit-message:
+      prefix: 'deps(pre-commit)'
+
+  # GitHub Actions dependencies
+  - <<: *defaults
+    package-ecosystem: 'github-actions'
+    groups:
+      actions-deps: *default-group
+    labels:
+      - 'dependencies'
+      - 'actions-deps'
+    commit-message:
+      prefix: 'deps(actions)'
