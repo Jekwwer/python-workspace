@@ -1,46 +1,32 @@
-# Default Pull Request Template
+# Pull Request
 
 ## Description
 
-<!-- Provide a brief description of the changes introduced by this pull request. -->
+<!-- Brief description of the changes. -->
 
 ...
 
-## Related Issues
+## Related issues
 
-<!-- Link related issues using `Closes #issue_number`, `Fixes #issue_number`, etc. -->
-
-...
-
-## Type of Change
-
-<!-- Mark the relevant box with an "x". -->
-
-- [ ] Bug fix (non-breaking change that fixes an issue)
-- [ ] New feature (non-breaking change that adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
-- [ ] Other (please specify):
-
-## Changes Made
-
-<!-- List specific changes introduced in this pull request. -->
+<!-- Link with `Closes #123`, `Fixes #456`, etc. -->
 
 ...
 
-## Testing Instructions
+## Changes made
 
-<!-- Provide clear testing instructions for reviewers. -->
+<!-- Specific changes in this PR. -->
 
 ...
 
 ## Checklist
 
-- [ ] I have performed a self-review of my code.
-- [ ] I have added tests that prove my changes are effective.
-- [ ] I have added necessary documentation (if applicable).
-- [ ] My changes do not introduce any breaking changes.
+- [ ] Self-reviewed the diff.
+- [ ] `make lint type test` passes locally (coverage ≥ 90%).
+- [ ] Tests added or updated.
+- [ ] Docs updated (if applicable).
+- [ ] Breaking changes flagged via `BREAKING CHANGE:` footer or `type!:` prefix.
 
-<!-- Template by Evgenii Shiliaev - Licensed under CC BY 4.0 -->
-<!-- https://github.com/Jekwwer/markdown-docs-kit -->
-<!-- Licensed under: https://github.com/Jekwwer/markdown-docs-kit/blob/main/LICENSE -->
+See [CONTRIBUTING][CONTRIBUTING] and [STYLEGUIDE][STYLEGUIDE].
+
+[CONTRIBUTING]: CONTRIBUTING.md
+[STYLEGUIDE]: STYLEGUIDE.md
