@@ -105,3 +105,29 @@ updates:
     commit-message:
       prefix: 'deps(pre-commit)'
     open-pull-requests-limit: 3
+
+  # Dev Container Features
+  - package-ecosystem: 'devcontainers'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    cooldown:
+      semver-major-days: 14
+      semver-minor-days: 7
+      semver-patch-days: 3
+    allow:
+      - dependency-type: 'direct'
+    groups:
+      devcontainers-deps:
+        applies-to: version-updates
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+          - 'patch'
+    labels:
+      - 'dependencies'
+      - 'devcontainers-deps'
+    commit-message:
+      prefix: 'deps(devcontainers)'
+    open-pull-requests-limit: 3
