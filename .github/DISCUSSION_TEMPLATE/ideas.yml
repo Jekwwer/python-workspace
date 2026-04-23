@@ -1,0 +1,38 @@
+---
+title: 'Idea: '
+labels: [idea]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For concrete feature requests, open an
+        [Issue](https://github.com/Jekwwer/python-workspace/issues/new/choose) with the
+        Feature Request template instead.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Idea
+      description: What's the idea?
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: What problem or need does it address?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives & tradeoffs
+      description: Other approaches considered? Risks or limitations?
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Not already discussed or requested.
+          required: true

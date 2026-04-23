@@ -1,0 +1,32 @@
+---
+title: 'Question: '
+labels: [question]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What do you need help with?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What I've tried
+      description: What have you attempted and what resources have you checked?
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description:
+        Python version, Poetry version, OS, commit SHA — whatever is relevant.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Searched existing discussions and issues first.
+          required: true

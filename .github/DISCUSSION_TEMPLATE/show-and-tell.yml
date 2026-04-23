@@ -1,0 +1,23 @@
+---
+title: 'Show: '
+labels: [show-and-tell]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What you built or used
+      description: Describe your project, use case, or derivative work.
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Repo, demo, blog post, screenshot — wherever readers can see it.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything interesting — gotchas, patterns, feedback for this repo.
