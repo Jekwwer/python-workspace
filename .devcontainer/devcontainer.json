@@ -1,12 +1,26 @@
 {
   "name": "jekwwer/python-workspace",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "remoteUser": "vscode",
   "features": {
+    "ghcr.io/devcontainers/features/github-cli:1.1.0": {},
     "ghcr.io/devcontainers/features/node:1.7.1": {
       "version": "22"
     }
   },
+  "containerEnv": {
+    "POETRY_VIRTUALENVS_IN_PROJECT": "true",
+    "POETRY_NO_INTERACTION": "1"
+  },
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Sphinx docs",
+      "onAutoForward": "notify"
+    }
+  },
   "postCreateCommand": ".devcontainer/post-create.sh",
+  "waitFor": "postCreateCommand",
   "customizations": {
     "vscode": {
       "extensions": [
