@@ -69,6 +69,26 @@ repos:
       - id: text-unicode-replacement-char
         name: 'detect:unicode-replacement-char'
 
+  # ── Python Lint & Format ───────────────────────────────────────────────────
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.11
+    hooks:
+      - id: ruff-check
+        name: 'lint:ruff'
+        args: ['--fix']
+      - id: ruff-format
+        name: 'format:ruff'
+
+  # ── Python Type Check ──────────────────────────────────────────────────────
+  - repo: local
+    hooks:
+      - id: mypy
+        name: 'typecheck:mypy'
+        entry: make type
+        language: system
+        files: '^(src|tests)/.*\.py$'
+        pass_filenames: false
+
   # ── Markdown ───────────────────────────────────────────────────────────────
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.48.0
@@ -94,24 +114,6 @@ repos:
           - '--config-file'
           - '.yamllint.yml'
 
-  # ── Python Lint & Format ───────────────────────────────────────────────────
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.11
-    hooks:
-      - id: ruff-check
-        name: 'lint:ruff'
-        args: ['--fix']
-      - id: ruff-format
-        name: 'format:ruff'
-
-  # ── Multi-format (Prettier) ────────────────────────────────────────────────
-  - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.8.3
-    hooks:
-      - id: prettier
-        name: 'format:prettier'
-        args: ['--write', '--config', '.prettierrc']
-
   # ── reStructuredText ───────────────────────────────────────────────────────
   - repo: https://github.com/dzhu/rstfmt
     rev: v0.0.14
@@ -121,19 +123,13 @@ repos:
         args: ['-w', '120']
         files: ^docs/source/.*\.rst$
 
-  # ── Tests ──────────────────────────────────────────────────────────────────
-  - repo: https://github.com/christophmeissner/pytest-pre-commit
-    rev: 1.0.0
+  # ── Multi-format (Prettier) ────────────────────────────────────────────────
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.8.3
     hooks:
-      - id: pytest
-        name: 'test:pytest'
-        pass_filenames: false
-        always_run: true
-        additional_dependencies:
-          - pytest
-          - pytest-cov
-          - pytest-xdist
-          - coverage[toml]
+      - id: prettier
+        name: 'format:prettier'
+        args: ['--write', '--config', '.prettierrc']
 
   # ── Spelling ───────────────────────────────────────────────────────────────
   - repo: https://github.com/streetsidesoftware/cspell-cli
@@ -152,6 +148,30 @@ repos:
         stages: [commit-msg]
         always_run: true
 
+  # ── Tests ──────────────────────────────────────────────────────────────────
+  - repo: https://github.com/christophmeissner/pytest-pre-commit
+    rev: 1.0.0
+    hooks:
+      - id: pytest
+        name: 'test:pytest'
+        pass_filenames: false
+        always_run: true
+        additional_dependencies:
+          - pytest
+          - pytest-cov
+          - pytest-xdist
+          - coverage[toml]
+
+  # ── Project Health ─────────────────────────────────────────────────────────
+  - repo: local
+    hooks:
+      - id: poetry-lock-check
+        name: 'validate:poetry-lock'
+        entry: poetry check --lock
+        language: system
+        files: ^(pyproject\.toml|poetry\.lock)$
+        pass_filenames: false
+
   # ── Commit Message ─────────────────────────────────────────────────────────
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v3.6.0
@@ -159,20 +179,3 @@ repos:
       - id: conventional-pre-commit
         name: 'validate:commit-msg'
         stages: [commit-msg]
-
-  # ── Local (Poetry-backed) ──────────────────────────────────────────────────
-  - repo: local
-    hooks:
-      - id: mypy
-        name: 'typecheck:mypy'
-        entry: make type
-        language: system
-        files: '^(src|tests)/.*\.py$'
-        pass_filenames: false
-
-      - id: poetry-lock-check
-        name: 'validate:poetry-lock'
-        entry: poetry check --lock
-        language: system
-        files: ^(pyproject\.toml|poetry\.lock)$
-        pass_filenames: false
