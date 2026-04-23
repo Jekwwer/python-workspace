@@ -1,0 +1,58 @@
+---
+name: Documentation Feedback
+description: Report errors or suggest improvements to docs
+title: 'Docs: '
+labels: [documentation]
+body:
+  - type: dropdown
+    id: which-doc
+    attributes:
+      label: Which doc
+      options:
+        - README
+        - CONTRIBUTING
+        - STYLEGUIDE
+        - docs/source (hand-written RST)
+        - Sphinx-generated API docs
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: document
+    attributes:
+      label: Document
+      description: Link or path to the specific page/section.
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue
+      description: What's wrong or missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-change
+    attributes:
+      label: Suggested change
+      description: What should it say instead?
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Screenshots, references, links, anything else.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Not already reported.
+          required: true
+        - label: Issue exists in current docs.
+          required: true
+        - label: Suggested a fix (or marked as "unsure").

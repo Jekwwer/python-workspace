@@ -1,0 +1,43 @@
+---
+name: Feature Request
+description: Suggest a feature
+title: 'Feature: '
+labels: [feature]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description:
+        What problem does this solve? For minor tweaks, use
+        [Discussions](https://github.com/Jekwwer/python-workspace/discussions) instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution
+      description: What should happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives & tradeoffs
+      description: Other approaches considered? Risks or limitations?
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Mockups, screenshots, examples.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Not already requested.
+          required: true

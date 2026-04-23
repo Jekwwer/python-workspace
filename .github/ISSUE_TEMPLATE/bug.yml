@@ -1,0 +1,106 @@
+---
+name: Bug Report
+description: Report a bug
+title: 'Bug: '
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What went wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+
+  - type: input
+    id: trigger
+    attributes:
+      label: Trigger command
+      description: Command or make target that surfaces the bug (if applicable).
+      placeholder: make test
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant logs or error output.
+      render: shell
+
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: Ubuntu 24.04 / macOS 15 / ...
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      placeholder: 3.14.1
+    validations:
+      required: true
+
+  - type: input
+    id: poetry-version
+    attributes:
+      label: Poetry version
+      placeholder: 2.1.x
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      default: 0
+      options:
+        - Devcontainer (Codespaces)
+        - Devcontainer (local)
+        - Local venv
+        - CI runner
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: last-known-good
+    attributes:
+      label: Last known good version or commit
+      description: Helps `git bisect` if this is a regression.
+      placeholder: v1.2.0 or <commit SHA>
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description:
+        Current commit SHA, screenshots, workarounds, severity, anything else.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Not already reported.
+          required: true
+        - label: Logs or error output included.
+        - label: Environment filled in.

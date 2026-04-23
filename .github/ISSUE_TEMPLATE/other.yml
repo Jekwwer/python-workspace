@@ -1,0 +1,37 @@
+---
+name: Other Issue
+description: Anything not covered by other templates
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's the issue?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Related info, steps to reproduce if applicable.
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: If applicable.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Screenshots, logs, anything else.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Not already reported.
+          required: true
