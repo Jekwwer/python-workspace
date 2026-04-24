@@ -180,3 +180,17 @@ repos:
       - id: conventional-pre-commit
         name: 'validate:commit-msg'
         stages: [commit-msg]
+        args:
+          - feat
+          - fix
+          - ci
+          - chore
+          - docs
+          - style
+          - refactor
+          - perf
+          - test
+          - build
+          - revert
+          - security
+          - deps
