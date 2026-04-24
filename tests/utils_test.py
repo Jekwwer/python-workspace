@@ -1,8 +1,8 @@
-"""Tests for utility functions in python_workspace.utils."""
+"""Tests for utility functions in my_package.utils."""
 
 import pytest
 
-from python_workspace.utils import greet
+from my_package.utils import greet
 
 
 def test_greet_basic() -> None:

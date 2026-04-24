@@ -1,11 +1,11 @@
-"""Tests for the command-line interface in python_workspace.cli."""
+"""Tests for the command-line interface in my_package.cli."""
 
 import sys
 
 import pytest
 from pytest import CaptureFixture, MonkeyPatch
 
-from python_workspace.cli import main
+from my_package.cli import main
 
 
 @pytest.mark.parametrize(

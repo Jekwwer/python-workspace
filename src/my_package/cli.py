@@ -5,7 +5,7 @@ Provides a main function to parse user input and display a greeting message.
 
 import argparse
 
-from python_workspace.utils import greet
+from my_package.utils import greet
 
 
 def main() -> None:

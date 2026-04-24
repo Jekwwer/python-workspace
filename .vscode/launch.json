@@ -13,7 +13,7 @@
       "name": "run-cli",
       "type": "debugpy",
       "request": "launch",
-      "module": "python_workspace.cli",
+      "module": "my_package.cli",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "justMyCode": true

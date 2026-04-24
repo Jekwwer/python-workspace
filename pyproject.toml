@@ -31,7 +31,10 @@ Homepage = "https://github.com/Jekwwer/python-workspace"
 Source = "https://github.com/Jekwwer/python-workspace"
 
 [project.scripts]
-cli = "python_workspace.cli:main"
+cli = "my_package.cli:main"
+
+[tool.poetry]
+packages = [{include = "my_package", from = "src"}]
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.2.0"
@@ -66,12 +69,12 @@ exclude_lines = [
 
 [tool.coverage.run]
 branch = true
-source_pkgs = ["python_workspace"]
+source_pkgs = ["my_package"]
 disable_warnings = ["module-not-measured"]
 omit = [
   "tests/*",
-  "src/python_workspace/__main__.py",
-  "src/python_workspace/migrations/*"
+  "src/my_package/__main__.py",
+  "src/my_package/migrations/*"
 ]
 
 [tool.mypy]
@@ -86,7 +89,7 @@ pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = [
   "--import-mode=importlib",
-  "--cov=python_workspace",
+  "--cov=my_package",
   "--cov-config=pyproject.toml",
   "--cov-fail-under=90",
   "--cov-report=term-missing",
@@ -107,7 +110,7 @@ select = ["E","F","W","C","ANN","B","D","I","Q","UP"]
 "tests/*" = ["D", "ANN"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["python_workspace"]
+known-first-party = ["my_package"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

@@ -16,11 +16,11 @@ except PackageNotFoundError:  # pragma: no cover
 
 
 def _console_scripts() -> list[str]:
-    """Return console_scripts registered for python_workspace."""
+    """Return console_scripts registered for my_package."""
     return [
         ep.name
         for ep in entry_points(group="console_scripts")
-        if ep.value.startswith("python_workspace")
+        if ep.value.startswith("my_package")
     ]
 
 
@@ -28,7 +28,7 @@ def _console_scripts() -> list[str]:
     "invocation",
     [
         *([script] for script in _console_scripts()),
-        [sys.executable, "-m", "python_workspace"],
+        [sys.executable, "-m", "my_package"],
     ],
 )
 def test_cli_greets(invocation: list[str]) -> None:
