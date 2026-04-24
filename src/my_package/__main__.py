@@ -1,4 +1,4 @@
-"""Enable `python -m my_package` invocation."""
+"""Enable ``python -m my_package`` invocation."""
 
 from my_package.cli import main
 

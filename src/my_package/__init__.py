@@ -2,15 +2,17 @@
 
 This is scaffolding shipped by the python-workspace template. The ``cli`` and
 ``utils`` modules exist only to exercise the toolchain (pytest, ruff, mypy,
-Sphinx). Rename the ``my_package`` directory, update imports in ``tests/``,
-and adjust ``pyproject.toml`` entries (``[project.scripts]``,
-``[tool.coverage]``, ``[tool.ruff.lint.isort]``) accordingly.
+Sphinx). To adopt: grep for ``my_package`` (import name) and
+``python-workspace`` (distribution name) across the repo and replace as
+needed. Import-name rename is cheap and always worthwhile; distribution-name
+rename additionally requires repo/PyPI/URL updates and is optional.
 """
 
 from importlib.metadata import PackageNotFoundError, version
 
 __all__ = ["__version__"]
 
+__version__: str
 try:
     __version__ = version("python-workspace")
 except PackageNotFoundError:  # pragma: no cover

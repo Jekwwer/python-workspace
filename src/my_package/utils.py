@@ -1,11 +1,8 @@
-"""Utility functions for greetings.
-
-This module contains helper functions to create greeting messages.
-"""
+"""Utility functions."""
 
 
 def greet(name: str) -> str:
-    """Generate a personalized greeting message.
+    """Return greeting for name.
 
     Args:
         name: The name of the person to greet.

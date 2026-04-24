@@ -1,7 +1,4 @@
-"""Command-line interface for greeting users.
-
-Provides a main function to parse user input and display a greeting message.
-"""
+"""Command-line interface entry point."""
 
 import argparse
 
@@ -9,12 +6,7 @@ from my_package.utils import greet
 
 
 def main() -> int:
-    """Entry point for the CLI.
-
-    Parses command-line arguments to obtain a name and prints a greeting.
-
-    Args:
-        None
+    """Parse command-line arguments and print a greeting.
 
     Returns:
         Process exit code.
