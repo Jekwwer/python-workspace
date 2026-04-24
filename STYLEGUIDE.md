@@ -83,7 +83,7 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 │       ├── conf.py                     │       ├── # Sphinx configuration
 │       └── index.rst                   │       └── # main documentation entry
 ├── src                                 ├── # source code
-│   └── python_workspace                │   └── # core package
+│   └── my_package                      │   └── # core package (placeholder — rename when forking)
 │       ├── __init__.py                 │       ├── # package initializer
 │       ├── __main__.py                 │       ├── # python -m entry point
 │       ├── cli.py                      │       ├── # cli entrypoint
@@ -136,7 +136,7 @@ Python developers who need a zero-setup, standardized workspace template optimiz
   `source-files`). Choose names that clearly indicate the directory’s content or purpose (e.g., `docs` for
   documentation, `assets` for media).
 - **Python Package Directories:** Under `src/` (or any Python package hierarchy), use **snake_case** to match module
-  naming conventions (e.g., `python_workspace`, `data_loader`).
+  naming conventions (e.g., `my_package`, `data_loader`).
 - **Special Directories:** Directories prefixed with a dot (e.g., `.github`, `.devcontainer`) have specific roles and
   should remain unchanged.
 
