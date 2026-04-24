@@ -25,39 +25,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: setup-node
-        uses: actions/setup-node@v4.4.0
-        with:
-          node-version: '20.x'
-
-      - name: cache-node
-        uses: actions/cache@v4.2.3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: install-node-dependencies
-        run: npm ci
+      - name: install-poetry
+        run: pipx install 'poetry>=2.3,<3'
 
       - name: setup-python
         uses: actions/setup-python@v5.6.0
         with:
           python-version: '3.14'
+          cache: poetry
 
-      - name: cache-pip-and-poetry
-        uses: actions/cache@v4.2.3
+      - name: setup-node
+        uses: actions/setup-node@v4.4.0
         with:
-          path: |
-            ~/.cache/pip
-            ~/.cache/pypoetry
-          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-poetry-
+          node-version: '20.x'
+          cache: npm
 
-      - name: install-poetry
-        run: pip install poetry
+      - name: install-node-dependencies
+        run: npm ci
 
       - name: release
         env:
