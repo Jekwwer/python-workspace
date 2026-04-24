@@ -1,6 +1,3 @@
-..
-   docs/source/index.rst: Sets up the main documentation page for Python Workspace.
-
 #######################################
  Welcome to |project|'s documentation!
 #######################################
@@ -9,7 +6,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :glob:
    :caption: Contents:
 
 ####################

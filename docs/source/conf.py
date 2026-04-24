@@ -6,7 +6,7 @@ _meta = _package_metadata("python-workspace")
 
 project = "Python Workspace"
 author = _meta["Author"]
-copyright = f"%Y, {author}"
+copyright = f"2025–%Y, {author}"
 release = _meta["Version"]
 
 rst_prolog = f"""
@@ -20,7 +20,6 @@ extensions = [
     "sphinx.ext.viewcode",
 ]
 
-autoapi_type = "python"
 autoapi_dirs = ["../../src"]
 autoapi_root = "api"
 autoapi_options = [
@@ -32,5 +31,7 @@ autoapi_options = [
 napoleon_google_docstring = True
 napoleon_numpy_docstring = False
 napoleon_include_init_with_doc = True
+
+add_module_names = False
 
 html_theme = "sphinx_rtd_theme"
