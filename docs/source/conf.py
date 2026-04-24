@@ -1,9 +1,18 @@
 """Sphinx configuration for the project documentation."""
 
+from importlib.metadata import metadata as _package_metadata
+
+_meta = _package_metadata("python-workspace")
+
 project = "Python Workspace"
-copyright = "%Y, Evgenii Shiliaev"
-author = "Evgenii Shiliaev"
-release = "2.0.3"
+author = _meta["Author"]
+copyright = f"%Y, {author}"
+release = _meta["Version"]
+
+rst_prolog = f"""
+.. |project| replace:: {project}
+.. |description| replace:: {_meta["Summary"]}
+"""
 
 extensions = [
     "autoapi.extension",

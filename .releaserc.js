@@ -102,8 +102,7 @@ module.exports = {
       {
         prepareCmd: `
         sed -i -E "s/v[0-9]+\\.[0-9]+\\.[0-9]+/v\${nextRelease.version}/g" SECURITY.md &&
-        sed -i "s/^version = \\".*\\"/version = \\"\${nextRelease.version}\\"/" pyproject.toml &&
-        sed -i "s/^release = \\".*\\"/release = \\"\${nextRelease.version}\\"/" docs/source/conf.py
+        sed -i "s/^version = \\".*\\"/version = \\"\${nextRelease.version}\\"/" pyproject.toml
       `,
       },
     ],
@@ -114,7 +113,6 @@ module.exports = {
           'package.json',
           'package-lock.json',
           'pyproject.toml',
-          'docs/source/conf.py',
           'CHANGELOG.md',
           'SECURITY.md',
         ],
