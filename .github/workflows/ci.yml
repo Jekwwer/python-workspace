@@ -1,5 +1,3 @@
-# .github/workflows/ci.yml:
-# Configures the CI workflow to run tests and upload coverage reports.
 ---
 name: ci
 

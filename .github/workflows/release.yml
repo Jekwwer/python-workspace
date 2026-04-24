@@ -1,4 +1,3 @@
-# .github/workflows/release.yml: Configures the release workflow.
 ---
 name: release
 

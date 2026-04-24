@@ -1,5 +1,3 @@
-# .github/workflows/docs.yml:
-# Configures the GitHub Actions workflow to build and deploy documentation using Sphinx.
 ---
 name: deploy-docs
 
