@@ -95,12 +95,15 @@ addopts = [
 
 [tool.ruff]
 line-length = 88
-extend-exclude = ["tests", "migrations", "__pycache__"]
+extend-exclude = ["migrations", "__pycache__"]
 src = ["src"]
 target-version = "py314"
 
 [tool.ruff.lint]
 select = ["E","F","W","C","ANN","B","D","I","Q","UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "ANN"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["python_workspace"]

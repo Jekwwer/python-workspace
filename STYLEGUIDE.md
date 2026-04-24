@@ -89,7 +89,7 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 │       ├── cli.py                      │       ├── # cli entrypoint
 │       ├── py.typed                    │       ├── # PEP 561 typing marker
 │       └── utils.py                    │       └── # utility functions
-├── test                                ├── # test suite
+├── tests                               ├── # test suite
 │   ├── cli_test.py                     │   ├── # cli functionality tests
 │   └── utils_test.py                   │   └── # utility functions tests
 ├── .editorconfig                       ├── # editor configuration
