@@ -238,7 +238,10 @@ to use the new OAuth2 endpoints as described in the migration guide.
 
 ### Environment Configuration
 
-- **Container Setup:** Configured with `.devcontainer/devcontainer.json` (includes VSCode settings and customizations).
+- **Container Setup:** `.devcontainer/devcontainer.json` defines the base image, features, ports, and post-create
+  script, and auto-installs VS Code extensions inside the container.
+- **Editor Config:** `.vscode/settings.json`, `.vscode/extensions.json`, and `.vscode/launch.json` are workspace-scoped
+  and apply in every context — Codespaces, local devcontainer, and local clone without a container.
 
 ## Testing and Quality Assurance
 
