@@ -11,10 +11,15 @@ permissions:
   id-token: write
   pages: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   deploy-docs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     environment:
       name: github-pages
@@ -41,7 +46,7 @@ jobs:
       - name: install-poetry
         run: pip install poetry
 
-      - name: install-dependencies
+      - name: install-python-dependencies
         run: poetry install --no-interaction --no-ansi --with docs
 
       - name: docs-clean

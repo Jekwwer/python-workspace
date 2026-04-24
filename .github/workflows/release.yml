@@ -10,10 +10,15 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: release
+  cancel-in-progress: false
+
 jobs:
   release:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: checkout-code
         uses: actions/checkout@v4.2.2
@@ -33,7 +38,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: install-dependencies
+      - name: install-node-dependencies
         run: npm ci
 
       - name: setup-python
