@@ -85,7 +85,9 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 ├── src                                 ├── # source code
 │   └── python_workspace                │   └── # core package
 │       ├── __init__.py                 │       ├── # package initializer
+│       ├── __main__.py                 │       ├── # python -m entry point
 │       ├── cli.py                      │       ├── # cli entrypoint
+│       ├── py.typed                    │       ├── # PEP 561 typing marker
 │       └── utils.py                    │       └── # utility functions
 ├── test                                ├── # test suite
 │   ├── cli_test.py                     │   ├── # cli functionality tests

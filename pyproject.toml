@@ -69,6 +69,7 @@ branch = true
 source = ["python_workspace"]
 omit = [
   "tests/*",
+  "src/python_workspace/__main__.py",
   "src/python_workspace/migrations/*"
 ]
 
