@@ -75,7 +75,9 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 │   ├── FUNDING.yml                     │   ├── # funding configuration
 │   └── PULL_REQUEST_TEMPLATE.md        │   └── # default pull request template
 ├── .vscode                             ├── # VS Code-related configurations
-│   └── launch.json                     │   └── # launch & debug configuration
+│   ├── extensions.json                 │   ├── # recommended extensions
+│   ├── launch.json                     │   ├── # launch & debug configuration
+│   └── settings.json                   │   └── # workspace editor settings
 ├── docs                                ├── # documentation files
 │   └── source                          │   └── # Sphinx-related configurations
 │       ├── conf.py                     │       ├── # Sphinx configuration
@@ -140,9 +142,12 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 
 Key configuration files in the repository:
 
-- `.devcontainer/devcontainer.json`: Development container setup, including VS Code settings, environment variables, and
-  extensions.
+- `.devcontainer/devcontainer.json`: Dev container setup (base image, features, ports, post-create) and VS Code
+  extensions for container auto-install.
 - `.github/dependabot.yml`: Dependabot configuration for automated dependency version updates.
+- `.vscode/extensions.json`: Recommended VS Code extensions (prompts install in non-container contexts).
+- `.vscode/launch.json`: Debug configurations for the CLI and current file.
+- `.vscode/settings.json`: Authoritative VS Code workspace settings (editor, formatter, linter, interpreter path).
 - `docs/source/conf.py`: Sphinx configuration file defining documentation build parameters, extensions, and theme.
 - `.gitignore`: Files and directories excluded from version control.
 - `.editorconfig`: EditorConfig rules for consistent code style across editors.
