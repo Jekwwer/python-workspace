@@ -22,10 +22,7 @@ def test_main_outputs_correct_greeting(
     argv: list[str],
     expected: str,
 ) -> None:
-    """CLI main function prints correct greeting for given argv."""
-    # Monkey-patch sys.argv for the parser
     monkeypatch.setattr(sys, "argv", argv)
     assert main() == 0
     captured = capsys.readouterr()
-    # strip newline for exact match
     assert captured.out.strip() == expected
