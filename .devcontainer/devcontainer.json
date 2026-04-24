@@ -32,46 +32,7 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "streetsidesoftware.code-spell-checker"
-      ],
-      "settings": {
-        "[json][jsonc]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[markdown]": {
-          "editor.rulers": [120]
-        },
-        "[python]": {
-          "editor.defaultFormatter": "charliermarsh.ruff",
-          "editor.codeActionsOnSave": {
-            "source.fixAll.ruff": "explicit",
-            "source.organizeImports.ruff": "explicit"
-          }
-        },
-        "[restructuredtext]": {
-          "editor.rulers": [120]
-        },
-        "[yaml]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "editor.formatOnPaste": true,
-        "editor.formatOnSave": true,
-        "editor.rulers": [88],
-        "files.autoSave": "onFocusChange",
-        "files.autoSaveWhenNoErrors": true,
-
-        "mypy-type-checker.args": ["--config-file=pyproject.toml"],
-        "mypy-type-checker.importStrategy": "fromEnvironment",
-
-        "prettier.configPath": "./.prettierrc",
-        "prettier.prettierPath": "./node_modules/prettier",
-
-        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-        "python.terminal.activateEnvironment": false,
-        "python.testing.pytestEnabled": true,
-        "python.testing.unittestEnabled": false,
-
-        "ruff.importStrategy": "fromEnvironment"
-      }
+      ]
     }
   }
 }
