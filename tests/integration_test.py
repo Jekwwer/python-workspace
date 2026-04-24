@@ -37,5 +37,6 @@ def test_cli_greets(invocation: list[str]) -> None:
         capture_output=True,
         text=True,
         check=True,
+        timeout=10,
     )
     assert result.stdout.strip() == "Hello, Alice!"
