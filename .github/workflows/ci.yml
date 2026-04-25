@@ -56,6 +56,9 @@ jobs:
   test-and-coverage:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: checkout-code
@@ -79,6 +82,6 @@ jobs:
       - name: upload-coverage
         uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24 # v5.4.3
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          use_oidc: true
           files: coverage.xml
           fail_ci_if_error: true
