@@ -43,9 +43,6 @@ jobs:
       - name: install-python-dependencies
         run: poetry install --no-interaction --with docs
 
-      - name: docs-clean
-        run: make docs-clean
-
       - name: docs-build
         run: make docs-build
 

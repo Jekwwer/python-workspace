@@ -55,7 +55,7 @@ release:
 	npm run release
 
 docs-build:
-	poetry run sphinx-build -b html docs/source docs/build/html
+	poetry run sphinx-build -W --keep-going -b html docs/source docs/build/html
 
 docs-serve:
 	poetry run sphinx-autobuild docs/source docs/build/html --open-browser --watch docs/source
