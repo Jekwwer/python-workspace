@@ -95,7 +95,6 @@ repos:
     hooks:
       - id: markdownlint
         name: 'lint:markdown'
-        args: ['--ignore-path', '.gitignore']
 
   - repo: https://github.com/tcort/markdown-link-check
     rev: v3.14.2

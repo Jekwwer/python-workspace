@@ -1,0 +1,11 @@
+default: true
+
+# Match Prettier bullet style (`-`)
+MD004:
+  style: dash
+
+MD013:
+  line_length: 120
+  heading_line_length: 120
+  code_blocks: false
+  tables: false

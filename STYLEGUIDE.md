@@ -94,7 +94,8 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 │   └── utils_test.py                   │   └── # utility functions tests
 ├── .editorconfig                       ├── # editor configuration
 ├── .gitignore                          ├── # files to ignore in Git
-├── .markdownlint.json                  ├── # markdown linting configuration
+├── .markdownlint.yaml                  ├── # markdown linting configuration
+├── .markdownlintignore                 ├── # markdown lint exclusions
 ├── .pre-commit-config.yaml             ├── # pre-commit hook configuration
 ├── .prettierrc                         ├── # Prettier configuration
 ├── .releaserc.js                       ├── # semantic release configuration
@@ -153,7 +154,8 @@ Key configuration files in the repository:
 - `docs/source/conf.py`: Sphinx configuration file defining documentation build parameters, extensions, and theme.
 - `.gitignore`: Files and directories excluded from version control.
 - `.editorconfig`: EditorConfig rules for consistent code style across editors.
-- `.markdownlint.json`: Markdown linting rules and file exclusions.
+- `.markdownlint.yaml`: Markdown linting rules.
+- `.markdownlintignore`: Markdown linter file exclusions.
 - `.pre-commit-config.yaml`: Definitions for pre-commit hooks (linting, formatting, type checks, tests).
 - `.prettierrc`: Prettier formatting rules for JSON, YAML, Markdown, etc.
 - `.releaserc.js`: semantic-release configuration, defining release branches, plugins, and versioning strategy.
@@ -196,7 +198,7 @@ See [File Naming Conventions][FILE_NAMING_CONVENTIONS].
 
 ## Code Formatting and Style
 
-The project adheres to the rules specified in the `.editorconfig`, `.markdownlint.json`, `.prettierrc`, `.yamllint` and
+The project adheres to the rules specified in the `.editorconfig`, `.markdownlint.yaml`, `.prettierrc`, `.yamllint` and
 `pyproject.toml` configuration files.
 
 ### Indentation and Spacing
@@ -282,7 +284,7 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   - **ruff:** Lints (`ruff-check --fix`) and formats Python files. Pyupgrade rules included via the `UP` selector in
     `pyproject.toml`.
   - **mypy:** Static type checks for Python code (local hook; runs `make type`, skipped in CI).
-  - **markdownlint-cli & markdown-link-check:** Lints Markdown files per `.markdownlint.json` and validates links
+  - **markdownlint-cli & markdown-link-check:** Lints Markdown files per `.markdownlint.yaml` and validates links
     (`markdown-link-check` skipped in CI — no network access).
   - **yamllint:** Lints YAML files per `.yamllint.yml`.
   - **rstfmt:** Formats reStructuredText files (`docs/source/*.rst`).
