@@ -1,4 +1,3 @@
-# .yamllint: Configures YAML files linter for pre-commit.
 ---
 extends: default
 rules:
@@ -6,3 +5,8 @@ rules:
     max: 88
   braces:
     max-spaces-inside: -1
+  truthy:
+    check-keys: false # allow GitHub Actions `on:` key
+  comments:
+    min-spaces-from-content: 1 # project uses single-space inline comments
+  document-start: disable

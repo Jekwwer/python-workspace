@@ -286,7 +286,7 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   - **mypy:** Static type checks for Python code (local hook; runs `make type`, skipped in CI).
   - **markdownlint-cli & markdown-link-check:** Lints Markdown files per `.markdownlint.yaml` and validates links
     (`markdown-link-check` skipped in CI — no network access).
-  - **yamllint:** Lints YAML files per `.yamllint.yml`.
+  - **yamllint:** Lints YAML files per `.yamllint.yml` (strict mode — warnings fail the hook).
   - **rstfmt:** Formats reStructuredText files (`docs/source/*.rst`).
   - **prettier:** Formats multi-format files (JSON, YAML, Markdown, etc.) per `.prettierrc`.
   - **cspell:** Spell-checks files (`pre-commit` stage) and commit message body (`commit-msg` stage).

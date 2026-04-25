@@ -111,6 +111,7 @@ repos:
     hooks:
       - id: yamllint
         name: 'lint:yaml'
+        args: ['--strict']
 
   # ── GitHub Actions ──────────────────────────────────────────────────────────
   - repo: https://github.com/rhysd/actionlint
