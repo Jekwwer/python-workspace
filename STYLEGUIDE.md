@@ -287,10 +287,13 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   - **markdownlint-cli & markdown-link-check:** Lints Markdown files per `.markdownlint.yaml` and validates links
     (`markdown-link-check` skipped in CI — no network access).
   - **yamllint:** Lints YAML files per `.yamllint.yml` (strict mode — warnings fail the hook).
+  - **actionlint:** Lints GitHub Actions workflow files (`.github/workflows/*.yml`).
   - **rstfmt:** Formats reStructuredText files (`docs/source/*.rst`).
   - **prettier:** Formats multi-format files (JSON, YAML, Markdown, etc.) per `.prettierrc`.
+  - **gitleaks:** Detects secrets (API keys, tokens) committed to the repo.
   - **cspell:** Spell-checks files (`pre-commit` stage) and commit message body (`commit-msg` stage).
   - **pytest-pre-commit:** Runs test suite on every commit.
+  - **validate-pyproject:** Schema-validates `pyproject.toml`.
   - **poetry-lock-check:** Validates `pyproject.toml` ↔ `poetry.lock` consistency (local hook).
   - **conventional-pre-commit:** Validates commit messages against Conventional Commits (`commit-msg` stage).
 

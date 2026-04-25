@@ -30,8 +30,8 @@ project management and customization.
 - **Type Checking:** MyPy with automatic installation of missing stub packages.
 - **Testing:** pytest suite with coverage reporting.
 - **Spell Checking:** cspell for both code and documentation.
-- **Pre-commit Hooks:** Runs Ruff, MyPy, pytest, rstfmt, yamllint, markdownlint, markdown-link-check, and other checks
-  before commit.
+- **Pre-commit Hooks:** Runs Ruff, MyPy, pytest, rstfmt, yamllint, markdownlint, markdown-link-check, actionlint,
+  gitleaks, validate-pyproject, and other checks before commit.
 - **CI/CD:** GitHub Actions for testing, semantic-release versioning, and Sphinx docs deployment.
 - **Documentation:** Sphinx configured with `autoapi`, `napoleon`, and `viewcode`; live preview during development and
   publishing to GitHub Pages.
