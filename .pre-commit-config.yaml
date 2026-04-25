@@ -1,11 +1,12 @@
 ---
+default_install_hook_types: [pre-commit, commit-msg]
 default_stages: [pre-commit] # commit-msg hooks opt in explicitly
 
 ci:
   run_on_all_branches: true
   autofix_commit_msg: 'ci(pre-commit): auto fixes from pre-commit hooks'
   autofix_prs: true
-  # hook-rev bumps handled by Dependabot (.github/dependabot.yml, pre-commit ecosystem)
+  autoupdate_schedule: never # Dependabot owns rev bumps (.github/dependabot.yml)
   skip:
     - mypy # ci can't run local hooks
     - markdown-link-check # ci has no network access
@@ -71,7 +72,7 @@ repos:
 
   # ── Python Lint & Format ───────────────────────────────────────────────────
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.11
+    rev: v0.15.12
     hooks:
       - id: ruff-check
         name: 'lint:ruff'
@@ -110,9 +111,13 @@ repos:
     hooks:
       - id: yamllint
         name: 'lint:yaml'
-        args:
-          - '--config-file'
-          - '.yamllint.yml'
+
+  # ── GitHub Actions ──────────────────────────────────────────────────────────
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint
+        name: 'lint:gha'
 
   # ── reStructuredText ───────────────────────────────────────────────────────
   - repo: https://github.com/dzhu/rstfmt
@@ -129,7 +134,7 @@ repos:
     hooks:
       - id: prettier
         name: 'format:prettier'
-        args: ['--write', '--config', '.prettierrc']
+        args: ['--write']
 
   # ── Spelling ───────────────────────────────────────────────────────────────
   - repo: https://github.com/streetsidesoftware/cspell-cli
@@ -163,6 +168,12 @@ repos:
           - coverage[toml]
 
   # ── Project Health ─────────────────────────────────────────────────────────
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.25
+    hooks:
+      - id: validate-pyproject
+        name: 'validate:pyproject'
+
   - repo: local
     hooks:
       - id: poetry-lock-check
@@ -174,7 +185,7 @@ repos:
 
   # ── Commit Message ─────────────────────────────────────────────────────────
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v3.6.0
+    rev: v4.4.0
     hooks:
       - id: conventional-pre-commit
         name: 'validate:commit-msg'
