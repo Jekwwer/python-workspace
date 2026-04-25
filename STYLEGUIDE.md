@@ -242,7 +242,7 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 ### EditorConfig
 
 - **Purpose:** The `.editorconfig` file ensures consistent coding styles across all editors by specifying:
-  - **Indentation:** 2 spaces (4 spaces for Python; tab-indented with 2-space width for `Makefile`)
+  - **Indentation:** 2 spaces (4 spaces for Python; tab-indented with 4-space width for `Makefile`)
   - **Line Endings:** Unix-style (`lf`)
   - **Charset:** UTF-8
   - **Max Line Length:** 88, 120 for Markdown/reStructuredText _(Note: `.editorconfig` provides these values for
