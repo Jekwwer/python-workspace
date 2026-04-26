@@ -262,6 +262,8 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   - **Tab Width:** 2 spaces
   - **End of Line:** Unix-style (`lf`)
   - **Print Width:** 88 120 for Markdown; JSON has no enforced limit.
+- **Note:** The `.prettierignore` file lists files Prettier skips (currently `CHANGELOG.md`, `poetry.lock`,
+  `package-lock.json`).
 - **Note:** Prettier runs in VS Code and as a pre-commit hook to auto-format code before commits.
 
 ### Ruff
