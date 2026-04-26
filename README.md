@@ -49,6 +49,14 @@ Designed for **GitHub Codespaces**—running locally is untested and may require
 Most manual quality checks and workflows are exposed via `Makefile` targets. These commands mirror the editor
 integrations, pre-commit hooks, and CI pipelines.
 
+### Setup
+
+```bash
+make install            # install Python (Poetry) and Node (npm) dependencies
+make check              # run all quality checks (format, lint, type, spell)
+make pre-commit         # run all pre-commit hooks against all files
+```
+
 ### CLI
 
 Invoke the project’s command-line interface:

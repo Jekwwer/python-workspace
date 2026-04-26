@@ -253,6 +253,8 @@ and pre-commit levels, with the exception of building the documentation.
 Run the following scripts to verify code quality manually:
 
 - **make help:** Shows Make help message.
+- **make install:** Installs Python (Poetry) and Node (npm) dependencies.
+- **make clean:** Removes tool caches and coverage artifacts.
 - **make format:** Verifies code formatting using Ruff (for Python files), Prettier (for non-Python files) and rstfmt
   (for reStructuredText files),
 - **make format-fix:** Auto-formats code using Ruff (for Python files), Prettier (for non-Python files) and rstfmt (for
@@ -261,11 +263,13 @@ Run the following scripts to verify code quality manually:
 - **make lint-fix:** Auto-fixes lint issues with Ruff.
 - **make type:** Performs static type checking with MyPy.
 - **make spell:** Checks files for typos using cspell.
+- **make check:** Runs all quality checks (format, lint, type, spell).
 - **make test:** Executes the test suite with coverage using pytest.
 - **make run:** Runs the project’s CLI entry point (`poetry run cli`).
 - **make docs-build:** Builds the documentation using Sphinx.
 - **make docs-serve:** Serves the documentation locally with live reloading.
 - **make docs-clean:** Cleans up the documentation build directory.
+- **make pre-commit:** Runs all pre-commit hooks against all files.
 
 ### Automated Testing
 
