@@ -32,7 +32,7 @@
     "node": ">=22 <23"
   },
   "scripts": {
-    "spell": "cspell . --gitignore --cache",
+    "spell": "cspell . --cache",
     "format": "prettier --check --config .prettierrc .",
     "format-fix": "prettier --write --config .prettierrc .",
     "release": "semantic-release"
