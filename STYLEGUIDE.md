@@ -1,46 +1,11 @@
 # Style Guide
 
-This document outlines the style guide for **Jekwwer/python-workspace**. It covers commit message formatting, coding
-conventions, repository structure, and other aspects detailed in [Scope][SCOPE]. Adhering to these guidelines ensures a
-consistent and readable project.
+Coding and documentation conventions for **Jekwwer/python-workspace**.
 
-## Introduction
-
-### Purpose
-
-This guide standardizes coding and documentation practices to ensure consistency, enhance readability, and support
-effective collaboration.
-
-### Audience
-
-This style guide is intended for:
-
-- **Developers and Contributors:** Those writing code or documentation for the project.
-- **Maintainers:** Individuals responsible for reviewing and merging contributions.
-- **Reviewers:** Participants in code reviews to ensure adherence to standards.
-
-### Scope
-
-This document covers:
-
-- **Repository Structure:** Directory layout, file naming conventions, and configuration file details.
-- **Naming Conventions:** Standards for variables, constants, functions, and file/directory names.
-- **Code Formatting and Style:** Guidelines on indentation, line length, brace styles, comments, EditorConfig settings,
-  and linting/formatting tools.
-- **Documentation:** Standards for creating and maintaining project documentation.
-- **Additional Best Practices:** Other practices to improve overall code quality and project maintainability.
-
-## Project Overview
-
-### Project Goals
-
-Provide a robust repository that delivers a ready-to-use Python development environment leveraging Docker-based
-devcontainer technology and GitHub Codespaces with VS Code.
-
-### Technology Stack
+## Technology Stack
 
 - **Editor:** Visual Studio Code (workspace settings, recommended extensions)
-- **Devcontainer:** Docker config (`devcontainer.json`)
+- **devcontainer:** Docker config (`devcontainer.json`)
 - **Pre-commit Hooks:** pre-commit (`.pre-commit-config.yaml`)
 - **Build and Packaging:** Python 3.14, Poetry
 - **Linting and Formatting:** Ruff, Prettier, rstfmt
@@ -48,10 +13,6 @@ devcontainer technology and GitHub Codespaces with VS Code.
 - **Testing:** pytest, pytest-cov
 - **Documentation:** Sphinx
 - **CI/CD:** GitHub Actions
-
-### Target Audience
-
-Python developers who need a zero-setup, standardized workspace template optimized for GitHub Codespaces and VS Code.
 
 ## Repository Structure
 
@@ -124,8 +85,8 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 - **Configuration Files:** Tool configuration files (e.g., `.cspell.json`, `.editorconfig`, `.pre-commit-config.yaml`,
   `.prettierrc.json`) use lowercase naming, following the specific requirements of each tool.
 - **Shell Files:** Use **snake_case** for executable scripts (e.g., `build_docs.sh`, `deploy_app.sh`).
-- **Python Files:** Use **snake_case** for modules and packages (e.g., `data_loader.py`, `utils.py`). Test modules
-  should follow the `<name>_test.py` pattern.
+- **Python Files:** Use **snake_case** for modules and packages (e.g., `data_loader.py`, `utils.py`). Test modules use
+  the `<name>_test.py` pattern.
 - **GitHub Files:** Files within the `.github` directory fall into two groups:
   - **GitHub-mandated names** (use exactly as required): `CODEOWNERS`, `FUNDING.yml`, `SUPPORT.md`,
     `PULL_REQUEST_TEMPLATE.md`, `dependabot.yml`, and `ISSUE_TEMPLATE/config.yml`.
@@ -136,65 +97,59 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 ### Directory Naming Conventions
 
 - **General Directories:** Use lowercase letters and **kebab-case** for multi-word names (e.g., `node-modules`,
-  `source-files`). Choose names that clearly indicate the directory’s content or purpose (e.g., `docs` for
+  `source-files`). Choose names that clearly indicate the directory's content or purpose (e.g., `docs` for
   documentation, `assets` for media).
 - **Python Package Directories:** Under `src/` (or any Python package hierarchy), use **snake_case** to match module
   naming conventions (e.g., `my_package`, `data_loader`).
-- **Special Directories:** Directories prefixed with a dot (e.g., `.github`, `.devcontainer`) have specific roles and
-  should remain unchanged.
+- **Special Directories:** Directories prefixed with a dot (e.g., `.github`, `.devcontainer`) have specific roles; leave
+  unchanged.
 
 ### Configuration Files
 
 Key configuration files in the repository:
 
-- `.devcontainer/devcontainer.json`: Dev container setup (base image, features, ports, post-create) and VS Code
-  extensions for container auto-install.
-- `.github/dependabot.yml`: Dependabot configuration for automated dependency version updates.
-- `.vscode/extensions.json`: Recommended VS Code extensions (prompts install in non-container contexts).
-- `.vscode/launch.json`: Debug configurations for the CLI and current file.
-- `.vscode/settings.json`: Authoritative VS Code workspace settings (editor, formatter, linter, interpreter path).
-- `docs/source/conf.py`: Sphinx configuration file defining documentation build parameters, extensions, and theme.
-- `.cspell.json`: Code spell-check configuration with custom dictionaries and file globs.
-- `.editorconfig`: EditorConfig rules for consistent code style across editors.
-- `.gitignore`: Files and directories excluded from version control.
-- `.markdown-link-check.json`: markdown-link-check configuration (timeouts, retry policy).
-- `.markdownlint.yaml`: Markdown linting rules.
-- `.markdownlintignore`: Markdown linter file exclusions.
-- `.pre-commit-config.yaml`: Definitions for pre-commit hooks (linting, formatting, type checks, tests).
-- `.prettierignore`: Prettier file exclusions.
-- `.prettierrc.json`: Prettier formatting rules for JSON, YAML, Markdown, etc.
-- `.releaserc.cjs`: semantic-release configuration, defining release branches, plugins, and versioning strategy.
-- `.yamllint.yaml`: YAML linting configuration for CI and project YAML files.
-- `Makefile`: Targets for common development tasks (linting, formatting, type checking, spell-checking, testing,
-  running, and releasing).
-- `package-lock.json`: npm lockfile capturing exact dependency versions.
-- `package.json`: npm manifest with project metadata, script definitions, and dependency declarations.
-- `poetry.lock`: Poetry lockfile locking Python dependency versions for reproducible environments.
-- `pyproject.toml`: Python project metadata, Poetry settings, build-system requirements, and tool configurations
-  (linting, typing, docs).
+- `.devcontainer/devcontainer.json`: devcontainer setup (base image, features, ports, post-create) + VS Code extension
+  auto-install
+- `.github/dependabot.yml`: Dependabot config for dep version updates
+- `.vscode/extensions.json`: Recommended VS Code extensions
+- `.vscode/launch.json`: Debug configs for CLI and current file
+- `.vscode/settings.json`: Workspace VS Code settings (editor, formatter, linter, interpreter)
+- `docs/source/conf.py`: Sphinx config (build params, extensions, theme)
+- `.cspell.json`: Spell-check config (dictionaries, file globs)
+- `.editorconfig`: Editor style rules
+- `.gitignore`: Files/directories excluded from version control
+- `.markdown-link-check.json`: markdown-link-check config (timeouts, retry policy)
+- `.markdownlint.yaml`: Markdown linting rules
+- `.markdownlintignore`: Markdown linter file exclusions
+- `.pre-commit-config.yaml`: Pre-commit hook definitions
+- `.prettierignore`: Prettier file exclusions
+- `.prettierrc.json`: Prettier formatting rules
+- `.releaserc.cjs`: semantic-release config (branches, plugins, versioning)
+- `.yamllint.yaml`: YAML linting config
+- `Makefile`: Common dev task targets
+- `package-lock.json`: npm lockfile
+- `package.json`: npm manifest (metadata, scripts, deps)
+- `poetry.lock`: Poetry lockfile
+- `pyproject.toml`: Python project metadata, Poetry settings, build system, tool configs
 
 ## Naming Conventions
 
-### General Guidelines
-
-Naming should be clear, descriptive, and consistent across the project to ensure maintainability and readability.
-
 ### Variables
 
-- **Python:** Use **snake_case** for variable names to enhance readability (e.g., `my_variable`).
+- **Python:** Use **snake_case** for variable names (e.g., `my_variable`).
 
 ### Constants
 
-- **Python:** Use **SCREAMING_SNAKE_CASE** for constants to distinguish them from regular variables (e.g., `MAX_LIMIT`).
+- **Python:** Use **SCREAMING_SNAKE_CASE** for constants (e.g., `MAX_LIMIT`).
 
 ### Functions / Methods
 
-- **General:** Names should be descriptive verbs conveying the action performed.
+- **General:** Use descriptive verbs conveying the action performed.
 - **Python:** Use **snake_case** for function and method names (e.g., `update_profile_svg`).
 
 ### Classes
 
-- **Python:** Use **CamelCase** for class names to clearly distinguish types (e.g., `ProfileCardGenerator`).
+- **Python:** Use **CamelCase** for class names (e.g., `ProfileCardGenerator`).
 
 ### Files
 
@@ -217,27 +172,22 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   yamllint pre-commit hook for YAML)_
 - **Markdown:** Allow up to **120 characters** per line. _(Enforced by Prettier and markdownlint pre-commit)_
 - **reStructuredText:** Allow up to **120 characters** per line. _(Enforced by rstfmt pre-commit)_
-- **JSON:** Allow up to **88 characters** per line. . _(Enforced by Prettier)_
-
-### Braces and Control Structures
-
-- **Python:** Python uses indentation to define code blocks instead of braces. Ensure consistent and correct
-  indentation.
+- **JSON:** Allow up to **88 characters** per line. _(Enforced by Prettier)_
 
 ### Comments and Documentation
 
-- **General Guidance:** All comments should enhance clarity and avoid redundancy with well-named functions and
-  variables. Ensure comments do not exceed the maximum line length.
+- **General Guidance:** Comments add clarity beyond what well-named functions and variables convey. Keep them within the
+  maximum line length.
 - **Inline Comments:** Place concise inline comments on the same line or immediately above the code they describe.
-- **Block Comments / Docstrings:** Follow the Google-style docstring convention. The first line should be a short
-  summary. _(Enforced by Ruff)_
+- **Block Comments / Docstrings:** Follow the Google-style docstring convention. First line: short summary. _(Enforced
+  by Ruff)_
 
   ```python
   """A script to fetch GitHub data, calculate streaks, and generate a heatmap grid."""
   ```
 
-- **File Header Comments:** Every source file (except JSON, Markdown, `Python` and `LICENSE`) should begin with a
-  one-line header comment describing its purpose.
+- **File Header Comments:** Begin every source file (except JSON, Markdown, Python, and `LICENSE`) with a one-line
+  header comment describing its purpose.
 
   ```plaintext
   # .gitignore: Specifies files and directories that should not be tracked by Git.
@@ -247,58 +197,51 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 
 ### EditorConfig
 
-- **Purpose:** The `.editorconfig` file ensures consistent coding styles across all editors by specifying:
-  - **Indentation:** 2 spaces (4 spaces for Python; tab-indented with 4-space width for `Makefile`)
+- **Purpose:** `.editorconfig` defines per-language editor settings:
+  - **Indentation:** 2 spaces (4 for Python; tab-indented with 4-space width for `Makefile`)
   - **Line Endings:** Unix-style (`lf`)
   - **Charset:** UTF-8
-  - **Max Line Length:** 88, 120 for Markdown/reStructuredText _(Note: `.editorconfig` provides these values for
-    reference; enforcement is handled by other tools.)_
+  - **Max Line Length:** 88, 120 for Markdown/reStructuredText _(reference values; enforced by other tools)_
   - **Final Newline:** Enforced
   - **Trailing Whitespace:** Trimmed (with exceptions)
-- **Note:** Contributors should use an editor that supports EditorConfig to automatically apply these settings.
 
 ### Prettier
 
-- **Purpose:** The `.prettierrc.json` file defines formatting rules for Prettier-supported files:
+- **Purpose:** `.prettierrc.json` defines formatting rules for Prettier-supported files:
   - **Quote Style:** Single quotes
   - **Print Width:** 88, 120 for Markdown
   - **Prose Wrap:** Always (auto-wrap Markdown paragraphs at print width)
 - **Note:** Other rules (semicolons, trailing commas, tab width 2, LF line endings) inherit from Prettier 3.x defaults.
-  The `.prettierignore` file lists files Prettier skips (currently `CHANGELOG.md`, `poetry.lock`, `package-lock.json`).
-- **Note:** Prettier runs in VS Code and as a pre-commit hook to auto-format code before commits.
+  `.prettierignore` lists skipped files (currently `CHANGELOG.md`, `poetry.lock`, `package-lock.json`). Runs in VS Code
+  and as a pre-commit hook.
 
 ### Ruff
 
-- **Purpose:** Provide fast, incremental linting and formatting for Python code, enforcing style rules (line length,
-  import order, docstrings) and catching errors early.
-- **Note:** Ruff runs as a local pre-commit hook to auto-format code before commits.
+- **Purpose:** Lint and format Python (line length, import order, docstrings).
+- **Note:** Runs as a local pre-commit hook.
 
 ### Additional Code Quality Tools
 
-- **Pre-commit Framework:** Enforces automated checks via `.pre-commit-config.yaml`. Hooks run on the `pre-commit` stage
-  by default; `commit-msg` hooks are opted in explicitly. Hook names follow a `category:action` convention (e.g.
-  `lint:ruff`, `validate:json`, `format:prettier`). Hook revisions are bumped by Dependabot (`.github/dependabot.yml`,
-  `pre-commit` ecosystem).
-  - **pre-commit-hooks:** Normalizes line endings, trims whitespace, validates JSON/TOML/YAML syntax, detects private
-    keys, checks for merge conflicts, enforces shebangs, enforces `*_test.py` test naming, and other generic sanity
-    checks.
-  - **pygrep-hooks:** Catches Python anti-patterns and enforces conventions (no `eval`, no `log.warn`, blanket
-    `# noqa`/`# type: ignore`, improper mock usage, stray Unicode replacement chars).
-  - **ruff:** Lints (`ruff-check --fix`) and formats Python files. Pyupgrade rules included via the `UP` selector in
-    `pyproject.toml`.
-  - **mypy:** Static type checks for Python code (local hook; runs `make type`, skipped in CI).
-  - **markdownlint-cli & markdown-link-check:** Lints Markdown files per `.markdownlint.yaml` and validates links
-    (`markdown-link-check` skipped in CI — no network access).
-  - **yamllint:** Lints YAML files per `.yamllint.yaml` (strict mode — warnings fail the hook).
-  - **actionlint:** Lints GitHub Actions workflow files (`.github/workflows/*.yml`).
-  - **rstfmt:** Formats reStructuredText files (`docs/source/*.rst`).
-  - **prettier:** Formats multi-format files (JSON, YAML, Markdown, etc.) per `.prettierrc.json`.
-  - **gitleaks:** Detects secrets (API keys, tokens) committed to the repo.
-  - **cspell:** Spell-checks files (`pre-commit` stage) and commit message body (`commit-msg` stage).
-  - **pytest-pre-commit:** Runs test suite on every commit.
-  - **validate-pyproject:** Schema-validates `pyproject.toml`.
-  - **poetry-lock-check:** Validates `pyproject.toml` ↔ `poetry.lock` consistency (local hook).
-  - **conventional-pre-commit:** Validates commit messages against Conventional Commits (`commit-msg` stage).
+- **Pre-commit Framework:** Automated checks via `.pre-commit-config.yaml`. Hooks default to `pre-commit` stage;
+  `commit-msg` hooks opt in explicitly. Hook names follow `category:action` (e.g. `lint:ruff`, `validate:json`,
+  `format:prettier`). Revisions bumped by Dependabot.
+  - **pre-commit-hooks:** Generic checks (line endings, whitespace, JSON/TOML/YAML syntax, private keys, merge
+    conflicts, shebangs, `*_test.py` naming).
+  - **pygrep-hooks:** Python anti-patterns (no `eval`, no `log.warn`, blanket `# noqa`/`# type: ignore`, mock misuse).
+  - **ruff:** Lint (`ruff-check --fix`) + format Python; pyupgrade via `UP` selector.
+  - **mypy:** Strict type checks (local hook, runs `make type`; skipped in CI).
+  - **markdownlint-cli + markdown-link-check:** Markdown lint + link validation (markdown-link-check skipped in CI — no
+    network).
+  - **yamllint:** YAML lint (strict — warnings fail).
+  - **actionlint:** GitHub Actions workflow lint.
+  - **rstfmt:** Format `docs/source/*.rst`.
+  - **prettier:** Format JSON/YAML/Markdown per `.prettierrc.json`.
+  - **gitleaks:** Detect secrets in commits.
+  - **cspell:** Spell-check files + commit message body.
+  - **pytest-pre-commit:** Test suite on every commit.
+  - **validate-pyproject:** Schema-validate `pyproject.toml`.
+  - **poetry-lock-check:** Validate `pyproject.toml` ↔ `poetry.lock` consistency.
+  - **conventional-pre-commit:** Validate commit messages against Conventional Commits.
 
 ## Documentation
 
@@ -308,27 +251,17 @@ See [Comments and Documentation][COMMENTS-AND-DOCUMENTATION].
 
 ### External Documentation
 
-- **Repository Documentation:** The root-level `README.md` offers an overview of the project and a preview of its
-  appearance on the profile. Additional key documents such as `CONTRIBUTING.md`, `STYLEGUIDE.md`, `SECURITY.md`, and
-  `LICENSE` are also maintained at the repository root.
-
-  _Note: File and directory names referenced in Markdown should always be formatted using backticks, for example:_
-
-  ```markdown
-  The `.editorconfig` file ensures consistent coding styles across all editors.
-  ```
-
-- **Project Documentation:** Comprehensive documentation is built with Sphinx. Source files live in `docs/source/`
-  (e.g., `index.rst`, `api/*.rst`), and the Sphinx config is in `docs/source/conf.py`. The generated HTML output appears
-  in `docs/build/`.
-  - **Features:**
-    - Auto-generated API reference via the `autoapi` extension.
-    - Google/NumPy-style docstring support with `napoleon` extension.
-    - Source code linking through `viewcode` extension.
+- **Repository docs:** Root-level `README.md`, `CONTRIBUTING.md`, `STYLEGUIDE.md`, `SECURITY.md`, `LICENSE`. Use
+  backticks for file/directory names in Markdown (e.g. `` `.editorconfig` ``).
+- **Project docs:** Built with Sphinx. Source in `docs/source/` (`index.rst`, `api/*.rst`); config in
+  `docs/source/conf.py`. Output to `docs/build/`. Auto-deploys to GitHub Pages on release.
+  - `autoapi` extension for API reference
+  - `napoleon` for Google/NumPy docstrings
+  - `viewcode` for source links
 
 ### Markdown References
 
-- **Reference-Style Links:** Use reference-style links for descriptive/labeled links. For example:
+- **Reference-style** for descriptive/labeled links:
 
   ```markdown
   [info][link]
@@ -336,116 +269,34 @@ See [Comments and Documentation][COMMENTS-AND-DOCUMENTATION].
   [link]: https://example.com
   ```
 
-- **Autolinks:** Use autolinks (`<...>`) for bare URLs and email addresses where the display text equals the target.
-  This avoids the duplicate-string awkwardness of `[email][email]` reference form. For example:
+- **Autolinks** for bare URLs and emails:
 
   ```markdown
   Contact <user@example.com> or visit <https://example.com>.
   ```
 
-- **Local References:** For links to repository-related documents (e.g., `CONTRIBUTING.md` or `CODE_OF_CONDUCT.md`) or
-  internal sections, use **SCREAMING_SNAKE_CASE** for link identifiers and omit the file extension for documents. For
-  example:
+- **Local references** use **SCREAMING_SNAKE_CASE** for repo docs (omit extension) and section anchors:
 
   ```markdown
-  See [Code of Conduct][CODE_OF_CONDUCT].
-
   [CODE_OF_CONDUCT]: CODE_OF_CONDUCT.md
-  ```
-
-  And for internal sections:
-
-  ```markdown
-  See [File Naming Conventions][FILE_NAMING_CONVENTIONS].
-
   [FILE_NAMING_CONVENTIONS]: #file-naming-conventions
   ```
 
-  **Note:** Local references should always appear at the top and be sorted alphabetically. For example:
+- **External references** use **kebab-case**:
 
   ```markdown
-  [FILE_NAMING_CONVENTIONS]: #file-naming-conventions
-  [SECURITY]: SECURITY.md
   [external-link]: https://example.com
   ```
 
-- **External Links:** For links that reference external resources, use **kebab-case** for link identifiers. For example:
+Sort link refs alphabetically. Local refs first, then external.
 
-  ```markdown
-  [info][external-link]
+### Documentation Tools
 
-  [external-link]: https://example.com
-  ```
-
-  **Note:** External references should be sorted alphabetically and always appear below local references. For example:
-
-  ```markdown
-  [SECURITY]: SECURITY.md
-  [external-link]: https://example.com
-  ```
-
-### Documentation Tools and Best Practices
-
-#### Tools
-
-- **sphinx:** Foundation for external docs. Auto-deploys to GitHub Pages on new releases; local commands:
-  `make docs-build` (build) and `make docs-serve` (live preview).
-- **rstfmt:** Formats reStructuredText files. Runs as a pre-commit hook; local command: `make format`.
-- **cspell:** Spell-checks code and Markdown. Runs as a pre-commit hook; local command: `make spell`.
-- **markdown-link-check:** Validates Markdown links. Runs as a pre-commit hook.
-- **markdownlint:** Enforces Markdown style rules. Runs as a pre-commit hook.
-
-#### Consistency and Updates
-
-- Update documentation alongside code changes.
-- Contributors should update docs when introducing new features or modifying existing functionality.
-
-#### Style and Tone
-
-- Maintain a semi-formal tone appropriate for a tech-oriented audience.
-- Use clear, precise language and consistent formatting throughout.
-
-#### Contribution Guidelines
-
-- Documentation contributions follow the same process as code changes—submit pull requests for review according to the
-  contribution guidelines.
-
-## Additional Best Practices
-
-### Security and Privacy
-
-- Avoid exposing sensitive information in logs or error messages.
-- Regularly review dependencies for security vulnerabilities.
-
-### Error Handling and Logging
-
-- Implement robust error handling to manage unexpected issues gracefully.
-- Use structured logging to capture context without exposing sensitive data.
-
-### Code Organization and Maintenance
-
-- Keep the codebase clean and modular to facilitate understanding and future extensions.
-- Regularly review and refactor code to eliminate redundancy.
-- Use design patterns where appropriate to improve clarity and reusability.
-
-## Conclusion
-
-### Continuous Improvement
-
-This document is a living resource that should evolve with the project. As new best practices emerge or project
-requirements change, please update the guide to keep it relevant and effective.
-
-### Feedback and Updates
-
-Your input is valuable. If you have suggestions for improvements, clarifications, or additional guidelines, please reach
-out to the maintainers or submit an [issue][issues]. For contributing guidelines, refer to
-[`CONTRIBUTING.md`][CONTRIBUTING]; for security concerns, see [`SECURITY.md`][SECURITY]; for discussions, consult the
-project's [discussion board][discussions] or contact the project owner at <evgenii.shiliaev@jekwwer.com>.
+- **sphinx:** Builds external docs (`make docs-build`, `make docs-serve`). Auto-deploys to GitHub Pages.
+- **rstfmt:** Formats `docs/source/*.rst` (pre-commit hook + `make format`).
+- **cspell:** Spell-checks code + Markdown.
+- **markdown-link-check:** Validates Markdown links.
+- **markdownlint:** Enforces Markdown style.
 
 [COMMENTS-AND-DOCUMENTATION]: #comments-and-documentation
-[CONTRIBUTING]: CONTRIBUTING.md
 [FILE_NAMING_CONVENTIONS]: #file-naming-conventions
-[SCOPE]: #scope
-[SECURITY]: SECURITY.md
-[discussions]: https://github.com/Jekwwer/python-workspace/discussions
-[issues]: https://github.com/Jekwwer/python-workspace/issues
