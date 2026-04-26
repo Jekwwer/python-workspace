@@ -157,16 +157,8 @@ Documentation builds run manually (`make docs-build`, `make docs-serve`).
 
 By contributing, you agree to the [Code of Conduct][CODE_OF_CONDUCT].
 
----
-
-This document is based on a template by [Evgenii Shiliaev][evgenii-shiliaev-github], licensed under [CC BY
-4.0][jekwwer-markdown-docs-kit-license]. All additional content is licensed under [LICENSE][LICENSE].
-
 [CODE_OF_CONDUCT]: CODE_OF_CONDUCT.md
-[LICENSE]: LICENSE
 [README]: README.md
 [STYLEGUIDE]: STYLEGUIDE.md
 [discussions]: https://github.com/Jekwwer/python-workspace/discussions
-[evgenii-shiliaev-github]: https://github.com/Jekwwer
 [issues]: https://github.com/Jekwwer/python-workspace/issues
-[jekwwer-markdown-docs-kit-license]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/LICENSE

@@ -78,8 +78,7 @@ Violations escalate to permanent ban.
 ## Attribution
 
 Adapted from the [Contributor Covenant v2.1][contributor-covenant-v21], licensed under [CC BY 4.0][cc-by-4.0]. Modified
-and reworded by [Evgenii Shiliaev][evgenii-shiliaev-github], available at
-[markdown-docs-kit][jekwwer-markdown-docs-kit].
+and reworded by [Evgenii Shiliaev][evgenii-shiliaev-github].
 
 For answers to common questions, see the [Contributor Covenant FAQ][contributor-covenant-faq]. Translations are
 available in the [official translations repository][contributor-covenant-translations].
@@ -89,4 +88,3 @@ available in the [official translations repository][contributor-covenant-transla
 [contributor-covenant-translations]: https://www.contributor-covenant.org/translations
 [contributor-covenant-v21]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
 [evgenii-shiliaev-github]: https://github.com/Jekwwer
-[jekwwer-markdown-docs-kit]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/templates/CODE_OF_CONDUCT.md

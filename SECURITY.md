@@ -36,13 +36,5 @@ I aim to respond to vulnerability reports within **48 hours** and provide a reso
 For any additional questions or concerns about this security policy, please feel free to contact me at
 <evgenii.shiliaev@jekwwer.com>.
 
----
-
-This document is based on a template by [Evgenii Shiliaev][evgenii-shiliaev-github], licensed under [CC BY
-4.0][jekwwer-markdown-docs-kit-license]. All additional content is licensed under [LICENSE][LICENSE].
-
-[LICENSE]: LICENSE
-[evgenii-shiliaev-github]: https://github.com/Jekwwer
-[jekwwer-markdown-docs-kit-license]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/LICENSE
 [security-advisories]: https://github.com/Jekwwer/python-workspace/security/advisories
 [v2.0.3]: https://github.com/Jekwwer/python-workspace/tree/v2.0.3
