@@ -10,7 +10,6 @@
     ".gitignore",
     ".markdownlintignore",
     ".prettierignore",
-    ".prettierrc.json",
     ".releaserc.cjs",
     "tests/*",
     "Makefile"
