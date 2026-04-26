@@ -100,9 +100,9 @@ Refs #<issue-number>
 Fill only sections that apply; omit empty headers entirely.
 
 Subject: type, optional scope, ≤72 char description, no trailing period. Allowed types (per `conventional-pre-commit`
-config): `build`, `chore`, `ci`, `deps`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `security`, `style`,
-`test`. Breaking change: append `!` to type/scope (`feat!:` or `feat(api)!:`) and add a `BREAKING CHANGE:` footer line
-in the body.
+config, ordered by user-impact): `feat`, `security`, `fix`, `perf`, `revert`, `deps`, `build`, `docs`, `refactor`,
+`style`, `test`, `chore`, `ci`. Breaking change: append `!` to type/scope (`feat!:` or `feat(api)!:`) and add a
+`BREAKING CHANGE:` footer line in the body.
 
 ### Example
 
