@@ -256,14 +256,11 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 ### Prettier
 
 - **Purpose:** The `.prettierrc` file defines formatting rules for Prettier-supported files:
-  - **Semicolons:** Enabled
   - **Quote Style:** Single quotes
-  - **Trailing Commas:** Added where possible
-  - **Tab Width:** 2 spaces
-  - **End of Line:** Unix-style (`lf`)
-  - **Print Width:** 88 120 for Markdown; JSON has no enforced limit.
-- **Note:** The `.prettierignore` file lists files Prettier skips (currently `CHANGELOG.md`, `poetry.lock`,
-  `package-lock.json`).
+  - **Print Width:** 88, 120 for Markdown
+  - **Prose Wrap:** Always (auto-wrap Markdown paragraphs at print width)
+- **Note:** Other rules (semicolons, trailing commas, tab width 2, LF line endings) inherit from Prettier 3.x defaults.
+  The `.prettierignore` file lists files Prettier skips (currently `CHANGELOG.md`, `poetry.lock`, `package-lock.json`).
 - **Note:** Prettier runs in VS Code and as a pre-commit hook to auto-format code before commits.
 
 ### Ruff
