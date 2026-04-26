@@ -1,5 +1,103 @@
 # Changelog
 
+## 3.0.0 - 2026-04-26
+### ⚠ BREAKING CHANGES
+
+* **python_workspace:** import path moved from `python_workspace` to `my_package`.
+* Python 3.14 required. Users on 3.12 must upgrade
+interpreter and rebuild devcontainer.
+
+* deps!(python): bump 3.12 → 3.14 ([dbfb45c](https://github.com/Jekwwer/python-workspace/commit/dbfb45c7f4edaa371e71d0db46729b02c77075ad))
+
+### 🚀 New Features
+
+* **ci:** add lint/format/type/spell quality matrix ([f7b94e3](https://github.com/Jekwwer/python-workspace/commit/f7b94e3b3ada13f380504589e01f9e86f64eaf32))
+* **ci:** add workflow_dispatch trigger to release and docs ([92363b2](https://github.com/Jekwwer/python-workspace/commit/92363b299dc7ff9b7b8def315dcb75aa4024cac8))
+* **ci:** harden workflows with concurrency, timeouts, permissions ([44f3fe4](https://github.com/Jekwwer/python-workspace/commit/44f3fe462e74abb8a5f4dd2bed926766354f28c8))
+* **dependabot:** add devcontainers ecosystem ([7ccdb2b](https://github.com/Jekwwer/python-workspace/commit/7ccdb2bf483bb12610382cfdab59587b7a1904b3))
+* **dependabot:** tighten update policy ([09469d6](https://github.com/Jekwwer/python-workspace/commit/09469d6aa65f0d0c5ea671c78082a02de27718d9))
+* **devcontainer:** add gh-cli, ports, env, and lifecycle config ([d2a2039](https://github.com/Jekwwer/python-workspace/commit/d2a20394121d8d2547fdfa8ef19ef35814a39f5b))
+* **docs:** enforce Sphinx warnings as errors ([90cad96](https://github.com/Jekwwer/python-workspace/commit/90cad9680f6fe3e8a58409adf8c250c942324321))
+* **github:** add CODEOWNERS ([2619311](https://github.com/Jekwwer/python-workspace/commit/2619311ed205788a1c472cca035824bf3eee6330))
+* **github:** add discussion templates ([dc8113c](https://github.com/Jekwwer/python-workspace/commit/dc8113c289f5f58ad1c6ae1cb22130fc38e2aa76))
+* **github:** add SUPPORT.md community health file ([c18f0fb](https://github.com/Jekwwer/python-workspace/commit/c18f0fb809cd795c16c3f655676307660a12efbc))
+* **gitignore:** prune cruft, add secrets, restructure ([77a8c76](https://github.com/Jekwwer/python-workspace/commit/77a8c76af7ef1b79e4346d38055439a6c3ce9cfc))
+* **issue-templates:** convert core templates to YAML forms ([0136975](https://github.com/Jekwwer/python-workspace/commit/013697508f603adfa55fe25718ba267f147808a1))
+* **make:** add install/clean/check/pre-commit + sync docs ([d5a8aa7](https://github.com/Jekwwer/python-workspace/commit/d5a8aa7d2397ead7c1f0fdae3f668e01e6b778e7))
+* **make:** include pre-commit install in setup target ([0101a94](https://github.com/Jekwwer/python-workspace/commit/0101a945ca141779f2a0e8664bf8809bb8b85e48))
+* **mlc:** add markdown-link-check config ([cdd4f94](https://github.com/Jekwwer/python-workspace/commit/cdd4f945dd82e01445c737b3631851245ea88f55))
+* **pre-commit:** add gitleaks, reorder, rename, sync docs ([28cbd1c](https://github.com/Jekwwer/python-workspace/commit/28cbd1cd6fc38bd1e3bbe40907cbff350dea29b4))
+* **pre-commit:** bumps, drop redundant args, add hooks ([f1362cb](https://github.com/Jekwwer/python-workspace/commit/f1362cb42ef3b2e791a32f4b32c6028573fb75c8))
+* **pre-commit:** extend commit-msg type allowlist ([e4687d9](https://github.com/Jekwwer/python-workspace/commit/e4687d98c09bc1c938b7f778438dcba2724d0198))
+* **prettier:** add ignore file for CHANGELOG and lockfiles ([e38c3f0](https://github.com/Jekwwer/python-workspace/commit/e38c3f08827378d174087341a7f80153112727fb))
+* **pyproject:** add publish guard against PyPI upload ([9511fa6](https://github.com/Jekwwer/python-workspace/commit/9511fa60d2cfeb9482a2b64b7083fa7274e56ba9))
+* **python_workspace:** add __main__, py.typed, runtime __version__ ([fd1f52d](https://github.com/Jekwwer/python-workspace/commit/fd1f52d17d3021c4361ab4fef8f432f9e3fdf8a1))
+* **release:** add build type, enable pre-release branches ([84ce745](https://github.com/Jekwwer/python-workspace/commit/84ce745def93cbf5bb879d95dc253215e34ab596))
+* **release:** auto-update LICENSE year on release ([baa090b](https://github.com/Jekwwer/python-workspace/commit/baa090b1b557009e25a58d311238e6f412edfa8c))
+* **yamllint:** enable --strict, tune rules ([6208454](https://github.com/Jekwwer/python-workspace/commit/62084543c20438f1932bbe75d3e852b68eb69dbe))
+
+### 🔒 Security Updates
+
+* **ci:** migrate Codecov to OIDC, drop unused NPM_TOKEN ([b5102b5](https://github.com/Jekwwer/python-workspace/commit/b5102b51ab2b38e10c5019b6ab159b6f1e5fe5f8))
+* **ci:** SHA-pin actions with version comments ([55a0bba](https://github.com/Jekwwer/python-workspace/commit/55a0bbac98f56e26937b1e2ddbca3f76346201e0))
+* **npm:** patch 11 vulnerabilities via npm audit fix ([c726aea](https://github.com/Jekwwer/python-workspace/commit/c726aea04aae37b8db0e7b32e67341a8410cf824))
+
+### 🐞 Bug Fixes
+
+* **ci:** gate workflow chain and fix Pages path ([cb72609](https://github.com/Jekwwer/python-workspace/commit/cb72609aed530785f01a3a601f030f9a3671b34a))
+* **make:** correct run help backticks, docs-clean backslash ([b6d80bc](https://github.com/Jekwwer/python-workspace/commit/b6d80bcf10928a945be1b665c60f1f7bc0ce53cf))
+
+### 📦 Dependency Updates
+
+* bump actions to latest majors and Node 22 ([c4379d4](https://github.com/Jekwwer/python-workspace/commit/c4379d4f5d732058fb6b6e71e38687e965f681d8))
+* **devcontainer:** bump node feature 1.6.3 → 1.7.1 and node 20 → 22 ([cffeb11](https://github.com/Jekwwer/python-workspace/commit/cffeb11ac24cf5b91d8982545192ca129f48ee9d))
+* **npm:** bump cspell to 10.0.0 ([58ae202](https://github.com/Jekwwer/python-workspace/commit/58ae2022c6ba0b9a68adc88fcf71b02d708f68a0))
+* **npm:** bump prettier to 3.8.3 ([68fa9ee](https://github.com/Jekwwer/python-workspace/commit/68fa9eea227747924257504bda7a4b44f8e495e2))
+* **python:** bump pytest, pytest-cov, sphinx, autobuild ([e85505d](https://github.com/Jekwwer/python-workspace/commit/e85505db7a2438e19389da4cad8331d4357f2d9b))
+
+### 📖 Documentation
+
+* **coc:** trim bureaucracy + simplify attribution ([8c95cbf](https://github.com/Jekwwer/python-workspace/commit/8c95cbf83c4c134c694ae568f9c370b7526ddc9b))
+* **contributing:** split container setup from editor config ([4ec9c74](https://github.com/Jekwwer/python-workspace/commit/4ec9c74927b9f8f5374c7cb75f47abf03d83ddc6))
+* **contributing:** trim bureaucracy + sync commit template ([2910e7a](https://github.com/Jekwwer/python-workspace/commit/2910e7ad4e3e9dd84b660318a2d047c3b0733543))
+* **my_package:** tighten scaffold docstrings and annotate __version__ ([176b80a](https://github.com/Jekwwer/python-workspace/commit/176b80aba486c0b6749715626daf078a27b34bba))
+* **readme:** add fork-time LICENSE guidance ([431677d](https://github.com/Jekwwer/python-workspace/commit/431677d3850d91e41e25a7dff0af93d0395f1ba0))
+* **readme:** drop stale pyupgrade ref, fix duplicate phrase ([893c5a0](https://github.com/Jekwwer/python-workspace/commit/893c5a0bfb8f0ed9ff581a9e83ca19dd888795e9))
+* **readme:** trim bureaucracy + document local setup ([d6905ac](https://github.com/Jekwwer/python-workspace/commit/d6905ac46d6ace44c1b721e933e606a96b5d00cc))
+* **refs:** drop markdown-docs-kit self-attribution from all docs ([f7ef44f](https://github.com/Jekwwer/python-workspace/commit/f7ef44fa9d1cb95feb345aad46b3ca4548f41efd))
+* **refs:** switch mailto links to autolink form ([8598060](https://github.com/Jekwwer/python-workspace/commit/8598060d4ce2da97b087a5bca296e66577e495da))
+* **security:** trim bureaucracy ([6208d84](https://github.com/Jekwwer/python-workspace/commit/6208d84696feba7314a7074745a68609efc94edf))
+* **styleguide:** clarify .github file naming rules ([d7f2c47](https://github.com/Jekwwer/python-workspace/commit/d7f2c472ec43dcd70ce3364ff544a14af0c5705a))
+* **styleguide:** document .vscode/ split from devcontainer.json ([b0c5658](https://github.com/Jekwwer/python-workspace/commit/b0c56587a292f46e39c27abe3aab8e22815c68a6))
+* **styleguide:** sync package name to my_package ([3347f4b](https://github.com/Jekwwer/python-workspace/commit/3347f4b4d644a6080e9ff64dd328a8fe163b75d9))
+* **styleguide:** trim bureaucracy + normalize style ([7de8aee](https://github.com/Jekwwer/python-workspace/commit/7de8aee31b75df915938ccb5a105bf4ecde71dca))
+
+### 🛠️ Refactoring
+
+* **python_workspace:** rename package to my_package ([6ce5601](https://github.com/Jekwwer/python-workspace/commit/6ce56017af44a06c25a0454c9bf27045129f17b1))
+
+### 🔧 Chores
+
+* **commits:** reorder allowed types to match releaserc ([4e59e78](https://github.com/Jekwwer/python-workspace/commit/4e59e78c878ba8723fbba7c54b1fe45461944096))
+* **config:** drop entries handled by auto-discovery ([617aabf](https://github.com/Jekwwer/python-workspace/commit/617aabf6fdc7447a9c0e090fac384d25ea5c9189))
+* **config:** standardize filenames to dotted+ext form ([77cc6e4](https://github.com/Jekwwer/python-workspace/commit/77cc6e456189c79012a43c08a1b89ba70c8eae2b))
+* **coverage:** silence subprocess module-not-measured warning ([c5b8cd1](https://github.com/Jekwwer/python-workspace/commit/c5b8cd19abbde7a06652d215f4201fa59f6abf86))
+* **cspell:** trim words via dictionaries, refine ignore paths ([2600950](https://github.com/Jekwwer/python-workspace/commit/26009508280abb7da5f1002d9d7070f86be20467))
+* **dependabot:** normalize fields and naming across ecosystems ([a940895](https://github.com/Jekwwer/python-workspace/commit/a940895a90c7514ea4754ad93d999cd189262d81))
+* **devcontainer:** drop personal extensions and stale comment ([9ea6247](https://github.com/Jekwwer/python-workspace/commit/9ea62478e3cbbf8c8eed073ce15c9084907cd9d0))
+* **docs:** drop inert config and tighten landing ([fc26cac](https://github.com/Jekwwer/python-workspace/commit/fc26cacde28fee4d821a7d9e2948212e63476aea))
+* **editorconfig:** simplify, fix lockfile glob, set Makefile width ([cc3a9df](https://github.com/Jekwwer/python-workspace/commit/cc3a9df43325bfaa3ba75cd0e8179d1c8e10eb45))
+* **github:** trim FUNDING.yml ([81ef8a6](https://github.com/Jekwwer/python-workspace/commit/81ef8a6f73b9778eee9eabd99c8aca76ac93b7b3))
+* **make:** drop top comment, terse help text, sync CONTRIBUTING ([89f2c84](https://github.com/Jekwwer/python-workspace/commit/89f2c8409d2abd1739bc09ad8078f42063d9cc33))
+* **markdownlint:** migrate to YAML, dash style, split ignores ([c758a55](https://github.com/Jekwwer/python-workspace/commit/c758a55730ec3f21f803e11c8a548f5c95e50ac1))
+* **metadata:** refresh description, keywords, classifiers, urls ([df84af7](https://github.com/Jekwwer/python-workspace/commit/df84af78d6ed94bc394558893b465e6f737cfd44))
+* **mlc:** drop unused aliveStatusCodes override ([25371c7](https://github.com/Jekwwer/python-workspace/commit/25371c721a1939c87ef58f6ba2a520edf4fa60cf))
+* **npm:** align metadata, prune redundant flags + unused dep ([14ebcb4](https://github.com/Jekwwer/python-workspace/commit/14ebcb49aa9dfc24eec84ba573c735103fbcd442))
+* **pre-commit:** exclude PR template from md-link-check ([e4943e7](https://github.com/Jekwwer/python-workspace/commit/e4943e717d1155b23a3086833e815ea22f5798fe))
+* **prettier:** trim default-value pins and redundant override ([19ccfee](https://github.com/Jekwwer/python-workspace/commit/19ccfeefaac2242e1ff0ce430e65455f7ffad88b))
+* **pytest:** drop redundant --cov-config flag ([9f400be](https://github.com/Jekwwer/python-workspace/commit/9f400be1956594307a7be7477f37b5ff4f8d5c5e))
+* **release:** cleanup, restructure, reading flow ([0d87263](https://github.com/Jekwwer/python-workspace/commit/0d872631ba90fa6decaf67bb77c23fbc625e93cb))
+
 ## 2.0.3 - 2025-06-23
 ### 📦 Dependency Updates
 

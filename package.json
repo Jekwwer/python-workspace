@@ -1,6 +1,6 @@
 {
   "name": "python-workspace",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "private": true,
   "description": "Python project template with Poetry, devcontainer, lint/type/test/docs toolchain, and semantic-release CI.",
   "keywords": [
