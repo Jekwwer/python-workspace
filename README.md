@@ -12,133 +12,69 @@
 
 ## Project Overview 🚀
 
-This repository is a robust template for Python development using **Poetry** and isolated virtual environments,
-delivering a consistent and reproducible local package workflow. It comes equipped with tools for testing, formatting,
-linting, spell-checking, a ready-to-use devcontainer, custom VS Code settings, essential repo files, automated checks,
-integrated VS Code extensions, semantic releases, automated documentation deployment, and extensive in-repo guides for
-project management and customization.
+Python project template with Poetry-managed venvs, devcontainer + VS Code integration, and a full lint/type/test/docs
+toolchain wired into pre-commit and GitHub Actions.
 
 ## Features ✨
 
-- **Devcontainer & VS Code:** Ubuntu-based Docker container with Python 3.14 and Poetry installed, plus recommended VS
-  Code extensions and workspace settings.
-- **Dependency Management:** Poetry for declarative `pyproject.toml` configuration and `poetry.lock` locking.
-- **Virtual Environments:** Project-scoped `.venv` directory automatically managed by Poetry (no need to install or
-  activate manually).
-- **Linting & Formatting:** Ruff for Python, Prettier for JSON/Markdown/YAML; enforced via pre-commit hooks and editor
-  integrations.
-- **Type Checking:** MyPy with automatic installation of missing stub packages.
-- **Testing:** pytest suite with coverage reporting.
-- **Spell Checking:** cspell for both code and documentation.
-- **Pre-commit Hooks:** Runs Ruff, MyPy, pytest, rstfmt, yamllint, markdownlint, markdown-link-check, actionlint,
-  gitleaks, validate-pyproject, and other checks before commit.
-- **CI/CD:** GitHub Actions for testing, semantic-release versioning, and Sphinx docs deployment.
-- **Documentation:** Sphinx configured with `autoapi`, `napoleon`, and `viewcode`; live preview during development and
-  publishing to GitHub Pages.
-- **In-Repo Guides:** `CONTRIBUTING.md`, `STYLEGUIDE.md`, `SECURITY.md` to enforce best practices and streamline
-  onboarding.
+- **devcontainer + VS Code:** Ubuntu-based Docker container, Python 3.14, Poetry, plus recommended extensions and
+  workspace settings.
+- **Dependency Management:** Poetry (`pyproject.toml` + `poetry.lock`).
+- **Virtual Environments:** Project-scoped `.venv` auto-managed by Poetry.
+- **Linting + Formatting:** Ruff (Python), Prettier (JSON/Markdown/YAML).
+- **Type Checking:** MyPy with strict type checks; auto-installs missing stubs at runtime.
+- **Testing:** pytest with coverage.
+- **Spell Checking:** cspell over code + docs.
+- **Pre-commit Hooks:** Ruff, MyPy, pytest, rstfmt, yamllint, markdownlint, markdown-link-check, actionlint, gitleaks,
+  validate-pyproject.
+- **CI/CD:** GitHub Actions for tests, semantic-release, Sphinx docs deployment.
+- **Documentation:** Sphinx (`autoapi`, `napoleon`, `viewcode`) with live preview + GitHub Pages publish.
+- **In-Repo Guides:** `CONTRIBUTING.md`, `STYLEGUIDE.md`, `SECURITY.md`.
 
 ## Installation 📦
 
-Designed for **GitHub Codespaces**—running locally is untested and may require extra configuration.
+**Codespaces or local devcontainer (recommended):**
 
 [![open-in-github-codespaces](https://github.com/codespaces/badge.svg)][open-in-codespaces]
 
+**Pure local:** install Python 3.14, Poetry ≥2.3, Node.js ≥22, then:
+
+```bash
+git clone https://github.com/Jekwwer/python-workspace.git
+cd python-workspace
+make install
+```
+
 ## Usage 🛠️
 
-Most manual quality checks and workflows are exposed via `Makefile` targets. These commands mirror the editor
-integrations, pre-commit hooks, and CI pipelines.
-
-### Setup
+Most workflows go through `Makefile` targets. Run `make help` for the full list.
 
 ```bash
-make install            # install Python (Poetry) and Node (npm) dependencies
-make check              # run all quality checks (format, lint, type, spell)
+make install            # install Python + Node deps + pre-commit hooks
+make check              # format + lint + type + spell
+make test               # pytest with coverage
 make pre-commit         # run all pre-commit hooks against all files
+make docs-build         # build HTML docs (Sphinx)
+make docs-serve         # live-serve docs locally
+poetry run cli --help   # invoke the project CLI
 ```
 
-### CLI
-
-Invoke the project’s command-line interface:
-
-```bash
-poetry run cli --help
-```
-
-### Formatting
-
-Most formatting tasks are automated and enforced using various tools. Feel free to adjust these settings for your
-project. The repository configurations are described in the [`STYLEGUIDE.md`][STYLEGUIDE].
-
-```bash
-make format             # check formatting
-make format-fix         # apply formatting fixes
-```
-
-### Linting
-
-```bash
-make lint               # detect lint issues
-make lint-fix           # auto-fix lint issues
-```
-
-### Static Analysis
-
-- **Type Checking** with MyPy
-
-  ```bash
-  make type
-  ```
-
-- **Spell Checking** with cspell
-
-  ```bash
-  make spell
-  ```
-
-### Testing
-
-Run the test suite (with coverage):
-
-```bash
-make test
-```
-
-### Documentation
-
-- **Build HTML docs** with Sphinx:
-
-  ```bash
-  make docs-build
-  ```
-
-- **Live-serve docs** locally:
-
-  ```bash
-  make docs-serve
-  ```
-
-- **Clean docs** build artifacts:
-
-  ```bash
-  make docs-clean
-  ```
+Toolchain config (formatter, linter, type checker, spell checker) documented in [`STYLEGUIDE.md`][STYLEGUIDE].
 
 ## Contributing 👥
 
-Contributions are welcome! Please read the [Contributing Guidelines][CONTRIBUTING] and check the [Issues][issues] page.
+See [Contributing Guidelines][CONTRIBUTING] and [Issues][issues].
 
 ## License 🛡️
 
-This project is licensed under the [MIT License][LICENSE].
+[MIT License][LICENSE].
 
-**Forking this template:** Add your own copyright line below the existing one in `LICENSE` — the MIT License requires
-preserving the original notice; don't replace it. The semantic-release `exec` plugin auto-updates year ranges on each
-release.
+**Forking:** Add your own copyright line below the existing one in `LICENSE`; do not replace it. The semantic-release
+`exec` plugin auto-updates year ranges on each release.
 
 ## Contact 📬
 
-For questions, reach out via <evgenii.shiliaev@jekwwer.com> or open an [issue][issues].
+<evgenii.shiliaev@jekwwer.com> or open an [issue][issues].
 
 ---
 
