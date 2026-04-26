@@ -2,21 +2,24 @@
   "name": "python-workspace",
   "version": "2.0.3",
   "private": true,
-  "description": "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates.",
+  "description": "Python project template with Poetry, devcontainer, lint/type/test/docs toolchain, and semantic-release CI.",
   "keywords": [
     "python",
+    "template",
+    "poetry",
     "devcontainer",
     "vscode",
-    "codespaces",
-    "ci",
-    "pre-commit-hooks",
-    "linting",
-    "formatting"
+    "github-actions",
+    "ruff",
+    "mypy",
+    "pytest",
+    "sphinx",
+    "pre-commit",
+    "semantic-release"
   ],
-  "homepage": "https://github.com/Jekwwer/python-workspace#readme",
+  "homepage": "https://github.com/Jekwwer/python-workspace",
   "bugs": {
-    "url": "https://github.com/Jekwwer/python-workspace/issues",
-    "email": "report@jekwwer.com"
+    "url": "https://github.com/Jekwwer/python-workspace/issues"
   },
   "repository": {
     "type": "git",
@@ -24,7 +27,7 @@
   },
   "license": "MIT",
   "author": {
-    "name": "Evgenii \"Jekwwer\" Shiliaev",
+    "name": "Evgenii Shiliaev",
     "email": "evgenii.shiliaev@jekwwer.com",
     "url": "https://jekwwer.com"
   },
@@ -33,8 +36,8 @@
   },
   "scripts": {
     "spell": "cspell . --cache",
-    "format": "prettier --check --config .prettierrc .",
-    "format-fix": "prettier --write --config .prettierrc .",
+    "format": "prettier --check .",
+    "format-fix": "prettier --write .",
     "release": "semantic-release"
   },
   "devDependencies": {
@@ -44,7 +47,6 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.3",
     "@semantic-release/release-notes-generator": "^14.0.3",
-    "conventional-changelog": "^7.1.0",
     "conventional-changelog-conventionalcommits": "^9.0.0",
     "cspell": "^10.0.0",
     "prettier": "^3.8.3",
