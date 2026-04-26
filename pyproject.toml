@@ -90,7 +90,6 @@ testpaths = ["tests"]
 addopts = [
   "--import-mode=importlib",
   "--cov=my_package",
-  "--cov-config=pyproject.toml",
   "--cov-fail-under=90",
   "--cov-report=term-missing",
   "--cov-report=html:htmlcov",
