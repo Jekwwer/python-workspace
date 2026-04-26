@@ -40,8 +40,8 @@ packages = [{include = "my_package", from = "src"}]
 pre-commit = "^4.2.0"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^8.4.0"
-pytest-cov = "^6.2.1"
+pytest = "^9"
+pytest-cov = "^7"
 pytest-xdist = "^3.7.0"
 coverage = {extras = ["toml"], version = "^7.9.1"}
 
@@ -53,10 +53,10 @@ ruff = "^0.15.11"
 mypy = "^1.20.2"
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^8.2.3"
+sphinx = "^9"
 sphinx-autoapi = "^3.6.0"
 sphinx-rtd-theme = "^3.0.2"
-sphinx-autobuild = "^2024.10.3"
+sphinx-autobuild = "^2025.8"
 
 [tool.coverage.report]
 fail_under = 90
