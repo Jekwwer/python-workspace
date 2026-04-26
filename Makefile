@@ -6,7 +6,7 @@ help:
 	@echo "Targets:"
 	@echo "  help             Show help."
 	@echo ""
-	@echo "  install          Install Python and Node dependencies."
+	@echo "  install          Install Python + Node deps and pre-commit hooks."
 	@echo "  clean            Remove tool caches and coverage artifacts."
 	@echo ""
 	@echo "  format           Check formatting (Ruff, Prettier, rstfmt)."
@@ -30,6 +30,7 @@ help:
 install:
 	poetry install --with test,lint,mypy,docs
 	npm install
+	poetry run pre-commit install
 
 clean:
 	rm -rf .ruff_cache .mypy_cache .cspellcache .pytest_cache htmlcov coverage.xml .coverage
