@@ -19,9 +19,7 @@ updates and fixes.
 
 If you discover a security vulnerability in this repository:
 
-1. **Private Disclosure via Email** Please send an email to [report@jekwwer.com][report@jekwwer.com] with the following
-   details:
-
+1. **Private Disclosure via Email** Please send an email to <report@jekwwer.com> with the following details:
    - A detailed description of the vulnerability.
    - Steps to reproduce the issue.
    - Affected versions (if applicable).
@@ -36,7 +34,7 @@ I aim to respond to vulnerability reports within **48 hours** and provide a reso
 ## For Further Inquiries
 
 For any additional questions or concerns about this security policy, please feel free to contact me at
-[evgenii.shiliaev@jekwwer.com][evgenii.shiliaev@jekwwer.com].
+<evgenii.shiliaev@jekwwer.com>.
 
 ---
 
@@ -45,8 +43,6 @@ This document is based on a template by [Evgenii Shiliaev][evgenii-shiliaev-gith
 
 [LICENSE]: LICENSE
 [evgenii-shiliaev-github]: https://github.com/Jekwwer
-[evgenii.shiliaev@jekwwer.com]: mailto:evgenii.shiliaev@jekwwer.com
 [jekwwer-markdown-docs-kit-license]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/LICENSE
-[report@jekwwer.com]: mailto:report@jekwwer.com
 [security-advisories]: https://github.com/Jekwwer/python-workspace/security/advisories
 [v2.0.3]: https://github.com/Jekwwer/python-workspace/tree/v2.0.3

@@ -328,12 +328,19 @@ See [Comments and Documentation][COMMENTS-AND-DOCUMENTATION].
 
 ### Markdown References
 
-- **Reference-Style Links:** Use reference-style links for clarity. For example:
+- **Reference-Style Links:** Use reference-style links for descriptive/labeled links. For example:
 
   ```markdown
   [info][link]
 
   [link]: https://example.com
+  ```
+
+- **Autolinks:** Use autolinks (`<...>`) for bare URLs and email addresses where the display text equals the target.
+  This avoids the duplicate-string awkwardness of `[email][email]` reference form. For example:
+
+  ```markdown
+  Contact <user@example.com> or visit <https://example.com>.
   ```
 
 - **Local References:** For links to repository-related documents (e.g., `CONTRIBUTING.md` or `CODE_OF_CONDUCT.md`) or
@@ -433,8 +440,7 @@ requirements change, please update the guide to keep it relevant and effective.
 Your input is valuable. If you have suggestions for improvements, clarifications, or additional guidelines, please reach
 out to the maintainers or submit an [issue][issues]. For contributing guidelines, refer to
 [`CONTRIBUTING.md`][CONTRIBUTING]; for security concerns, see [`SECURITY.md`][SECURITY]; for discussions, consult the
-project's [discussion board][discussions] or contact the project owner at
-[evgenii.shiliaev@jekwwer.com][evgenii.shiliaev@jekwwer.com].
+project's [discussion board][discussions] or contact the project owner at <evgenii.shiliaev@jekwwer.com>.
 
 ---
 
@@ -449,6 +455,5 @@ This document is based on a template by [Evgenii Shiliaev][evgenii-shiliaev-gith
 [SECURITY]: SECURITY.md
 [discussions]: https://github.com/Jekwwer/python-workspace/discussions
 [evgenii-shiliaev-github]: https://github.com/Jekwwer
-[evgenii.shiliaev@jekwwer.com]: mailto:evgenii.shiliaev@jekwwer.com
 [issues]: https://github.com/Jekwwer/python-workspace/issues
 [jekwwer-markdown-docs-kit-license]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/LICENSE

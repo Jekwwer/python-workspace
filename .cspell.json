@@ -19,6 +19,7 @@
   "dictionaries": ["python", "node", "bash", "softwareTerms"],
   "words": [
     "autoapi",
+    "autolinks",
     "docstrings",
     "Evgenii",
     "genindex",

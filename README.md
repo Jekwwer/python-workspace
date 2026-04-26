@@ -138,7 +138,7 @@ release.
 
 ## Contact 📬
 
-For questions, reach out via [evgenii.shiliaev@jekwwer.com][evgenii.shiliaev@jekwwer.com] or open an [issue][issues].
+For questions, reach out via <evgenii.shiliaev@jekwwer.com> or open an [issue][issues].
 
 ---
 
@@ -154,7 +154,6 @@ This document is based on a template by [Evgenii Shiliaev][evgenii-shiliaev-gith
 [LICENSE]: LICENSE
 [STYLEGUIDE]: STYLEGUIDE.md
 [evgenii-shiliaev-github]: https://github.com/Jekwwer
-[evgenii.shiliaev@jekwwer.com]: mailto:evgenii.shiliaev@jekwwer.com
 [issues]: https://github.com/Jekwwer/python-workspace/issues
 [jekwwer-markdown-docs-kit-license]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/LICENSE
 [open-in-codespaces]: https://codespaces.new/Jekwwer/python-workspace

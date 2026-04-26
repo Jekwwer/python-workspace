@@ -42,8 +42,8 @@ the project in public spaces.
 
 ## Enforcement
 
-Report abusive, harassing, or otherwise unacceptable behavior to [report@jekwwer.com][report@jekwwer.com]. I review all
-complaints promptly and confidentially.
+Report abusive, harassing, or otherwise unacceptable behavior to <report@jekwwer.com>. I review all complaints promptly
+and confidentially.
 
 ## Enforcement Guidelines
 
@@ -90,4 +90,3 @@ available in the [official translations repository][contributor-covenant-transla
 [contributor-covenant-v21]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
 [evgenii-shiliaev-github]: https://github.com/Jekwwer
 [jekwwer-markdown-docs-kit]: https://github.com/Jekwwer/markdown-docs-kit/blob/main/templates/CODE_OF_CONDUCT.md
-[report@jekwwer.com]: mailto:report@jekwwer.com
