@@ -20,7 +20,7 @@ help:
 	@echo "  check            Run all quality checks (format, lint, type, spell)."
 	@echo ""
 	@echo "  test             Run pytest for your test suite."
-	@echo "  run              Run the chatbot CLI (`poetry run cli`)."
+	@echo "  run              Run the project CLI."
 	@echo "  release          Run semantic-release (via npm)."
 	@echo ""
 	@echo "  docs-build       Build the documentation using Sphinx."
@@ -76,7 +76,7 @@ docs-serve:
 	poetry run sphinx-autobuild docs/source docs/build/html --open-browser --watch docs/source
 
 docs-clean:
-	rm -rf docs/source/api docs/build\
+	rm -rf docs/source/api docs/build
 
 pre-commit:
 	poetry run pre-commit run --all-files
