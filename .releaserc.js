@@ -1,6 +1,11 @@
 // .releaserc.js: Configures the semantic-release process.
 module.exports = {
-  branches: ['main'],
+  branches: [
+    'main',
+    { name: 'next', prerelease: true },
+    { name: 'beta', prerelease: true },
+    { name: 'alpha', prerelease: true },
+  ],
   plugins: [
     [
       '@semantic-release/commit-analyzer',
@@ -12,6 +17,7 @@ module.exports = {
           { type: 'fix', release: 'patch' },
           { type: 'security', release: 'patch' },
           { type: 'deps', release: 'patch' },
+          { type: 'build', release: 'patch' },
           { type: 'docs', release: false },
           { type: 'docs', scope: 'api', release: 'patch' },
           { type: 'style', release: false },
@@ -36,6 +42,7 @@ module.exports = {
             { type: 'fix', section: '🐞 Bug Fixes' },
             { type: 'security', section: '🔒 Security Updates' },
             { type: 'deps', section: '📦 Dependency Updates' },
+            { type: 'build', section: '🏗️ Build System' },
             { type: 'docs', section: '📖 Documentation' },
             { type: 'test', section: '✅ Testing' },
             { type: 'perf', section: '⚡ Performance Improvements' },
@@ -55,6 +62,7 @@ module.exports = {
               '🐞 Bug Fixes',
               '🔒 Security Updates',
               '📦 Dependency Updates',
+              '🏗️ Build System',
               '📖 Documentation',
               '✅ Testing',
               '⚡ Performance Improvements',
