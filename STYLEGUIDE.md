@@ -92,18 +92,20 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 ├── tests                               ├── # test suite
 │   ├── cli_test.py                     │   ├── # cli functionality tests
 │   └── utils_test.py                   │   └── # utility functions tests
+├── .cspell.json                        ├── # spell checking configuration
 ├── .editorconfig                       ├── # editor configuration
 ├── .gitignore                          ├── # files to ignore in Git
+├── .markdown-link-check.json           ├── # markdown link check configuration
 ├── .markdownlint.yaml                  ├── # markdown linting configuration
 ├── .markdownlintignore                 ├── # markdown lint exclusions
 ├── .pre-commit-config.yaml             ├── # pre-commit hook configuration
-├── .prettierrc                         ├── # Prettier configuration
-├── .releaserc.js                       ├── # semantic release configuration
-├── .yamllint.yml                       ├── # yaml linting configuration
+├── .prettierignore                     ├── # Prettier exclusions
+├── .prettierrc.json                    ├── # Prettier configuration
+├── .releaserc.cjs                      ├── # semantic release configuration
+├── .yamllint.yaml                      ├── # yaml linting configuration
 ├── CHANGELOG.md                        ├── # changelog
 ├── CODE_OF_CONDUCT.md                  ├── # code of conduct
 ├── CONTRIBUTING.md                     ├── # contributing guidelines
-├── cspell.json                         ├── # spell checking configuration
 ├── LICENSE                             ├── # main license
 ├── Makefile                            ├── # common development tasks
 ├── package-lock.json                   ├── # npm lock file
@@ -119,8 +121,8 @@ Python developers who need a zero-setup, standardized workspace template optimiz
 
 - **Repository Documentation Files:** Use **SCREAMING_SNAKE_CASE** for key documentation files (e.g.,
   `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `README.md`, `SECURITY.md`).
-- **Configuration Files:** Tool configuration files (e.g., `cspell.json`, `.editorconfig`, `.pre-commit-config.yaml`,
-  `.prettierrc`) use lowercase naming, following the specific requirements of each tool.
+- **Configuration Files:** Tool configuration files (e.g., `.cspell.json`, `.editorconfig`, `.pre-commit-config.yaml`,
+  `.prettierrc.json`) use lowercase naming, following the specific requirements of each tool.
 - **Shell Files:** Use **snake_case** for executable scripts (e.g., `build_docs.sh`, `deploy_app.sh`).
 - **Python Files:** Use **snake_case** for modules and packages (e.g., `data_loader.py`, `utils.py`). Test modules
   should follow the `<name>_test.py` pattern.
@@ -152,15 +154,17 @@ Key configuration files in the repository:
 - `.vscode/launch.json`: Debug configurations for the CLI and current file.
 - `.vscode/settings.json`: Authoritative VS Code workspace settings (editor, formatter, linter, interpreter path).
 - `docs/source/conf.py`: Sphinx configuration file defining documentation build parameters, extensions, and theme.
-- `.gitignore`: Files and directories excluded from version control.
+- `.cspell.json`: Code spell-check configuration with custom dictionaries and file globs.
 - `.editorconfig`: EditorConfig rules for consistent code style across editors.
+- `.gitignore`: Files and directories excluded from version control.
+- `.markdown-link-check.json`: markdown-link-check configuration (timeouts, retry policy).
 - `.markdownlint.yaml`: Markdown linting rules.
 - `.markdownlintignore`: Markdown linter file exclusions.
 - `.pre-commit-config.yaml`: Definitions for pre-commit hooks (linting, formatting, type checks, tests).
-- `.prettierrc`: Prettier formatting rules for JSON, YAML, Markdown, etc.
-- `.releaserc.js`: semantic-release configuration, defining release branches, plugins, and versioning strategy.
-- `.yamllint`: YAML linting configuration for CI and project YAML files.
-- `cspell.json`: Code spell-check configuration with custom dictionaries and file globs.
+- `.prettierignore`: Prettier file exclusions.
+- `.prettierrc.json`: Prettier formatting rules for JSON, YAML, Markdown, etc.
+- `.releaserc.cjs`: semantic-release configuration, defining release branches, plugins, and versioning strategy.
+- `.yamllint.yaml`: YAML linting configuration for CI and project YAML files.
 - `Makefile`: Targets for common development tasks (linting, formatting, type checking, spell-checking, testing,
   running, and releasing).
 - `package-lock.json`: npm lockfile capturing exact dependency versions.
@@ -198,8 +202,8 @@ See [File Naming Conventions][FILE_NAMING_CONVENTIONS].
 
 ## Code Formatting and Style
 
-The project adheres to the rules specified in the `.editorconfig`, `.markdownlint.yaml`, `.prettierrc`, `.yamllint` and
-`pyproject.toml` configuration files.
+The project adheres to the rules specified in the `.editorconfig`, `.markdownlint.yaml`, `.prettierrc.json`,
+`.yamllint.yaml` and `pyproject.toml` configuration files.
 
 ### Indentation and Spacing
 
@@ -255,7 +259,7 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 
 ### Prettier
 
-- **Purpose:** The `.prettierrc` file defines formatting rules for Prettier-supported files:
+- **Purpose:** The `.prettierrc.json` file defines formatting rules for Prettier-supported files:
   - **Quote Style:** Single quotes
   - **Print Width:** 88, 120 for Markdown
   - **Prose Wrap:** Always (auto-wrap Markdown paragraphs at print width)
@@ -285,10 +289,10 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
   - **mypy:** Static type checks for Python code (local hook; runs `make type`, skipped in CI).
   - **markdownlint-cli & markdown-link-check:** Lints Markdown files per `.markdownlint.yaml` and validates links
     (`markdown-link-check` skipped in CI — no network access).
-  - **yamllint:** Lints YAML files per `.yamllint.yml` (strict mode — warnings fail the hook).
+  - **yamllint:** Lints YAML files per `.yamllint.yaml` (strict mode — warnings fail the hook).
   - **actionlint:** Lints GitHub Actions workflow files (`.github/workflows/*.yml`).
   - **rstfmt:** Formats reStructuredText files (`docs/source/*.rst`).
-  - **prettier:** Formats multi-format files (JSON, YAML, Markdown, etc.) per `.prettierrc`.
+  - **prettier:** Formats multi-format files (JSON, YAML, Markdown, etc.) per `.prettierrc.json`.
   - **gitleaks:** Detects secrets (API keys, tokens) committed to the repo.
   - **cspell:** Spell-checks files (`pre-commit` stage) and commit message body (`commit-msg` stage).
   - **pytest-pre-commit:** Runs test suite on every commit.
