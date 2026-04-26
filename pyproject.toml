@@ -1,7 +1,7 @@
 [project]
 name = "python-workspace"
 version = "2.0.3"
-description = "Ready-to-use Python workspace with a devcontainer, VS Code settings, linting, formatting, type checks, pre-commit hooks, and automated updates."
+description = "Python project template with Poetry, devcontainer, lint/type/test/docs toolchain, and semantic-release CI."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.14,<3.15"
@@ -10,26 +10,34 @@ authors = [
 ]
 keywords = [
   "python",
+  "template",
+  "poetry",
   "devcontainer",
   "vscode",
-  "codespaces",
-  "ci",
-  "pre-commit-hooks",
-  "linting",
-  "formatting",
+  "github-actions",
+  "ruff",
+  "mypy",
+  "pytest",
+  "sphinx",
+  "pre-commit",
+  "semantic-release",
 ]
 classifiers = [
   "Private :: Do Not Upload",
-  "Development Status :: 3 - Alpha",
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
   "Intended Audience :: Developers",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.14",
-  "Operating System :: OS Independent"
+  "Typing :: Typed",
 ]
 
 [project.urls]
 Homepage = "https://github.com/Jekwwer/python-workspace"
 "Bug Reports" = "https://github.com/Jekwwer/python-workspace/issues"
 Source = "https://github.com/Jekwwer/python-workspace"
+Author = "https://jekwwer.com"
 
 [project.scripts]
 cli = "my_package.cli:main"
