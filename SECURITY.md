@@ -1,40 +1,25 @@
 # Security Policy
 
-This document outlines the security policy for the **Jekwwer/python-workspace** repository and provides instructions for
-reporting vulnerabilities.
-
 ## Supported Versions
-
-I actively maintain and provide security updates for the following versions:
 
 | Version            | Supported             |
 | ------------------ | --------------------- |
 | [`v2.0.3`][v2.0.3] | ✅ Actively supported |
 | Older versions     | ❌ Not supported      |
 
-If your project is using an unsupported version, I recommend upgrading to the latest version to benefit from security
-updates and fixes.
-
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in this repository:
+1. **Private Disclosure via Email** — email <report@jekwwer.com> with:
+   - Detailed description of the vulnerability
+   - Steps to reproduce
+   - Affected versions (if applicable)
+   - Suggested fixes or workarounds (if any)
 
-1. **Private Disclosure via Email** Please send an email to <report@jekwwer.com> with the following details:
-   - A detailed description of the vulnerability.
-   - Steps to reproduce the issue.
-   - Affected versions (if applicable).
-   - Any suggested fixes or workarounds.
+2. **Private Security Advisory on GitHub** — submit via GitHub Security Advisories:
+   - Open the repository's [Security Advisories][security-advisories]
+   - Click **Create security advisory** and follow prompts
 
-2. **Private Security Advisory on GitHub** Alternatively, you can submit a report via GitHub Security Advisories:
-   - Navigate to the repository's [Security Advisories][security-advisories].
-   - Click **Create security advisory** and follow the instructions.
-
-I aim to respond to vulnerability reports within **48 hours** and provide a resolution or update within **7 days**.
-
-## For Further Inquiries
-
-For any additional questions or concerns about this security policy, please feel free to contact me at
-<evgenii.shiliaev@jekwwer.com>.
+I aim to respond within **48 hours**, with resolution or update within **7 days**.
 
 [security-advisories]: https://github.com/Jekwwer/python-workspace/security/advisories
 [v2.0.3]: https://github.com/Jekwwer/python-workspace/tree/v2.0.3
