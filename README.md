@@ -124,6 +124,10 @@ Contributions are welcome! Please read the [Contributing Guidelines][CONTRIBUTIN
 
 This project is licensed under the [MIT License][LICENSE].
 
+**Forking this template:** Add your own copyright line below the existing one in `LICENSE` — the MIT License requires
+preserving the original notice; don't replace it. The semantic-release `exec` plugin auto-updates year ranges on each
+release.
+
 ## Contact 📬
 
 For questions, reach out via [evgenii.shiliaev@jekwwer.com][evgenii.shiliaev@jekwwer.com] or open an [issue][issues].
