@@ -1,4 +1,3 @@
-// .releaserc.js: Configures the semantic-release process.
 module.exports = {
   branches: [
     'main',
@@ -11,22 +10,24 @@ module.exports = {
       '@semantic-release/commit-analyzer',
       {
         preset: 'conventionalcommits',
+        // Explicit list (including default-equivalent rules) self-documents
+        // the full project commit-type policy.
         releaseRules: [
+          { breaking: true, release: 'major' },
           { type: 'init', release: false },
           { type: 'feat', release: 'minor' },
-          { type: 'fix', release: 'patch' },
           { type: 'security', release: 'patch' },
+          { type: 'fix', release: 'patch' },
+          { type: 'perf', release: 'patch' },
+          // revert: handled by semantic-release auto-cancel (pairs with reverted commit, excluded from release)
           { type: 'deps', release: 'patch' },
           { type: 'build', release: 'patch' },
           { type: 'docs', release: false },
-          { type: 'docs', scope: 'api', release: 'patch' },
-          { type: 'style', release: false },
           { type: 'refactor', release: false },
-          { type: 'chore', release: false },
-          { type: 'chore', scope: 'sync', release: 'patch' },
-          { type: 'ci', release: false },
-          { type: 'test', scope: 'critical', release: 'patch' },
+          { type: 'style', release: false },
           { type: 'test', release: false },
+          { type: 'chore', release: false },
+          { type: 'ci', release: false },
         ],
       },
     ],
@@ -35,20 +36,20 @@ module.exports = {
       {
         preset: 'conventionalcommits',
         presetConfig: {
-          header: '# Release Notes',
           types: [
             { type: 'init', section: '🎉 Initial Commit', hidden: true },
             { type: 'feat', section: '🚀 New Features' },
-            { type: 'fix', section: '🐞 Bug Fixes' },
             { type: 'security', section: '🔒 Security Updates' },
+            { type: 'fix', section: '🐞 Bug Fixes' },
+            { type: 'perf', section: '⚡ Performance Improvements' },
+            { type: 'revert', section: '⏪ Reverts' },
             { type: 'deps', section: '📦 Dependency Updates' },
             { type: 'build', section: '🏗️ Build System' },
             { type: 'docs', section: '📖 Documentation' },
-            { type: 'test', section: '✅ Testing' },
-            { type: 'perf', section: '⚡ Performance Improvements' },
-            { type: 'chore', section: '📦 Chores' },
-            { type: 'style', section: '🎨 Code Style Improvements' },
-            { type: 'refactor', section: '🛠️ Refactoring' },
+            { type: 'refactor', section: '🛠️ Refactoring', hidden: true },
+            { type: 'style', section: '🎨 Code Style Improvements', hidden: true },
+            { type: 'test', section: '✅ Testing', hidden: true },
+            { type: 'chore', section: '🔧 Chores' },
             { type: 'ci', section: '🔄 Continuous Integration' },
           ],
         },
@@ -59,24 +60,23 @@ module.exports = {
             const order = [
               '🎉 Initial Commit',
               '🚀 New Features',
-              '🐞 Bug Fixes',
               '🔒 Security Updates',
+              '🐞 Bug Fixes',
+              '⚡ Performance Improvements',
+              '⏪ Reverts',
               '📦 Dependency Updates',
               '🏗️ Build System',
               '📖 Documentation',
-              '✅ Testing',
-              '⚡ Performance Improvements',
-              '📦 Chores',
-              '🎨 Code Style Improvements',
               '🛠️ Refactoring',
+              '🎨 Code Style Improvements',
+              '✅ Testing',
+              '🔧 Chores',
               '🔄 Continuous Integration',
             ];
             return order.indexOf(a.title) - order.indexOf(b.title);
           },
           commitsSort: ['scope', 'subject'],
         },
-        linkCompare: true,
-        linkReferences: true,
       },
     ],
     [
@@ -92,19 +92,7 @@ module.exports = {
         npmPublish: false,
       },
     ],
-    [
-      '@semantic-release/github',
-      {
-        successComment:
-          ":tada: This ${issue.pull_request ? 'pull request' : 'issue'} has been included in version ${nextRelease.version} :tada:\n\nThe release is available on [GitHub release](${releases[0].url}).",
-        failComment:
-          "The release from branch ${branch.name} failed due to the following issues:\n\n${errors.map(e => `- ${e.message}`).join('\\n')}",
-        failTitle: 'The automated release failed 🚨',
-        releasedLabels: [
-          "released<%= nextRelease.channel ? ` on @${nextRelease.channel}` : '' %>",
-        ],
-      },
-    ],
+    '@semantic-release/github',
     [
       '@semantic-release/exec',
       {
