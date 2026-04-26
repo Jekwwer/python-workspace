@@ -19,6 +19,7 @@ keywords = [
   "formatting",
 ]
 classifiers = [
+  "Private :: Do Not Upload",
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
   "Programming Language :: Python :: 3.14",
