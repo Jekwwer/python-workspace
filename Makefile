@@ -1,33 +1,31 @@
-# Makefile: Simplifies common development tasks.
-
 .PHONY: help install clean format format-fix lint lint-fix type spell check test run release docs-build docs-serve docs-clean pre-commit
 
 help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "Targets:"
-	@echo "  help             Show this help message."
+	@echo "  help             Show help."
 	@echo ""
 	@echo "  install          Install Python and Node dependencies."
 	@echo "  clean            Remove tool caches and coverage artifacts."
 	@echo ""
-	@echo "  format           Verify formatting in Python files (Ruff), Prettier-supported files and reStructuredText files."
-	@echo "  format-fix       Auto-format Python files (Ruff), Prettier-supported files and reStructuredText files."
-	@echo "  lint             Run Ruff to lint Python files."
-	@echo "  lint-fix         Run Ruff to auto-fix Python lint issues."
-	@echo "  type             Run Mypy for static type checking."
-	@echo "  spell            Run cspell to spell-check all files."
-	@echo "  check            Run all quality checks (format, lint, type, spell)."
+	@echo "  format           Check formatting (Ruff, Prettier, rstfmt)."
+	@echo "  format-fix       Apply formatting fixes."
+	@echo "  lint             Lint Python (Ruff)."
+	@echo "  lint-fix         Auto-fix Python lint issues (Ruff)."
+	@echo "  type             Type-check Python (Mypy)."
+	@echo "  spell            Spell-check files (cspell)."
+	@echo "  check            Run all quality checks."
 	@echo ""
-	@echo "  test             Run pytest for your test suite."
+	@echo "  test             Run tests (pytest)."
 	@echo "  run              Run the project CLI."
-	@echo "  release          Run semantic-release (via npm)."
+	@echo "  release          Run semantic-release."
 	@echo ""
-	@echo "  docs-build       Build the documentation using Sphinx."
-	@echo "  docs-serve       Serve the documentation locally with live reloading."
-	@echo "  docs-clean       Clean up the documentation build directory."
+	@echo "  docs-build       Build docs (Sphinx)."
+	@echo "  docs-serve       Serve docs with live reload."
+	@echo "  docs-clean       Remove docs build artifacts."
 	@echo ""
-	@echo "  pre-commit       Run all pre-commit hooks against all files."
+	@echo "  pre-commit       Run all pre-commit hooks."
 
 install:
 	poetry install --with test,lint,mypy,docs

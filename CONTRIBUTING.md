@@ -252,24 +252,22 @@ and pre-commit levels, with the exception of building the documentation.
 
 Run the following scripts to verify code quality manually:
 
-- **make help:** Shows Make help message.
-- **make install:** Installs Python (Poetry) and Node (npm) dependencies.
-- **make clean:** Removes tool caches and coverage artifacts.
-- **make format:** Verifies code formatting using Ruff (for Python files), Prettier (for non-Python files) and rstfmt
-  (for reStructuredText files),
-- **make format-fix:** Auto-formats code using Ruff (for Python files), Prettier (for non-Python files) and rstfmt (for
-  reStructuredText files),
-- **make lint:** Checks Python files for lint issues using Ruff.
-- **make lint-fix:** Auto-fixes lint issues with Ruff.
-- **make type:** Performs static type checking with MyPy.
-- **make spell:** Checks files for typos using cspell.
-- **make check:** Runs all quality checks (format, lint, type, spell).
-- **make test:** Executes the test suite with coverage using pytest.
-- **make run:** Runs the project’s CLI entry point (`poetry run cli`).
-- **make docs-build:** Builds the documentation using Sphinx.
-- **make docs-serve:** Serves the documentation locally with live reloading.
-- **make docs-clean:** Cleans up the documentation build directory.
-- **make pre-commit:** Runs all pre-commit hooks against all files.
+- **make help:** Show help.
+- **make install:** Install Python and Node dependencies.
+- **make clean:** Remove tool caches and coverage artifacts.
+- **make format:** Check formatting (Ruff, Prettier, rstfmt).
+- **make format-fix:** Apply formatting fixes.
+- **make lint:** Lint Python (Ruff).
+- **make lint-fix:** Auto-fix Python lint issues (Ruff).
+- **make type:** Type-check Python (Mypy).
+- **make spell:** Spell-check files (cspell).
+- **make check:** Run all quality checks (format, lint, type, spell).
+- **make test:** Run tests (pytest).
+- **make run:** Run the project CLI.
+- **make docs-build:** Build docs (Sphinx).
+- **make docs-serve:** Serve docs with live reload.
+- **make docs-clean:** Remove docs build artifacts.
+- **make pre-commit:** Run all pre-commit hooks.
 
 ### Automated Testing
 
