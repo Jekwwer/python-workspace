@@ -98,7 +98,8 @@ module.exports = {
       {
         prepareCmd: `
         sed -i -E "s/v[0-9]+\\.[0-9]+\\.[0-9]+/v\${nextRelease.version}/g" SECURITY.md &&
-        sed -i "s/^version = \\".*\\"/version = \\"\${nextRelease.version}\\"/" pyproject.toml
+        sed -i "s/^version = \\".*\\"/version = \\"\${nextRelease.version}\\"/" pyproject.toml &&
+        sed -i -E "s/Copyright \\(c\\) ([0-9]{4})(–[0-9]{4})?/Copyright (c) \\1–$(date +%Y)/" LICENSE
       `,
       },
     ],
@@ -111,6 +112,7 @@ module.exports = {
           'pyproject.toml',
           'CHANGELOG.md',
           'SECURITY.md',
+          'LICENSE',
         ],
         message:
           'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
