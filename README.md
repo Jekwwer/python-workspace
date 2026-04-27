@@ -80,8 +80,10 @@ See [Contributing Guidelines][CONTRIBUTING] and [Issues][issues].
 
 ---
 
-**Migration Note:** This project previously used PDM (last PDM-based release: [v1.0.1]). As of [v2.0.0], Poetry is used
-for dependency and environment management.
+**Migration Notes:**
+
+- **[v3.0.0]:** requires Python 3.14 (was 3.12 in all prior releases).
+- **[v2.0.0]:** Poetry replaces PDM for dependency management (last PDM-based release: [v1.0.1]).
 
 [CONTRIBUTING]: CONTRIBUTING.md
 [LICENSE]: LICENSE
@@ -90,3 +92,4 @@ for dependency and environment management.
 [open-in-codespaces]: https://codespaces.new/Jekwwer/python-workspace
 [v1.0.1]: https://github.com/Jekwwer/python-workspace/tree/v1.0.1
 [v2.0.0]: https://github.com/Jekwwer/python-workspace/tree/v2.0.0
+[v3.0.0]: https://github.com/Jekwwer/python-workspace/tree/v3.0.0
