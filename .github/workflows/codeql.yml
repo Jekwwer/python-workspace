@@ -1,0 +1,55 @@
+---
+name: codeql
+
+# Weekly-only schedule because the template ships with placeholder code (15-line
+# greet CLI) and per-PR scans would burn ~10 min CI per run for near-zero value.
+# Forkers shipping real application code should add `pull_request` and `push`
+# triggers on `main` to catch issues at PR time:
+#
+#   on:
+#     push:
+#       branches: [main]
+#     pull_request:
+#       branches: [main]
+#     schedule:
+#       - cron: '0 6 * * 1'
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    name: analyze-${{ matrix.language }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [python]
+
+    steps:
+      - name: checkout-code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: init-codeql
+        # yamllint disable-line rule:line-length
+        uses: github/codeql-action/init@ce64ddcb0d8d890d2df4a9d1c04ff297367dea2a # v3.35.2
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: autobuild
+        # yamllint disable-line rule:line-length
+        uses: github/codeql-action/autobuild@ce64ddcb0d8d890d2df4a9d1c04ff297367dea2a # v3.35.2
+
+      - name: analyze
+        # yamllint disable-line rule:line-length
+        uses: github/codeql-action/analyze@ce64ddcb0d8d890d2df4a9d1c04ff297367dea2a # v3.35.2
+        with:
+          category: '/language:${{ matrix.language }}'

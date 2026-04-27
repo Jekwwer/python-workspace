@@ -28,7 +28,7 @@ toolchain wired into pre-commit and GitHub Actions.
 - **Pre-commit Hooks:** Ruff, MyPy, pytest, rstfmt, yamllint, markdownlint, markdown-link-check, actionlint, gitleaks,
   validate-pyproject.
 - **CI/CD:** GitHub Actions for tests, semantic-release, Sphinx docs deployment.
-- **Security CI:** Codecov coverage + Test Analytics, dependency review (PR CVE gate).
+- **Security CI:** Codecov coverage + Test Analytics, dependency review (PR CVE gate), CodeQL SAST (weekly schedule).
 - **Documentation:** Sphinx (`autoapi`, `napoleon`, `viewcode`) with live preview + GitHub Pages publish.
 - **In-Repo Guides:** `CONTRIBUTING.md`, `STYLEGUIDE.md`, `SECURITY.md`.
 
