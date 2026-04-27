@@ -1,5 +1,28 @@
 # Changelog
 
+## 3.1.0 - 2026-04-27
+### 🚀 New Features
+
+* **ci:** add Codecov Test Analytics upload (OIDC tokenless) ([38a9c9e](https://github.com/Jekwwer/python-workspace/commit/38a9c9e58c5c718ff36337969cd2df12eacc9c47))
+* **ci:** add CodeQL SAST workflow (weekly schedule) ([a5171ca](https://github.com/Jekwwer/python-workspace/commit/a5171ca6ae3d2fec8cca5c4c78135207035e3827))
+* **ci:** add dependency-review workflow on PRs ([1fddfd6](https://github.com/Jekwwer/python-workspace/commit/1fddfd65f634238618f1811693b3c1c9ac8c2ddd))
+* **ci:** add OpenSSF Scorecard workflow ([f60b990](https://github.com/Jekwwer/python-workspace/commit/f60b990233128d12cab1b9eaa2744e4395dc6315))
+
+### 🐞 Bug Fixes
+
+* **ci:** satisfy Dependabot + pre-commit.ci config validation ([3673e57](https://github.com/Jekwwer/python-workspace/commit/3673e5766361718c6d0d8a03f7144023b458a858))
+* **cspell:** exclude CHANGELOG.md from scan (auto-generated) ([aecfbcd](https://github.com/Jekwwer/python-workspace/commit/aecfbcd0cdd30923678dcc77ba02122bad10c043))
+
+### 📖 Documentation
+
+* **changelog:** fix v3.0.0 breaking-changes rendering ([82c0b8a](https://github.com/Jekwwer/python-workspace/commit/82c0b8ab9cc932db67410e51f724caff452f123e))
+* **readme:** add v3.0.0 Python 3.14 migration note ([bfae0e1](https://github.com/Jekwwer/python-workspace/commit/bfae0e15281663ac9cb5aa43f32c47fcb3bedad6))
+* **readme:** refresh badges + auto-upgrade all ([27b9b6f](https://github.com/Jekwwer/python-workspace/commit/27b9b6fa477bbbcea36aece7ed4e4162871e3310))
+
+### 🔧 Chores
+
+* **ci:** rename docs workflow name to match filename ([a35a834](https://github.com/Jekwwer/python-workspace/commit/a35a83423922a2a351ee279c82b576867ef75f3e))
+
 ## 3.0.0 - 2026-04-26
 ### ⚠ BREAKING CHANGES
 

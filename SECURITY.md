@@ -4,7 +4,7 @@
 
 | Version            | Supported             |
 | ------------------ | --------------------- |
-| [`v3.0.0`][v3.0.0] | ✅ Actively supported |
+| [`v3.1.0`][v3.1.0] | ✅ Actively supported |
 | Older versions     | ❌ Not supported      |
 
 ## Reporting a Vulnerability
@@ -22,4 +22,4 @@
 I aim to respond within **48 hours**, with resolution or update within **7 days**.
 
 [security-advisories]: https://github.com/Jekwwer/python-workspace/security/advisories
-[v3.0.0]: https://github.com/Jekwwer/python-workspace/tree/v3.0.0
+[v3.1.0]: https://github.com/Jekwwer/python-workspace/tree/v3.1.0
