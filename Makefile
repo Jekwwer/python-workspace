@@ -33,7 +33,7 @@ install:
 	poetry run pre-commit install
 
 clean:
-	rm -rf .ruff_cache .mypy_cache .cspellcache .pytest_cache htmlcov coverage.xml .coverage
+	rm -rf .ruff_cache .mypy_cache .cspellcache .pytest_cache htmlcov coverage.xml junit.xml .coverage
 
 format:
 	poetry run ruff format . --check
