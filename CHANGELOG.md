@@ -92,10 +92,6 @@
 * **styleguide:** sync package name to my_package ([3347f4b](https://github.com/Jekwwer/python-workspace/commit/3347f4b4d644a6080e9ff64dd328a8fe163b75d9))
 * **styleguide:** trim bureaucracy + normalize style ([7de8aee](https://github.com/Jekwwer/python-workspace/commit/7de8aee31b75df915938ccb5a105bf4ecde71dca))
 
-### 🛠️ Refactoring
-
-* **python_workspace:** rename package to my_package ([6ce5601](https://github.com/Jekwwer/python-workspace/commit/6ce56017af44a06c25a0454c9bf27045129f17b1))
-
 ### 🔧 Chores
 
 * **commits:** reorder allowed types to match releaserc ([4e59e78](https://github.com/Jekwwer/python-workspace/commit/4e59e78c878ba8723fbba7c54b1fe45461944096))
@@ -127,10 +123,6 @@
 
 * **README.md:** update feature section for accuracy ([d481c0b](https://github.com/Jekwwer/python-workspace/commit/d481c0bccd3f6dfe7669cbdced78c62be4125291))
 
-### 🛠️ Refactoring
-
-* **prettierrc:** remove redundant overwrite for printWidth ([639e1ac](https://github.com/Jekwwer/python-workspace/commit/639e1ac831b2a7a06dbfdaa16f52e5c0fe136643))
-
 ## 2.0.2 - 2025-06-18
 ### 🐞 Bug Fixes
 
@@ -140,24 +132,6 @@
 
 * **npm:** bump conventional-changelog and cspell to latest versions ([581c638](https://github.com/Jekwwer/python-workspace/commit/581c638c42d051f1075ea9877826473428026126))
 * **poetry:** bump pytest-cov, coverage, mypy to latest versions ([b7bb4ff](https://github.com/Jekwwer/python-workspace/commit/b7bb4ff8aae4b661f9950085f788bd0f39227025))
-
-### 📦 Chores
-
-* **release:** 2.0.2 [skip ci] ([469af53](https://github.com/Jekwwer/python-workspace/commit/469af538b7e9a166fc35c043898169c1a82d9dad))
-
-### 🛠️ Refactoring
-
-* **devcontainer:** optimize devcontainer settings and extensions ([d72f548](https://github.com/Jekwwer/python-workspace/commit/d72f5485535b383fcc94bafb464e2ab35c530eb0))
-
-## 2.0.2 - 2025-06-18
-### 📦 Dependency Updates
-
-* **npm:** bump conventional-changelog and cspell to latest versions ([581c638](https://github.com/Jekwwer/python-workspace/commit/581c638c42d051f1075ea9877826473428026126))
-* **poetry:** bump pytest-cov, coverage, mypy to latest versions ([b7bb4ff](https://github.com/Jekwwer/python-workspace/commit/b7bb4ff8aae4b661f9950085f788bd0f39227025))
-
-### 🛠️ Refactoring
-
-* **devcontainer:** optimize devcontainer settings and extensions ([d72f548](https://github.com/Jekwwer/python-workspace/commit/d72f5485535b383fcc94bafb464e2ab35c530eb0))
 
 ## 2.0.1 - 2025-06-15
 ### 🐞 Bug Fixes
@@ -170,7 +144,7 @@
 * **README.md:** add note about migration to Poetry ([90a521d](https://github.com/Jekwwer/python-workspace/commit/90a521d26fae9f3902ec754e9d849b581995e10a))
 * **STYLEGUIDE.md:** update style guide for clarity and accuracy ([64cf419](https://github.com/Jekwwer/python-workspace/commit/64cf419e2f3355fb5c8130beb2d35ae39bedaced))
 
-### 📦 Chores
+### 🔧 Chores
 
 * **metadata:** add report email to package metadata ([c13f43f](https://github.com/Jekwwer/python-workspace/commit/c13f43fc7e37d2738c96f8d8b3648d10f6d808c0))
 * **metadata:** update keywords in package.json and pyproject.toml ([05fa191](https://github.com/Jekwwer/python-workspace/commit/05fa191b3aded8614ccc16e11d903a59fb734dd4))
@@ -178,52 +152,11 @@
 ## 2.0.0 - 2025-06-08
 ### ⚠️ BREAKING CHANGES
 
-* The project now uses Poetry instead of PDM for dependency management and build tasks. Workflows and scripts relying on PDM have been removed or replaced. Users must adopt the 'Makefile' tasks and 'poetry' commands for their workflows.
+* **build:** Poetry replaces PDM. Adopt Makefile tasks and `poetry` commands; remove PDM scripts and `pdm.lock`.
 
-[FILES ADDED]
- - Makefile
- - poetry.lock
+### 🚀 New Features
 
-[FILES MODIFIED]
- - .devcontainer/devcontainer.json
- - .devcontainer/post-create.sh
- - .editorconfig
- - .github/dependabot.yml
- - .github/workflows/ci.yml
- - .github/workflows/docs.yml
- - .github/workflows/release.yml
- - .pre-commit-config.yaml
- - CONTRIBUTING.md
- - README.md
- - STYLEGUIDE.md
- - cspell.json
- - pyproject.toml
-
-[FILES REMOVED]
- - pdm.lock
-
-[DEPENDENCIES ADDED]
- - poetry
-
-[DEPENDENCIES REMOVED]
- - pdm
-
-[FEATURES/CHANGES]
- - Adapted project to use Poetry for dependency management.
- - Introduced Makefile to standardize development tasks.
- - Updated CI/CD workflows to use Poetry.
- - Updated documentation to reflect changes in tasks and dependencies.
-
-[TECHNIQUES]
- - Replaced PDM scripts with Makefile targets.
-
-[PURPOSE]
- - Simplify task execution and unify development workflow under Poetry and Makefile tooling.
-
-[IMPACT]
- - Users must adapt to using Poetry and Makefile commands for development and CI/CD tasks.
-
-* feat!(build): migrate from PDM to Poetry ([934c82a](https://github.com/Jekwwer/python-workspace/commit/934c82a92eacd9c3fec501bc5f4dea9d6a61fc25))
+* **build:** migrate from PDM to Poetry ([934c82a](https://github.com/Jekwwer/python-workspace/commit/934c82a92eacd9c3fec501bc5f4dea9d6a61fc25))
 
 ## 1.0.1 - 2025-06-08
 ### 🐞 Bug Fixes
@@ -234,7 +167,7 @@
 
 * bump mypy 1.16.0 and @semantic-release/github 11.0.3 versions ([488f4ac](https://github.com/Jekwwer/python-workspace/commit/488f4ac78844da5d9307ee13acb6791b8b53f979)), closes [#3](https://github.com/Jekwwer/python-workspace/issues/3)
 
-### 📦 Chores
+### 🔧 Chores
 
 * **config:** remove redundant ignore pattern for cspell ([ba837ca](https://github.com/Jekwwer/python-workspace/commit/ba837ca57541c810948046ce8d9a03210cc50cf6))
 * **docs:** remove redundant settings from Sphinx configuration ([45ba501](https://github.com/Jekwwer/python-workspace/commit/45ba501a0696fd5fef245e9ee3e0553c4827ca97))
