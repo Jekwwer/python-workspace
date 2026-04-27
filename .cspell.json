@@ -12,6 +12,7 @@
     ".prettierignore",
     ".releaserc.cjs",
     "tests/*",
+    "CHANGELOG.md",
     "Makefile"
   ],
   "useGitignore": true,
