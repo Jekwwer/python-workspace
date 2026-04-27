@@ -30,6 +30,7 @@ Coding and documentation conventions for **Jekwwer/python-workspace**.
 │   │   └── *                           │   │   └── # all files in the folder
 │   ├── workflows                       │   ├── # GitHub workflows
 │   │   ├── ci.yml                      │   │   ├── # ci pipeline workflow
+│   │   ├── codeql.yml                  │   │   ├── # CodeQL SAST workflow
 │   │   ├── dependency-review.yml       │   │   ├── # PR dep CVE gate workflow
 │   │   ├── docs.yml                    │   │   ├── # docs deploy workflow
 │   │   └── release.yml                 │   │   └── # release workflow
