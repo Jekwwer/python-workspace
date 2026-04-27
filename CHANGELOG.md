@@ -24,7 +24,7 @@
 * **ci:** rename docs workflow name to match filename ([a35a834](https://github.com/Jekwwer/python-workspace/commit/a35a83423922a2a351ee279c82b576867ef75f3e))
 
 ## 3.0.0 - 2026-04-26
-### ⚠ BREAKING CHANGES
+### ⚠️ BREAKING CHANGES
 
 * **python_workspace:** import path moved from `python_workspace` to `my_package`.
 * **python:** Python 3.14 required. Users on 3.12 must upgrade interpreter and rebuild devcontainer.
@@ -176,7 +176,7 @@
 * **metadata:** update keywords in package.json and pyproject.toml ([05fa191](https://github.com/Jekwwer/python-workspace/commit/05fa191b3aded8614ccc16e11d903a59fb734dd4))
 
 ## 2.0.0 - 2025-06-08
-### ⚠ BREAKING CHANGES
+### ⚠️ BREAKING CHANGES
 
 * The project now uses Poetry instead of PDM for dependency management and build tasks. Workflows and scripts relying on PDM have been removed or replaced. Users must adopt the 'Makefile' tasks and 'poetry' commands for their workflows.
 

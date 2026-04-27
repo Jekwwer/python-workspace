@@ -55,6 +55,31 @@ module.exports = {
         },
         writerOpts: {
           headerPartial: '## {{version}} - {{date}}',
+          // Upstream template hardcodes `⚠` (U+26A0) without VS-16, which renders
+          // as text-style glyph alongside emoji-style section icons. Override to
+          // append U+FE0F so it renders as colored emoji.
+          mainTemplate:
+            '{{> header}}\n' +
+            '{{#if noteGroups}}\n' +
+            '{{#each noteGroups}}\n' +
+            '\n' +
+            '### ⚠️ {{title}}\n' +
+            '\n' +
+            '{{#each notes}}\n' +
+            '* {{#if commit.scope}}**{{commit.scope}}:** {{/if}}{{text}}\n' +
+            '{{/each}}\n' +
+            '{{/each}}\n' +
+            '{{/if}}\n' +
+            '{{#each commitGroups}}\n' +
+            '\n' +
+            '{{#if title}}\n' +
+            '### {{title}}\n' +
+            '\n' +
+            '{{/if}}\n' +
+            '{{#each commits}}\n' +
+            '{{> commit root=@root}}\n' +
+            '{{/each}}\n' +
+            '{{/each}}\n',
           groupBy: 'type',
           commitGroupsSort: (a, b) => {
             const order = [
