@@ -6,7 +6,7 @@ ci:
   run_on_all_branches: true
   autofix_commit_msg: 'ci(pre-commit): auto fixes from pre-commit hooks'
   autofix_prs: true
-  autoupdate_schedule: never # Dependabot owns rev bumps (.github/dependabot.yml)
+  autoupdate_schedule: quarterly # Dependabot owns rev bumps (.github/dependabot.yml)
   skip:
     - mypy # ci can't run local hooks
     - markdown-link-check # ci has no network access
