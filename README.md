@@ -1,14 +1,14 @@
 # Python Workspace
 
-![github-release](https://img.shields.io/github/v/release/Jekwwer/python-workspace?logo=github&link=https%3A%2F%2Fgithub.com%2FJekwwer%2Fpython-workspace%2Freleases%2Flatest)
-![github-release-date](https://img.shields.io/github/release-date/Jekwwer/python-workspace?link=https%3A%2F%2Fgithub.com%2FJekwwer%2Fpython-workspace%2Freleases%2Flatest)
-![github-commits-since-latest-release](https://img.shields.io/github/commits-since/Jekwwer/python-workspace/latest?link=https%3A%2F%2Fgithub.com%2FJekwwer%2Fpython-workspace%2Freleases%2Flatest)
-![tests-status](https://img.shields.io/github/actions/workflow/status/Jekwwer/python-workspace/ci.yml?label=tests)
-[![tests-coverage-status](https://codecov.io/gh/Jekwwer/python-workspace/graph/badge.svg?token=5PLRAD5I82)](https://codecov.io/gh/Jekwwer/python-workspace)
-![libraries.io-dependency-status-for-github-repo](https://img.shields.io/librariesio/github/Jekwwer/python-workspace?logo=librariesdotio&logoColor=%23FFFFFF)
-![github-open-issues](https://img.shields.io/github/issues/Jekwwer/python-workspace?logo=github&link=https%3A%2F%2Fgithub.com%2FJekwwer%2Fpython-workspace%2Fissues)
-![is-maintained](https://img.shields.io/maintenance/yes/2025)
-![license](https://img.shields.io/github/license/Jekwwer/python-workspace?link=https%3A%2F%2Fgithub.com%2FJekwwer%2Fpython-workspace%2Fblob%2Fmain%2FLICENSE)
+[![github-release](https://img.shields.io/github/v/release/Jekwwer/python-workspace?logo=github&logoColor=white&display_name=tag)](https://github.com/Jekwwer/python-workspace/releases/latest)
+[![github-release-date](https://img.shields.io/github/release-date/Jekwwer/python-workspace?logo=github&logoColor=white)](https://github.com/Jekwwer/python-workspace/releases/latest)
+[![github-commits-since-latest-release](https://img.shields.io/github/commits-since/Jekwwer/python-workspace/latest?logo=github&logoColor=white)](https://github.com/Jekwwer/python-workspace/releases/latest)
+[![tests-status](https://img.shields.io/github/actions/workflow/status/Jekwwer/python-workspace/ci.yml?label=tests&logo=githubactions&logoColor=white)](https://github.com/Jekwwer/python-workspace/actions/workflows/ci.yml)
+[![pre-commit-ci-status](https://results.pre-commit.ci/badge/github/Jekwwer/python-workspace/main.svg)](https://results.pre-commit.ci/latest/github/Jekwwer/python-workspace/main)
+[![tests-coverage-status](https://img.shields.io/codecov/c/github/Jekwwer/python-workspace?logo=codecov&logoColor=white)](https://codecov.io/gh/Jekwwer/python-workspace)
+[![openssf-scorecard](https://api.scorecard.dev/projects/github.com/Jekwwer/python-workspace/badge)](https://scorecard.dev/viewer/?uri=github.com/Jekwwer/python-workspace)
+[![github-open-issues](https://img.shields.io/github/issues/Jekwwer/python-workspace?logo=github&logoColor=white)](https://github.com/Jekwwer/python-workspace/issues)
+[![license](https://img.shields.io/github/license/Jekwwer/python-workspace)](https://github.com/Jekwwer/python-workspace/blob/main/LICENSE)
 
 ## Project Overview 🚀
 
