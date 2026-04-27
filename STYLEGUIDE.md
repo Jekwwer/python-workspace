@@ -33,7 +33,8 @@ Coding and documentation conventions for **Jekwwer/python-workspace**.
 │   │   ├── codeql.yml                  │   │   ├── # CodeQL SAST workflow
 │   │   ├── dependency-review.yml       │   │   ├── # PR dep CVE gate workflow
 │   │   ├── docs.yml                    │   │   ├── # docs deploy workflow
-│   │   └── release.yml                 │   │   └── # release workflow
+│   │   ├── release.yml                 │   │   ├── # release workflow
+│   │   └── scorecard.yml               │   │   └── # OpenSSF Scorecard workflow
 │   ├── dependabot.yml                  │   ├── # Dependabot configuration
 │   ├── FUNDING.yml                     │   ├── # funding configuration
 │   └── PULL_REQUEST_TEMPLATE.md        │   └── # default pull request template
