@@ -4,10 +4,7 @@
 ### ⚠ BREAKING CHANGES
 
 * **python_workspace:** import path moved from `python_workspace` to `my_package`.
-* Python 3.14 required. Users on 3.12 must upgrade
-interpreter and rebuild devcontainer.
-
-* deps!(python): bump 3.12 → 3.14 ([dbfb45c](https://github.com/Jekwwer/python-workspace/commit/dbfb45c7f4edaa371e71d0db46729b02c77075ad))
+* **python:** Python 3.14 required. Users on 3.12 must upgrade interpreter and rebuild devcontainer.
 
 ### 🚀 New Features
 
