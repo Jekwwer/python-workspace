@@ -47,6 +47,13 @@ cd python-workspace
 make install
 ```
 
+## Fork Setup 🔑
+
+Optional GitHub-side config for forks:
+
+- **`SCORECARD_TOKEN`** secret: enables OpenSSF Scorecard's Branch-Protection check. Create a fine-grained PAT scoped to
+  the fork repo with `Administration: Read`, then add as repo secret. Other checks run without it.
+
 ## Usage 🛠️
 
 Most workflows go through `Makefile` targets. Run `make help` for the full list.
