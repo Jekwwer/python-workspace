@@ -53,6 +53,7 @@ pytest = "^9"
 pytest-cov = "^7"
 pytest-xdist = "^3.8.0"
 coverage = {extras = ["toml"], version = "^7.9.1"}
+hypothesis = "^6"
 
 [tool.poetry.group.lint.dependencies]
 rstfmt = "^0.0.14"
