@@ -177,10 +177,10 @@ repos:
         pass_filenames: false
         always_run: true
         additional_dependencies:
-          - pytest>=8.4,<9
-          - pytest-cov>=6.2,<7
-          - pytest-xdist>=3.7,<4
-          - coverage[toml]>=7.9,<8
+          - pytest>=9.0.3,<10
+          - pytest-cov>=7.1.0,<8
+          - pytest-xdist>=3.8.0,<4
+          - coverage[toml]>=7.13.5,<8
 
   # ── Project Health ─────────────────────────────────────────────────────────
   - repo: https://github.com/abravalheri/validate-pyproject
