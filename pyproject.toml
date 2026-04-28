@@ -1,6 +1,6 @@
 [project]
 name = "python-workspace"
-version = "3.1.0"
+version = "3.1.1"
 description = "Python project template with Poetry, devcontainer, lint/type/test/docs toolchain, and semantic-release CI."
 readme = "README.md"
 license = "MIT"

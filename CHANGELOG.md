@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.1.1 - 2026-04-28
+### 🐞 Bug Fixes
+
+* **changelog:** force emoji presentation on BREAKING CHANGES heading ([daf19f5](https://github.com/Jekwwer/python-workspace/commit/daf19f5d942fb2d9d75b016528a0410b5a922958))
+
+### 📦 Dependency Updates
+
+* **actions:** bump github/codeql-action v3.35.2 → v4.35.2 ([e1f154c](https://github.com/Jekwwer/python-workspace/commit/e1f154cf2684f07cdccd187221716b209a25d200))
+* **npm:** bump semantic-release ecosystem ([6aec384](https://github.com/Jekwwer/python-workspace/commit/6aec384964eab45b16ff6ccbfdc17bdd0f5907ad))
+* **pip:** bump pre-commit, pytest-xdist, sphinx-autoapi ([01f45ba](https://github.com/Jekwwer/python-workspace/commit/01f45ba666bb0c12f8495cb66d553f8cece6f4f0))
+* **pre-commit:** bump pytest hook test deps ([ada2691](https://github.com/Jekwwer/python-workspace/commit/ada2691d8548d4193c3b9596ff50ee68e5995c8a))
+
+### 🔧 Chores
+
+* **changelog:** align history with current releaserc + commit rules ([2888e9a](https://github.com/Jekwwer/python-workspace/commit/2888e9a59eeedd8c559499138516a9aee2651a78))
+
 ## 3.1.0 - 2026-04-27
 ### 🚀 New Features
 
