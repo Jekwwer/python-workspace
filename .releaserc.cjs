@@ -117,14 +117,23 @@ module.exports = {
         npmPublish: false,
       },
     ],
-    '@semantic-release/github',
+    [
+      '@semantic-release/github',
+      {
+        assets: [
+          { path: 'dist/*.whl', label: 'Python wheel' },
+          { path: 'dist/*.tar.gz', label: 'Source distribution (sdist)' },
+        ],
+      },
+    ],
     [
       '@semantic-release/exec',
       {
         prepareCmd: `
         sed -i -E "s/v[0-9]+\\.[0-9]+\\.[0-9]+/v\${nextRelease.version}/g" SECURITY.md &&
         sed -i "s/^version = \\".*\\"/version = \\"\${nextRelease.version}\\"/" pyproject.toml &&
-        sed -i -E "s/Copyright \\(c\\) ([0-9]{4})(–[0-9]{4})?/Copyright (c) \\1–$(date +%Y)/" LICENSE
+        sed -i -E "s/Copyright \\(c\\) ([0-9]{4})(–[0-9]{4})?/Copyright (c) \\1–$(date +%Y)/" LICENSE &&
+        poetry build
       `,
       },
     ],

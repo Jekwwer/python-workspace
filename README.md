@@ -27,7 +27,7 @@ toolchain wired into pre-commit and GitHub Actions.
 - **Spell Checking:** cspell over code + docs.
 - **Pre-commit Hooks:** Ruff, MyPy, pytest, rstfmt, yamllint, markdownlint, markdown-link-check, actionlint, gitleaks,
   validate-pyproject.
-- **CI/CD:** GitHub Actions for tests, semantic-release, Sphinx docs deployment.
+- **CI/CD:** GitHub Actions for tests, semantic-release with wheel + sdist asset publishing, Sphinx docs deployment.
 - **Security CI:** Codecov coverage + Test Analytics, dependency review (PR CVE gate), CodeQL SAST (weekly), OpenSSF
   Scorecard (weekly + push).
 - **Documentation:** Sphinx (`autoapi`, `napoleon`, `viewcode`) with live preview + GitHub Pages publish.
