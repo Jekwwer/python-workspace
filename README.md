@@ -49,14 +49,10 @@ make install
 
 ## Fork Setup 🔑
 
-GitHub-side config for forks:
+Optional GitHub-side config for forks:
 
-- **`GH_TOKEN`** secret (required if branch protection is enabled): admin PAT used by the release bot to push the
-  `chore(release)` commit past required status checks. Create a fine-grained PAT scoped to the fork repo with
-  `Contents: Write` and `Pull Requests: Write`, then add as repo secret. Without it, releases fail when branch
-  protection is on.
-- **`SCORECARD_TOKEN`** secret (optional): enables OpenSSF Scorecard's Branch-Protection check. Create a fine-grained
-  PAT scoped to the fork repo with `Administration: Read`, then add as repo secret. Other checks run without it.
+- **`SCORECARD_TOKEN`** secret: enables OpenSSF Scorecard's Branch-Protection check. Create a fine-grained PAT scoped to
+  the fork repo with `Administration: Read`, then add as repo secret. Other checks run without it.
 
 ## Usage 🛠️
 

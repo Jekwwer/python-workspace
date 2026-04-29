@@ -51,9 +51,7 @@ jobs:
 
       - name: release
         env:
-          # GH_TOKEN: admin PAT bypasses branch protection on bot's release commit.
-          # Falls back to GITHUB_TOKEN; release will fail until secret is set.
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: make release
 
       - name: attest-build-provenance
