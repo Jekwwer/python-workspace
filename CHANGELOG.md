@@ -1,5 +1,31 @@
 # Changelog
 
+## 3.2.0 - 2026-04-29
+### 🚀 New Features
+
+* **release:** publish wheel + sdist as GitHub Release assets ([c68506c](https://github.com/Jekwwer/python-workspace/commit/c68506c6adceb555457ff70950466fe868b2cf37))
+* **release:** sign artifacts with sigstore keyless attestation ([59bcfeb](https://github.com/Jekwwer/python-workspace/commit/59bcfeb4530c05f9de2849a91ef991cade0c9558))
+* **test:** add hypothesis property-based testing ([ea4fb21](https://github.com/Jekwwer/python-workspace/commit/ea4fb21b2c5737589da6a9f3ddbd0cde7ce8d44d))
+
+### 🔒 Security Updates
+
+* **ci:** move workflow write perms to job-level scope ([4ff2bdd](https://github.com/Jekwwer/python-workspace/commit/4ff2bddcbee03f2542e68d0d55e4a1c26768ffbd))
+
+### 🐞 Bug Fixes
+
+* **ci:** add quality-pass aggregator for matrix branch protection ([3ce4ab5](https://github.com/Jekwwer/python-workspace/commit/3ce4ab541dc7b8064a61b66ce9815963ac36d80c))
+* **ci:** make branch protection compat with matrix CI + release bot ([e55bfac](https://github.com/Jekwwer/python-workspace/commit/e55bfac6bf196282b6f99acd80394f55c17c107a))
+* **ci:** swap deprecated codecov/test-results-action for codecov-action ([7f0870e](https://github.com/Jekwwer/python-workspace/commit/7f0870e138e201b2239f8ec2099e6267420b8fae))
+* **ci:** use SCORECARD_TOKEN PAT for branch-protection read ([6d2b66a](https://github.com/Jekwwer/python-workspace/commit/6d2b66ace38d4de08c1033107a43f39fb93ae617))
+
+### 📦 Dependency Updates
+
+* **pip:** bump ruff to 0.15.12 ([#26](https://github.com/Jekwwer/python-workspace/issues/26)) ([bd5f4f9](https://github.com/Jekwwer/python-workspace/commit/bd5f4f93e6f45851373998151efa9fe9bc18fd1d))
+
+### 🔧 Chores
+
+* **ci:** drop dead branch-protection-bypass scaffolding ([0d6bdac](https://github.com/Jekwwer/python-workspace/commit/0d6bdac1cd6fc337596a6cba9121eb0352c737ee))
+
 ## 3.1.1 - 2026-04-28
 ### 🐞 Bug Fixes
 
