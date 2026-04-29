@@ -55,8 +55,19 @@ jobs:
         run: make release
 
       - name: attest-build-provenance
+        id: attest
         if: hashFiles('dist/*') != ''
         # yamllint disable-line rule:line-length
         uses: actions/attest-build-provenance@e4d4f7c39adfa4c260fb5c147f0622000aa14b99 # v4.0.0
         with:
           subject-path: 'dist/*'
+
+      - name: upload-attestation-to-release
+        if: steps.attest.conclusion == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG=$(git describe --tags --abbrev=0)
+          DEST="dist/attestation-$TAG.intoto.jsonl"
+          cp "${{ steps.attest.outputs.bundle-path }}" "$DEST"
+          gh release upload "$TAG" "$DEST" --clobber
