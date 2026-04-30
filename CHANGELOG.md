@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.3.0 - 2026-04-30
+### 🚀 New Features
+
+* **release:** attach attestation bundle as release asset ([9c082f3](https://github.com/Jekwwer/python-workspace/commit/9c082f32eff44d6d64c34858981aecdcf4936d68))
+
+### 🔒 Security Updates
+
+* **deps:** bump transitive deps to clear 11 GHSAs ([b86620b](https://github.com/Jekwwer/python-workspace/commit/b86620b1535b3fa23ebcf29c98e224aef3f416fe))
+
 ## 3.2.0 - 2026-04-29
 ### 🚀 New Features
 
