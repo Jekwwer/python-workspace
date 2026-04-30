@@ -7,6 +7,7 @@
 [![pre-commit-ci-status](https://results.pre-commit.ci/badge/github/Jekwwer/python-workspace/main.svg)](https://results.pre-commit.ci/latest/github/Jekwwer/python-workspace/main)
 [![tests-coverage-status](https://img.shields.io/codecov/c/github/Jekwwer/python-workspace?logo=codecov&logoColor=white)](https://codecov.io/gh/Jekwwer/python-workspace)
 [![openssf-scorecard](https://api.scorecard.dev/projects/github.com/Jekwwer/python-workspace/badge)](https://scorecard.dev/viewer/?uri=github.com/Jekwwer/python-workspace)
+[![openssf-best-practices](https://www.bestpractices.dev/projects/12679/badge)](https://www.bestpractices.dev/projects/12679)
 [![github-open-issues](https://img.shields.io/github/issues/Jekwwer/python-workspace?logo=github&logoColor=white)](https://github.com/Jekwwer/python-workspace/issues)
 [![license](https://img.shields.io/github/license/Jekwwer/python-workspace)](https://github.com/Jekwwer/python-workspace/blob/main/LICENSE)
 
