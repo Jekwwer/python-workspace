@@ -198,6 +198,17 @@ The project adheres to the rules specified in the `.editorconfig`, `.markdownlin
 
   If a file starts with a shebang (e.g., `#!/bin/bash`), place the header comment immediately after the shebang line.
 
+### Git Attributes
+
+- **Purpose:** `.gitattributes` normalizes file handling on every clone, independent of contributor's global git config
+  (`core.autocrlf`, `core.eol`):
+  - **Line Endings:** `* text=auto` baseline; `*.sh`, `*.py`, and `Makefile` pinned to `lf` so shell/Python tooling
+    works on Windows clones.
+  - **Generated Files:** `poetry.lock`, `package-lock.json`, `CHANGELOG.md` marked `linguist-generated` — collapsed in
+    GitHub PR diffs and excluded from language stats.
+  - **Merge Strategy:** `CHANGELOG.md merge=union` auto-resolves append-at-top conflicts when concurrent release
+    branches or PRs land past a release window; semantic-release rewrites the header cleanly on the next run.
+
 ### EditorConfig
 
 - **Purpose:** `.editorconfig` defines per-language editor settings:
