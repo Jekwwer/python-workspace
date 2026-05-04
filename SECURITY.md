@@ -4,7 +4,7 @@
 
 | Version            | Supported             |
 | ------------------ | --------------------- |
-| [`v3.3.0`][v3.3.0] | ✅ Actively supported |
+| [`v3.4.0`][v3.4.0] | ✅ Actively supported |
 | Older versions     | ❌ Not supported      |
 
 ## Reporting a Vulnerability
@@ -35,4 +35,4 @@ gh attestation verify <artifact-file> --owner Jekwwer
 The bundle file works with offline tooling (slsa-verifier, in-toto, cosign) for air-gapped verification.
 
 [security-advisories]: https://github.com/Jekwwer/python-workspace/security/advisories
-[v3.3.0]: https://github.com/Jekwwer/python-workspace/tree/v3.3.0
+[v3.4.0]: https://github.com/Jekwwer/python-workspace/tree/v3.4.0

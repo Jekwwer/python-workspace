@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.4.0 - 2026-05-04
+### 🚀 New Features
+
+* **gitattributes:** add normalization, generated, and merge rules ([ce5bbf0](https://github.com/Jekwwer/python-workspace/commit/ce5bbf08d3c4a3086f1d909b6585a06ff8c49510))
+* **release:** tighten checkout creds, add bot identity and PR perms ([0cb5ef1](https://github.com/Jekwwer/python-workspace/commit/0cb5ef1bdd0058c3699012e354cdfdfb2d9662b9))
+
+### 📦 Dependency Updates
+
+* **actions:** bump actions/attest-build-provenance ([#29](https://github.com/Jekwwer/python-workspace/issues/29)) [skip ci] ([3745f66](https://github.com/Jekwwer/python-workspace/commit/3745f6606c12b5b2ae391abe230757a99c581bb0))
+* **devcontainers:** bump ghcr.io/devcontainers/features/node ([#27](https://github.com/Jekwwer/python-workspace/issues/27)) [skip ci] ([fae1878](https://github.com/Jekwwer/python-workspace/commit/fae18787b751d4dccbed5802397cee5390071f32))
+* **pre-commit:** bump hypothesis in the pre-commit-deps group ([#28](https://github.com/Jekwwer/python-workspace/issues/28)) [skip ci] ([088f2a1](https://github.com/Jekwwer/python-workspace/commit/088f2a1697dd6665455129470ee8b66e4ecbc2cc))
+
+### 📖 Documentation
+
+* **readme:** add OpenSSF Best Practices badge ([c8d347e](https://github.com/Jekwwer/python-workspace/commit/c8d347ee78f1df254c694f4a5c434d193ff93dae))
+
 ## 3.3.0 - 2026-04-30
 ### 🚀 New Features
 
