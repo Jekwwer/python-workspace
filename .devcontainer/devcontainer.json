@@ -3,6 +3,9 @@
   "image": "mcr.microsoft.com/devcontainers/python:3.14",
   "remoteUser": "vscode",
   "features": {
+    "ghcr.io/devcontainers-extra/features/poetry:2.0.18": {
+      "version": "2.4.1"
+    },
     "ghcr.io/devcontainers/features/github-cli:1.1.0": {},
     "ghcr.io/devcontainers/features/node:2.0.0": {
       "version": "22"

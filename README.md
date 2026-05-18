@@ -41,7 +41,7 @@ toolchain wired into pre-commit and GitHub Actions.
 
 [![open-in-github-codespaces](https://github.com/codespaces/badge.svg)][open-in-codespaces]
 
-**Pure local:** install Python 3.14, Poetry ≥2.3, Node.js ≥22, then:
+**Pure local:** install Python 3.14, Poetry ≥2.4, Node.js ≥22, then:
 
 ```bash
 git clone https://github.com/Jekwwer/python-workspace.git
