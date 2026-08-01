@@ -46,18 +46,18 @@ cli = "my_package.cli:main"
 packages = [{include = "my_package", from = "src"}]
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^4.5.1"
+pre-commit = "^4.6.1"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^9"
 pytest-cov = "^7"
 pytest-xdist = "^3.8.0"
-coverage = {extras = ["toml"], version = "^7.9.1"}
+coverage = {extras = ["toml"], version = "^7.15.2"}
 hypothesis = "^6"
 
 [tool.poetry.group.lint.dependencies]
 rstfmt = "^0.0.14"
-ruff = "^0.15.12"
+ruff = "^0.16.0"
 
 [tool.poetry.group.mypy.dependencies]
 mypy = "^1.20.2"
